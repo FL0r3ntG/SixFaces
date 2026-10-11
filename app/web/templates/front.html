@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import status_badge, coverage_bar, dot, sparkline, legend_row, photo, pill %}
+{% from "_macros.html" import status_badge, coverage_bar, dot, sparkline, legend_row, photo, pill, also %}
 {% block title %}À la une · {{ APP_NAME }}{% endblock %}
 {% block content %}
 <div class="front">
@@ -55,7 +55,7 @@
             {% if c.headlines %}
               <ul class="alt-heads" aria-label="Autres titres">
                 {% for h in c.headlines %}
-                  <li>{{ pill(h.source, h.slot) }} {{ h.title }}</li>
+                  <li>{{ pill(h.source, h.slot) }}{{ also(h.also) }} {{ h.title }}</li>
                 {% endfor %}
               </ul>
             {% endif %}

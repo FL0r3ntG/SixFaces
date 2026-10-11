@@ -30,7 +30,7 @@ and docs are in English.
   order in `views.CHART_GROUPS`, alternating reds and blues for stacking). Groups without a brand colour
   fold into "Autres". Re-check separation (normal + colour-blind, both themes) before changing a colour.
 - Never put scraped text (titles, summaries) inside `data-tip` attributes: app.js renders them as HTML.
-- The app name and tagline live in `app/config.py` (`app_name`, `app_tagline`); templates use `APP_NAME`.
+- No logo: the cube reference stays implicit in the name. The app name and tagline live in `app/config.py` (`app_name`, `app_tagline`); templates use `APP_NAME`.
 - Only one process may run the scheduler on `data/six_faces.db`.
 
 ## Commands

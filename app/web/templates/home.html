@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import coverage_bar, dot, photo, pill, status_mark %}
+{% from "_macros.html" import coverage_bar, dot, photo, pill, status_mark, also %}
 {% block title %}{{ APP_NAME }} — Édition du {{ today | longdate | lower }}{% endblock %}
 {% block content %}
 
@@ -8,7 +8,7 @@
     <span>Édition du {{ today | longdate | lower }}</span>
     <span>Mis à jour à {{ today | hm }} · heure du Québec</span>
   </div>
-  <p class="mh-name"><svg class="mh-cube" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 10 16 17 4 10z" class="cube-top"/><path d="M4 10 16 17v13L4 23z" class="cube-left"/><path d="M28 10 16 17v13l12-7z" class="cube-right"/></svg>{{ APP_NAME }}</p>
+  <p class="mh-name">{{ APP_NAME }}</p>
   <p class="mh-tag">{{ APP_TAGLINE }}</p>
   <nav class="mh-sections" aria-label="Rubriques">
     <a href="/" aria-current="page">À la une</a>
@@ -52,7 +52,7 @@
       {% for t in fil[:12] %}
         <li>
           <span class="fil-t">{{ t.a.published_at | hm }}</span>
-          <div>{{ pill(t.source, t.slot) }}
+          <div>{{ pill(t.source, t.slot) }}{{ also(t.also) }}
             <a href="{% if t.sujet_id %}/sujet/{{ t.sujet_id }}{% else %}{{ t.a.url }}{% endif %}">{{ t.a.title }}</a></div>
         </li>
       {% endfor %}
@@ -80,7 +80,7 @@
           <p class="howtitle-h">Comment ils titrent</p>
           <ul>
             {% for h in c.headlines %}
-              <li>{{ pill(h.source, h.slot) }}<a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.title }}</a></li>
+              <li>{{ pill(h.source, h.slot) }}{{ also(h.also) }}<a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.title }}</a></li>
             {% endfor %}
           </ul>
         </div>
@@ -139,7 +139,7 @@
         {% for r in divides.rows %}
           <blockquote>
             <a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.title }}</a>
-            <footer>{{ pill(r.source, r.slot) }}{% if r.opinion %} · opinion{% endif %}</footer>
+            <footer>{{ pill(r.source, r.slot) }}{{ also(r.also) }}{% if r.opinion %} · opinion{% endif %}</footer>
           </blockquote>
         {% endfor %}
       </div>

@@ -34,6 +34,7 @@ from app.nlp.similarity import (
     score,
     top_terms,
 )
+from app.nlp.text import same_headline
 
 log = logging.getLogger(__name__)
 
@@ -49,6 +50,7 @@ P_SUJET = 0.7  # same story: mean of the two best cross-event article pairs
 # Sports: every Canadiens game looks like the last one; only coverage of the same game is chained.
 RELINK_FOR = timedelta(hours=36)  # events younger than this can still move to another sujet
 COPY_WINDOW = timedelta(hours=48)  # same owner, same piece on another of its sites
+SAME_PIECE_WINDOW = timedelta(hours=36)  # another owner running the same (agency) piece
 T_COPY = 0.96  # embedding cosine above which two same-owner headlines+ledes are the same piece
 ENRICH_GRACE = timedelta(minutes=20)  # wait this long for the page text before clustering anyway
 IDF_DAYS = 14
@@ -91,7 +93,7 @@ def process() -> dict:
 
         pool = _Pool(window, idf)
         touched: set[int] = set()
-        n_copies = 0
+        n_copies = n_same = 0
         for a in new:
             original = pool.copy_of(a)
             if original is not None:
@@ -99,6 +101,14 @@ def process() -> dict:
                 session.add(a)
                 touched.add(original.event_id)
                 n_copies += 1
+                continue
+            original = pool.same_piece(a)
+            if original is not None:
+                a.same_as, a.event_id, a.processed = original.same_as or original.id, original.event_id, True
+                session.add(a)
+                pool.add(a)  # still counts for its owner's coverage
+                touched.add(original.event_id)
+                n_same += 1
                 continue
             event_id = pool.best_event(a)
             if event_id is None:
@@ -134,12 +144,14 @@ def process() -> dict:
         n_sujets = link_sujets(session, touched, idf)
         session.commit()
     log.info(
-        "clustered %d articles (%d same-owner copies) into %d events (%d merged), %d sujets touched",
-        len(new), n_copies, len(touched), n_merged, n_sujets,
+        "clustered %d articles (%d same-owner copies, %d same piece from another owner) into %d events "
+        "(%d merged), %d sujets touched",
+        len(new), n_copies, n_same, len(touched), n_merged, n_sujets,
     )  # fmt: skip
     return {
         "articles": len(new),
         "copies": n_copies,
+        "same_piece": n_same,
         "events": len(touched),
         "merged": n_merged,
         "sujets": n_sujets,
@@ -232,6 +244,21 @@ class _Pool:
                 and o.source_key != a.source_key
                 and abs(o.published_at - a.published_at) <= COPY_WINDOW
             ):
+                return o
+        return None
+
+    def same_piece(self, a: Article) -> Article | None:
+        """The first article if `a` is the same piece already run by another owner (agency copy)."""
+        if not self.ids:
+            return None
+        cos = self._matrix() @ from_bytes(a.embedding)
+        for i in np.argsort(-cos)[:8]:
+            if cos[i] < 0.8:
+                break
+            o = self.arts[i]
+            if o.group == a.group or abs(o.published_at - a.published_at) > SAME_PIECE_WINDOW:
+                continue
+            if same_headline(o.title, a.title):
                 return o
         return None
 
@@ -338,11 +365,12 @@ def refresh_event(session: Session, ev: Event, idf: Idf) -> None:
     ev.keywords = json.dumps(top_terms(merge_vectors(vecs)), ensure_ascii=False)
     ev.first_at = min(a.published_at for a in arts)
     ev.last_at = max(a.published_at for a in arts)
-    ev.n_articles = len(arts)
+    ev.n_articles = sum(1 for a in arts if a.same_as is None)  # the same piece counts once
     ev.n_sources = len({a.source_key for a in arts})
     ev.n_groups = len({a.group for a in arts})
     ev.category = _vote_category(arts)
-    rep = representative(arts, embs, vecs)
+    listed = [i for i, a in enumerate(arts) if a.same_as is None]
+    rep = representative([arts[i] for i in listed], [embs[i] for i in listed], [vecs[i] for i in listed])
     ev.rep_article_id, ev.title = rep.id, rep.title
     ev.verification = json.dumps(verify_event(arts), ensure_ascii=False)
     ev.updated_at = utcnow()
@@ -497,16 +525,16 @@ def refresh_sujet(session: Session, sujet_id: int) -> None:
         session.delete(sujet)
         return
     arts = session.exec(
-        select(Article.source_key, Article.group).where(
+        select(Article.source_key, Article.group, Article.same_as).where(
             col(Article.event_id).in_([e.id for e in events]), Article.dup_of == None
         )
     ).all()
     sujet.first_at = min(e.first_at for e in events)
     sujet.last_at = max(e.last_at for e in events)
     sujet.n_events = len(events)
-    sujet.n_articles = len(arts)
-    sujet.n_sources = len({s for s, _ in arts})
-    groups = Counter(g for _, g in arts)
+    sujet.n_articles = sum(1 for _, _, same in arts if same is None)
+    sujet.n_sources = len({s for s, _, _ in arts})
+    groups = Counter(g for _, g, _ in arts)
     sujet.n_groups = len(groups)
     sujet.groups = json.dumps(dict(groups))
     cats: Counter[str] = Counter()

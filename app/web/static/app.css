@@ -75,7 +75,6 @@ h2 { font-size: 15px; }
 .topbar { position: sticky; top: 0; z-index: 10; background: var(--surface); border-bottom: 1px solid var(--border); }
 .topbar-inner { max-width: 1280px; margin: 0 auto; padding: 0 16px; height: 52px; display: flex; align-items: center; gap: 20px; }
 .brand { display: flex; align-items: center; gap: 8px; font-family: var(--serif); font-weight: 700; font-size: 21px; letter-spacing: -0.01em; text-decoration: none; white-space: nowrap; }
-.brand-mark { width: 22px; height: 22px; flex: none; }
 .nav { display: flex; gap: 2px; }
 .nav a { padding: 6px 10px; border-radius: 6px; text-decoration: none; color: var(--ink-2); font-weight: 500; }
 .nav a:hover { background: var(--surface-2); color: var(--ink); }
@@ -507,8 +506,6 @@ table.data, table.heat { width: 100%; border-collapse: collapse; font-size: 13px
 .tag { border-radius: 2px; }
 .panel, .tile, .tl-body, .evolution, .card { border-radius: 2px; box-shadow: none; }
 
-/* the logo: a small black cube, three faces in three inks */
-.cube-top { fill: #595650; } .cube-left { fill: var(--ink); } .cube-right { fill: #2b2925; }
-:root[data-theme="dark"] .cube-top { fill: #8d887e; } :root[data-theme="dark"] .cube-right { fill: #c9c2b5; }
-@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) .cube-top { fill: #8d887e; } :root:not([data-theme="light"]) .cube-right { fill: #c9c2b5; } }
-.mh-cube { width: 0.62em; height: 0.62em; margin-right: 0.18em; vertical-align: -0.02em; }
+
+/* the same piece run by another owner: shown once, credited */
+.also { font-size: 10.5px; font-weight: 600; color: var(--muted); margin-right: 6px; white-space: nowrap; letter-spacing: 0.02em; }

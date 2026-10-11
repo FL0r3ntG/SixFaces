@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import dot, pill %}
+{% from "_macros.html" import dot, pill, also %}
 {% block title %}Recherche · {{ APP_NAME }}{% endblock %}
 {% block content %}
 <div class="feed-head">
@@ -14,7 +14,7 @@
     {% for r in results %}
       {% set a = r.article %}
       <li>
-        <span class="res-src">{{ pill(r.outlet.name, r.outlet.slot, r.outlet.sites | join(", ") if r.outlet.multi else None) }}</span>
+        <span class="res-src">{{ pill(r.outlet.name, r.outlet.slot, r.outlet.sites | join(", ") if r.outlet.multi else None) }}{{ also(r.outlet.also) }}</span>
         <span class="res-when muted">{{ a.published_at | when }}</span>
         <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">{{ a.title }}</a>
         {% if r.sujet_id %}<a class="tag" href="/sujet/{{ r.sujet_id }}">Voir le sujet →</a>{% endif %}

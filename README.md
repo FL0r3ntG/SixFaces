@@ -252,7 +252,8 @@ times are stored in UTC and shown in Quebec time.
 ## The name
 
 **Six-Faces** sounds like a Quebec place name (Trois-Rivières, Deux-Montagnes, Sept-Îles), but it is the
-six faces of a cube. The logo is a small black cube, and each face is one outlet's angle on the same story.
+six faces of a cube: each face one outlet's angle on the same story. The reference stays implicit, so
+there is no logo, just the name.
 
 ## License
 

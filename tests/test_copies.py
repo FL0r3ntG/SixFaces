@@ -50,3 +50,32 @@ def test_outlet_label():
         "Le Journal de Montréal", "Le Journal de Québec", "TVA Nouvelles",
     ]  # fmt: skip
     assert outlet("jdm", "quebecor", [])["name"] == "Le Journal de Montréal"
+
+
+def test_same_headline_across_mastheads():
+    from app.nlp.text import same_headline
+
+    # agency copy under two mastheads: identical, rubric prefix, punctuation, one letter
+    assert same_headline("Le Panama déclare l’état d’urgence", "Le Panama déclare l'état d'urgence")
+    assert same_headline("Fête nationale | Taïwan ne renoncera pas à sa liberté, affirme son président",
+                         "Taïwan ne renoncera pas à sa liberté, affirme son président")  # fmt: skip
+    assert same_headline("Le projet d’alliance Canada-UE doit être défini et vite",
+                         "Le projet d’alliance Canada-EU doit être défini et vite")  # fmt: skip
+    # same story, each outlet's own article: NOT the same piece
+    assert not same_headline("Trump affirme qu'«il est temps pour l'Ukraine d'avoir un nouveau président»",
+                             "Donald Trump estime que l'Ukraine devrait avoir un nouveau président")  # fmt: skip
+    assert not same_headline("Expulsé de la CAQ, Mathieu Lacombe s'excuse d'avoir été au party du PQ",
+                             "Exclu de la CAQ, Mathieu Lacombe s’excuse de s’être rendu à la soirée")  # fmt: skip
+
+
+def test_same_piece_from_another_owner():
+    noovo = art("noovo", "bell", "Séismes: le Panama déclare l’état d’urgence", (2,))
+    pool = _Pool([noovo], Idf([noovo.title]))
+    assert (
+        pool.same_piece(art("lactualite", "mishmash", "Séismes: le Panama déclare l'état d'urgence", (2,)))
+        is noovo
+    )
+    assert pool.same_piece(art("rc", "cbcrc", "Le Panama sous le choc après deux séismes", (2,))) is None
+    assert (
+        pool.same_piece(art("jdm", "bell", "Séismes: le Panama déclare l’état d’urgence", (2,))) is None
+    )  # same owner

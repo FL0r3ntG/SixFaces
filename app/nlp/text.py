@@ -169,3 +169,22 @@ def entities(text: str) -> set[str]:
 def entity_tokens(text: str) -> set[str]:
     """Words of the names in a text ("max verstappen" -> {"max", "verstappen"}), for partial name matches."""
     return {w for e in entities(text) for w in e.split() if len(w) >= 3 and w not in STOPWORDS}
+
+
+_RUBRIC = re.compile(r"^[^|]{2,40}\|\s*")  # La Presse style "Guerre en Ukraine | ..."
+
+
+def same_headline(a: str, b: str) -> bool:
+    """The same piece under two mastheads: identical once normalized, once a rubric prefix is dropped, one
+    containing the other, or differing by a few characters (a dash, quotation marks, "UE"/"EU")."""
+    import difflib
+
+    na, nb = normalize(_RUBRIC.sub("", a)), normalize(_RUBRIC.sub("", b))
+    if not na or not nb:
+        return False
+    if na == nb:
+        return True
+    short, long_ = sorted((na, nb), key=len)
+    if len(short) >= 30 and short in long_:
+        return True
+    return difflib.SequenceMatcher(None, na, nb).ratio() >= 0.9

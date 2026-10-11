@@ -57,3 +57,7 @@
   {%- set s = STATUS.get(status, STATUS["source_unique"]) -%}
   <span class="mark mark-{{ s[1] }}" title="{{ s[3] }}">{{ s[2] }} {{ s[0] }}</span>
 {%- endmacro %}
+
+{% macro also(names) -%}
+  {%- if names %}<span class="also" title="Même article (copie d'agence) repris par {{ names | join(', ') }}">+ {{ names | join(", ") }}</span>{% endif -%}
+{%- endmacro %}

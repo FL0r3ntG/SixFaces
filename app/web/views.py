@@ -32,6 +32,24 @@ def canonical():
     return col(Article.dup_of).is_(None)
 
 
+def listed():
+    """What lists show and article counts count: one row per piece. Excludes same-owner copies AND the same
+    piece run by another owner (agency copy). Group coverage uses canonical(), which keeps the latter."""
+    return col(Article.dup_of).is_(None) & col(Article.same_as).is_(None)
+
+
+def also_run_by(session: Session, ids: list[int]) -> dict[int, list[str]]:
+    """original article id -> source keys of other owners that ran the same piece."""
+    out: dict[int, list[str]] = defaultdict(list)
+    if ids:
+        for orig, src in session.exec(
+            select(Article.same_as, Article.source_key).where(col(Article.same_as).in_(ids), canonical())
+        ).all():
+            if src not in out[orig]:
+                out[orig].append(src)
+    return out
+
+
 def copies(session: Session, ids: list[int]) -> dict[int, list[str]]:
     """original article id -> source keys of its copies on the owner's other sites."""
     out: dict[int, list[str]] = defaultdict(list)
@@ -44,14 +62,17 @@ def copies(session: Session, ids: list[int]) -> dict[int, list[str]]:
     return out
 
 
-def outlet(source_key: str, group: str, copy_keys: list[str] | None = None) -> dict:
+def outlet(
+    source_key: str, group: str, copy_keys: list[str] | None = None, also: list[str] | None = None
+) -> dict:
     """'Le Journal de Montréal', or 'Québecor' (with its sites) when the piece runs on several of them."""
     keys = [source_key, *[k for k in copy_keys or [] if k != source_key]]
+    also_names = [BY_KEY[k].name for k in also or [] if k != source_key]
     if len(keys) > 1:
-        return {"name": GROUPS[group][0], "sites": [BY_KEY[k].name for k in keys], "multi": True,
-                "slot": group_slot(group)}  # fmt: skip
+        return {"name": SHORT.get(group, GROUPS[group][0]), "sites": [BY_KEY[k].name for k in keys], "multi": True,
+                "slot": group_slot(group), "also": also_names}  # fmt: skip
     return {"name": BY_KEY[source_key].name, "sites": [BY_KEY[source_key].name], "multi": False,
-            "slot": group_slot(group)}  # fmt: skip
+            "slot": group_slot(group), "also": also_names}  # fmt: skip
 
 
 SHORT = {"cbcrc": "Radio-Canada/CBC", "cn2i": "CN2i", "bell": "Bell (Noovo, CTV)", "postmedia": "Gazette",
@@ -175,9 +196,10 @@ def cards_for(session: Session, sujets: list[Sujet]) -> list[SujetCard]:
         select(
             Article.event_id, Article.published_at, Article.source_key, Article.title, Article.url,
             Article.image_url, Article.summary, Article.wire, Article.id,
-        ).where(col(Article.event_id).in_([e.id for e in events]), canonical())
+        ).where(col(Article.event_id).in_([e.id for e in events]), listed())
     ).all()  # fmt: skip
     cps = copies(session, [r[8] for r in rows])
+    alr = also_run_by(session, [r[8] for r in rows])
     sujet_of_event = {e.id: e.sujet_id for e in events}
     times: dict[int, list[datetime]] = defaultdict(list)
     heads: dict[int, list] = defaultdict(list)
@@ -198,10 +220,11 @@ def cards_for(session: Session, sujets: list[Sujet]) -> list[SujetCard]:
             if g in seen or title == s.title:
                 continue
             seen.add(g)
-            o = outlet(src, g, cps.get(art_id))
+            o = outlet(src, g, cps.get(art_id), alr.get(art_id))
             sample.append(
                 {
                     "source": o["name"],
+                    "also": o["also"],
                     "group": g,
                     "slot": group_slot(g),
                     "title": title,
@@ -300,7 +323,7 @@ def home(session: Session) -> dict:
 def latest(session: Session, n: int) -> list[dict]:
     arts = session.exec(
         select(Article)
-        .where(Article.event_id != None, canonical())
+        .where(Article.event_id != None, listed())
         .order_by(Article.published_at.desc())
         .limit(n)
     ).all()
@@ -310,10 +333,12 @@ def latest(session: Session, n: int) -> list[dict]:
         ).all()
     )
     cps = copies(session, [a.id for a in arts])
+    alr = also_run_by(session, [a.id for a in arts])
     return [
         {
             "a": a,
             "source": outlet(a.source_key, a.group, cps.get(a.id))["name"],
+            "also": outlet(a.source_key, a.group, None, alr.get(a.id))["also"],
             "slot": group_slot(a.group),
             "sujet_id": sujet_of.get(a.event_id),
         }
@@ -340,7 +365,7 @@ def divided_headlines(session: Session, since: datetime) -> dict | None:
     for ev in events:
         arts = session.exec(
             select(Article)
-            .where(Article.event_id == ev.id, Article.wire == None, canonical())
+            .where(Article.event_id == ev.id, Article.wire == None, listed())
             .order_by(Article.published_at)
         ).all()
         per_group: dict[str, Article] = {}
@@ -358,8 +383,10 @@ def divided_headlines(session: Session, since: datetime) -> dict | None:
     if best is None:
         return None
     cps = copies(session, [a.id for a in best["picks"]])
+    alr = also_run_by(session, [a.id for a in best["picks"]])
     best["rows"] = [
         {"title": a.title, "url": a.url, "source": outlet(a.source_key, a.group, cps.get(a.id))["name"],
+         "also": outlet(a.source_key, a.group, None, alr.get(a.id))["also"],
          "group": GROUPS[a.group][0],
          "slot": group_slot(a.group), "opinion": a.opinion}
         for a in best["picks"][:4]
@@ -369,7 +396,7 @@ def divided_headlines(session: Session, since: datetime) -> dict | None:
 
 def day_numbers(session: Session, since: datetime, cards: list[SujetCard]) -> dict:
     n_arts = session.exec(
-        select(func.count()).select_from(Article).where(Article.published_at >= since, canonical())
+        select(func.count()).select_from(Article).where(Article.published_at >= since, listed())
     ).one()
     _, n_sources = session.exec(
         select(func.count(), func.count(func.distinct(Article.source_key))).where(
@@ -426,7 +453,9 @@ def sujet_detail(session: Session, sujet_id: int) -> dict | None:
         ev_arts = by_event[e.id]
         groups: dict[str, list[Article]] = defaultdict(list)
         for a in ev_arts:
-            groups[a.group].append(a)
+            if a.same_as is None:  # the same piece run by another owner is shown once, with "+ owner"
+                groups[a.group].append(a)
+
         ordered = sorted(groups.items(), key=lambda kv: (group_slot(kv[0]) or 99, kv[0]))
         ver = json.loads(e.verification)
         for f in ver.get("figures", []):
@@ -482,6 +511,7 @@ def sujet_detail(session: Session, sujet_id: int) -> dict | None:
     ]  # fmt: skip
     card = cards_for(session, [s])[0]
     cps = copies(session, [a.id for a in arts])
+    alr = also_run_by(session, [a.id for a in arts])
     ids_in = {t["event"].id for t in timeline}
     for t in timeline:
         f = t["event"].follows_id
@@ -490,7 +520,8 @@ def sujet_detail(session: Session, sujet_id: int) -> dict | None:
     return {
         "n_links": n_links,
         "days": days,
-        "outlets": {a.id: outlet(a.source_key, a.group, cps.get(a.id)) for a in arts},
+        "outlets": {a.id: outlet(a.source_key, a.group, cps.get(a.id), alr.get(a.id)) for a in arts},
+        "n_same": sum(1 for a in arts if a.same_as),
         "n_copies": sum(len(v) for v in cps.values()),
         "card": card,
         "sujet": s,
@@ -687,9 +718,9 @@ def stats(session: Session) -> dict:
         "articles_24h": session.exec(
             select(func.count())
             .select_from(Article)
-            .where(Article.published_at >= now - timedelta(hours=24), canonical())
+            .where(Article.published_at >= now - timedelta(hours=24), listed())
         ).one(),
-        "articles": session.exec(select(func.count()).select_from(Article).where(canonical())).one(),
+        "articles": session.exec(select(func.count()).select_from(Article).where(listed())).one(),
         "sujets_24h": session.exec(
             select(func.count()).select_from(Sujet).where(Sujet.last_at >= now - timedelta(hours=24))
         ).one(),
@@ -704,7 +735,7 @@ def search(session: Session, q: str, limit: int = 80) -> list[dict]:
     like = f"%{q}%"
     arts = session.exec(
         select(Article)
-        .where(Article.title.like(like) | Article.summary.like(like), canonical())  # type: ignore[union-attr]
+        .where(Article.title.like(like) | Article.summary.like(like), listed())  # type: ignore[union-attr]
         .order_by(Article.published_at.desc())
         .limit(limit)
     ).all()
@@ -716,8 +747,9 @@ def search(session: Session, q: str, limit: int = 80) -> list[dict]:
         ).all()
     )
     cps = copies(session, [a.id for a in arts])
+    alr = also_run_by(session, [a.id for a in arts])
     return [
         {"article": a, "sujet_id": sujet_of.get(a.event_id), "slot": group_slot(a.group),
-         "outlet": outlet(a.source_key, a.group, cps.get(a.id))}
+         "outlet": outlet(a.source_key, a.group, cps.get(a.id), alr.get(a.id))}
         for a in arts
     ]  # fmt: skip

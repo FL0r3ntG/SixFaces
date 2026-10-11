@@ -1,5 +1,5 @@
 {% extends "base.html" %}
-{% from "_macros.html" import status_badge, coverage_bar, dot, legend_row, photo, pill %}
+{% from "_macros.html" import status_badge, coverage_bar, dot, legend_row, photo, pill, also %}
 {% block title %}{{ sujet.title }} · {{ APP_NAME }}{% endblock %}
 {% block content %}
 <article class="sujet">
@@ -25,6 +25,9 @@
     <div class="tile"><span class="tile-v">{{ n_opinion }}</span><span class="tile-l">opinions / chroniques</span></div>
   </div>
 
+  {% if n_same %}
+    <p class="note copies-note">{{ n_same }} article{{ 's' if n_same > 1 }} identique{{ 's' if n_same > 1 }} (copie d'agence) publié{{ 's' if n_same > 1 }} par un autre groupe n'{{ 'apparaissent' if n_same > 1 else 'apparaît' }} qu'une fois, avec la mention « + média ».</p>
+  {% endif %}
   {% if n_copies %}
     <p class="note copies-note">{{ n_copies }} reprise{{ 's' if n_copies > 1 }} du même article sur d'autres sites du même propriétaire (ex. Journal de Montréal → Journal de Québec, TVA) {{ 'ne sont' if n_copies > 1 else "n'est" }} pas comptée{{ 's' if n_copies > 1 }} : chaque article n'apparaît qu'une fois, sous le nom du groupe.</p>
   {% endif %}
@@ -173,7 +176,7 @@
                           <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">{{ a.title }}</a>
                           <span class="art-meta">
                             {% set o = outlets[a.id] %}
-                            {{ pill(o.name, o.slot, ("Même article publié sur : " ~ o.sites | join(", ")) if o.multi else None) }}
+                            {{ pill(o.name, o.slot, ("Même article publié sur : " ~ o.sites | join(", ")) if o.multi else None) }}{{ also(o.also) }}
                             {%- if o.multi %} <span class="tag tag-muted">{{ o.sites | length }} sites : {{ o.sites | join(" · ") }}</span>{% endif %} · {{ a.published_at | when }}
                             {% if a.featured %}<span class="tag tag-une" title="Présent dans le fil « à la une » du média">À la une</span>{% endif %}
                             {% if a.wire %}<span class="tag">Dépêche {{ a.wire }}</span>{% endif %}

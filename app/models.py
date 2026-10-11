@@ -40,6 +40,10 @@ class Article(SQLModel, table=True):
     # Same piece on another site of the same owner (JdM -> JdQ, TVA; Le Soleil -> 5 CN2i papers): points to the
     # first one. Copies stay in their event for the record but are left out of every count and list.
     dup_of: int | None = Field(default=None, index=True)
+    # Same piece run by ANOTHER owner (agency copy: La Presse Canadienne in Noovo and L'actualité): points to
+    # the first one. Shown once in every list and counted once as an article, but each owner still gets
+    # credit for covering the story (it chose to run it); never an independent confirmation (app.verify).
+    same_as: int | None = Field(default=None, index=True)
     processed: bool = Field(default=False, index=True)
 
 

@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>{% block title %}{{ APP_NAME }}{% endblock %}</title>
-  <link rel="icon" href="data:image/svg+xml,<svg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'><path d='M16 3 28 10 16 17 4 10z' fill='%23595650'/><path d='M4 10 16 17v13L4 23z' fill='%23151412'/><path d='M28 10 16 17v13l12-7z' fill='%232b2925'/></svg>">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' fill='%23151412'/><text x='16' y='24' text-anchor='middle' font-family='Georgia,serif' font-size='24' font-weight='700' fill='%23faf8f3'>S</text></svg>">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;0,6..72,700;0,6..72,800;1,6..72,400&family=Inter:wght@400;500;600;700&display=swap">
@@ -16,7 +16,7 @@
 <body>
   <header class="topbar">
     <div class="topbar-inner">
-      <a class="brand" href="/"><svg class="brand-mark" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 10 16 17 4 10z" class="cube-top"/><path d="M4 10 16 17v13L4 23z" class="cube-left"/><path d="M28 10 16 17v13l12-7z" class="cube-right"/></svg>{{ APP_NAME }}</a>
+      <a class="brand" href="/">{{ APP_NAME }}</a>
       <nav class="nav" aria-label="Navigation principale">
         <a href="/" {% if nav in ("front", "home") %}aria-current="page"{% endif %}>À la une</a>
         <a href="/?vue=liste" {% if nav == "liste" %}aria-current="page"{% endif %}>Tous les sujets</a>
