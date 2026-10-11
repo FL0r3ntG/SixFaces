@@ -1,4 +1,4 @@
-# Six-Faces, local 24/7 run on the laptop (same setup as appart_finder).
+# Six-Faces, local 24/7 run on the laptop.
 # Install: cp deploy/six-faces.container ~/.config/containers/systemd/ && systemctl --user daemon-reload
 # Manage: systemctl --user {status,restart,stop} six-faces ; logs: journalctl --user -u six-faces -f
 [Unit]

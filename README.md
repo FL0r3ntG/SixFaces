@@ -198,7 +198,7 @@ résultat, le sprint et le Grand Prix, une déclaration et la réponse à cette 
 
 ## Lancer l'application
 
-Elle tourne comme appart_finder : un conteneur Podman géré par un service systemd utilisateur (un
+Elle tourne dans un conteneur Podman géré par un service systemd utilisateur (un
 *quadlet*), sur <http://127.0.0.1:8010>. Elle démarre avec la session et redémarre en cas de plantage. Les
 données (SQLite et les deux modèles d'embeddings, environ 3 Go, téléchargés au premier démarrage) sont dans
 `data/`, monté sur `/data`.
@@ -305,4 +305,4 @@ implicite, il n'y a donc pas de logo, seulement le nom.
 
 ## Licence
 
-GPL-3.0-only, comme appart_finder.
+GPL-3.0-only.

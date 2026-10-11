@@ -1,6 +1,6 @@
 """Background jobs: discover (per source), enrich (page text), process (cluster + rank).
 
-Made for a laptop, like appart_finder: late runs after sleep still run (misfire_grace_time=None), missed runs
+Made for a laptop: late runs after sleep still run (misfire_grace_time=None), missed runs
 collapse into one (coalesce), and a watchdog notices a suspend/resume and runs everything again soon.
 """
 
