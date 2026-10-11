@@ -448,12 +448,22 @@ def sujet_detail(session: Session, sujet_id: int) -> dict | None:
     for a in arts:
         by_event[a.event_id].append(a)
 
+    shared_by = also_run_by(session, [a.id for a in arts])  # piece id -> other owners' sources
     timeline = []
     for e in events:
         ev_arts = by_event[e.id]
         groups: dict[str, list[Article]] = defaultdict(list)
+        shared = []  # the same piece run by several owners (agency copy): one block, every owner named
         for a in ev_arts:
-            if a.same_as is None:  # the same piece run by another owner is shown once, with "+ owner"
+            if a.same_as is not None:
+                continue
+            if shared_by.get(a.id):
+                owners = [a.group, *(BY_KEY[k].group for k in shared_by[a.id])]
+                names = list(dict.fromkeys(GROUPS[g][0] for g in owners))
+                sources = [BY_KEY[a.source_key].name, *(BY_KEY[k].name for k in shared_by[a.id])]
+                shared.append({"article": a, "groups": names, "sources": list(dict.fromkeys(sources)),
+                               "slots": [group_slot(g) for g in dict.fromkeys(owners)]})  # fmt: skip
+            else:
                 groups[a.group].append(a)
 
         ordered = sorted(groups.items(), key=lambda kv: (group_slot(kv[0]) or 99, kv[0]))
@@ -472,6 +482,12 @@ def sujet_detail(session: Session, sujet_id: int) -> dict | None:
             {
                 "image": with_img[-1].image_url if with_img else None,
                 "event": e,
+                "shared": shared,
+                # every owner that covered it, by real name (the chart folds small ones into "Autres")
+                "who": [
+                    {"name": SHORT.get(g, GROUPS[g][0]), "slot": group_slot(g)}
+                    for g, _ in Counter(a.group for a in ev_arts).most_common()
+                ],
                 "verification": ver,
                 "keywords": json.loads(e.keywords),
                 "groups": [

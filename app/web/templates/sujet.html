@@ -136,8 +136,12 @@
             {% if t.image %}<div class="tl-thumb"><span class="ph"><img src="{{ t.image }}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.parentNode.remove()"></span></div>{% endif %}
             <div class="tl-meta">
               {{ status_badge(v.status, v.n_independent) }}
-              <span>{{ e.n_articles }} article{{ 's' if e.n_articles > 1 }} · {{ e.n_groups }} groupe{{ 's' if e.n_groups > 1 }}</span>
-              {% if v.agencies %}<span class="badge badge-neutral" data-tip="Copie d'agence détectée (signature ou titre identique dans plusieurs groupes)">Agence : {{ v.agencies | join(", ") | replace("copie", "copie reprise") }}</span>{% endif %}
+              {% if e.n_articles == 1 and t.shared %}
+                <span>1 dépêche reprise par {{ e.n_groups }} groupes</span>
+              {% else %}
+                <span>{{ e.n_articles }} article{{ 's' if e.n_articles > 1 }} · {{ e.n_groups }} groupe{{ 's' if e.n_groups > 1 }}{% if t.shared %} · dont {{ t.shared | length }} dépêche{{ 's' if t.shared | length > 1 }} reprise{{ 's' if t.shared | length > 1 }} par plusieurs groupes{% endif %}</span>
+              {% endif %}
+              {% if v.agencies %}<span class="badge badge-neutral" data-tip="Copie d'agence détectée (signature ou titre identique dans plusieurs groupes)">Agence : {{ (v.agencies | reject("equalto", "copie") | list or ["copie reprise"]) | join(", ") }}</span>{% endif %}
             </div>
             <h3 class="tl-title">{{ e.title }}</h3>
             {% if t.follows %}
@@ -163,10 +167,23 @@
 
             <details class="tl-articles">
               <summary>
-                <span class="tl-who">{% for g in t.groups[:4] %}{{ dot(g.slot) }}{{ g.name }}{{ ", " if not loop.last }}{% endfor %}{% if t.groups | length > 4 %} +{{ t.groups | length - 4 }}{% endif %}</span>
+                <span class="tl-who">{% for g in t.who[:4] %}{{ dot(g.slot) }}{{ g.name }}{{ ", " if not loop.last }}{% endfor %}{% if t.who | length > 4 %} +{{ t.who | length - 4 }}{% endif %}</span>
                 <span class="tl-open">{% if e.n_articles == 1 %}Voir l'article{% else %}Voir les {{ e.n_articles }} articles{% endif %}</span>
               </summary>
               <div class="by-group">
+                {% for sh in t.shared %}
+                  {% set a = sh.article %}
+                  <div class="grp grp-shared">
+                    <div class="grp-name">{% for sl in sh.slots %}{{ dot(sl) }}{% endfor %}Dépêche{% if a.wire %} {{ a.wire }}{% endif %} · reprise par {{ sh.groups | join(", ") }}</div>
+                    <ul>
+                      <li>
+                        <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">{{ a.title }}</a>
+                        <span class="art-meta">{{ sh.sources | join(" · ") }} · {{ a.published_at | when }}
+                          {% if a.headline_only %}<span class="tag tag-muted">Titre seul</span>{% endif %}</span>
+                      </li>
+                    </ul>
+                  </div>
+                {% endfor %}
                 {% for g in t.groups %}
                   <div class="grp">
                     <div class="grp-name">{{ dot(g.slot) }}{{ g.name }}</div>

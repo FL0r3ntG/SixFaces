@@ -509,3 +509,5 @@ table.data, table.heat { width: 100%; border-collapse: collapse; font-size: 13px
 
 /* the same piece run by another owner: shown once, credited */
 .also { font-size: 10.5px; font-weight: 600; color: var(--muted); margin-right: 6px; white-space: nowrap; letter-spacing: 0.02em; }
+.grp-shared .grp-name { color: var(--ink-2); }
+.grp-shared .dot { margin-right: 3px; }

@@ -359,6 +359,7 @@ def refresh_event(session: Session, ev: Event, idf: Idf) -> None:
     if not arts:
         session.delete(ev)
         return
+    _reroot_shared(session, arts)
     embs = [from_bytes(a.embedding) for a in arts]
     vecs = [idf.vector(doc_text(a.title, a.summary)) for a in arts]
     ev.centroid = to_bytes(centroid(embs))
@@ -375,6 +376,25 @@ def refresh_event(session: Session, ev: Event, idf: Idf) -> None:
     ev.verification = json.dumps(verify_event(arts), ensure_ascii=False)
     ev.updated_at = utcnow()
     session.add(ev)
+
+
+def _reroot_shared(session: Session, arts: list[Article]) -> None:
+    """Of a piece run by several owners, show the richest copy: full text and photo before a headline-only
+    Google News item, then the earliest. The others point to it (same_as)."""
+    families: dict[int, list[Article]] = defaultdict(list)
+    by_id = {a.id: a for a in arts}
+    for a in arts:
+        root = a.same_as if a.same_as in by_id else a.id
+        families[root].append(a)
+    for root_id, fam in families.items():
+        if len(fam) < 2:
+            continue
+        best = min(fam, key=lambda a: (a.headline_only, a.text is None, not a.image_url, a.published_at))
+        if best.id == root_id and best.same_as is None:
+            continue
+        for a in fam:
+            a.same_as = None if a.id == best.id else best.id
+            session.add(a)
 
 
 def _vote_category(arts: list[Article]) -> str:
