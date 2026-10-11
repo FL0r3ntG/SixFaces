@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+{% from "_macros.html" import dot %}
+{% block title %}Couverture · {{ APP_NAME }}{% endblock %}
+{% block content %}
+<div class="feed-head">
+  <div>
+    <h1>Couverture comparée</h1>
+    <p class="sub">Ce que chaque groupe de presse choisit de couvrir. Seuls les articles regroupés en sujets sont comptés.</p>
+  </div>
+  <div class="seg" role="group" aria-label="Période">
+    {% for p, label in [("24h", "24 h"), ("3j", "3 jours"), ("7j", "7 jours"), ("30j", "30 jours")] %}
+      <a href="?periode={{ p }}" {% if p == periode %}aria-current="true"{% endif %}>{{ label }}</a>
+    {% endfor %}
+  </div>
+</div>
+
+<section class="panel">
+  <div class="panel-head">
+    <h2>Répartition par catégorie</h2>
+    <span class="muted">part des articles de chaque groupe, en %</span>
+  </div>
+  <div class="table-scroll">
+    <table class="heat">
+      <thead>
+        <tr><th scope="col">Groupe</th>{% for key, label in categories.items() %}<th scope="col">{{ label }}</th>{% endfor %}<th scope="col" class="num">Articles</th></tr>
+      </thead>
+      <tbody>
+        {% for row in matrix %}
+          <tr>
+            <th scope="row">{{ row.group }}</th>
+            {% for c in row.cells %}
+              {% set lvl = 0 if c.pct < 1 else (1 if c.pct < 5 else (2 if c.pct < 10 else (3 if c.pct < 20 else (4 if c.pct < 35 else 5)))) %}
+              <td class="h{{ lvl }} num" data-tip="<b>{{ row.group }}</b> · {{ categories[c.cat] }}<br>{{ c.n }} articles · {{ '%.1f' | format(c.pct) }} %">{{ '%.0f' | format(c.pct) if c.n else "–" }}</td>
+            {% endfor %}
+            <td class="num muted">{{ row.total }}</td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+  {% if small_groups %}<p class="note">Trop peu d'articles sur la période pour un pourcentage fiable (moins de 20) : {{ small_groups | join(", ") }}.</p>{% endif %}
+  <p class="note">Les catégories des médias sans rubrique exploitable (Québecor, La Presse, L'actualité) sont déduites des articles les plus semblables : à lire comme une tendance.</p>
+</section>
+
+<div class="grid-2">
+  <section class="panel">
+    <h2>Angles morts</h2>
+    <p class="note">Sujets couverts par au moins 3 groupes, mais pas du tout par ce groupe.</p>
+    {% for b in blindspots %}
+      <details class="blind" {% if loop.first %}open{% endif %}>
+        <summary><span>{{ b.group }}</span><span class="num">{{ b.n }}</span></summary>
+        {% if b.sujets %}
+          <ul>{% for s in b.sujets %}<li><a href="/sujet/{{ s.id }}">{{ s.title }}</a> <span class="muted">· {{ s.n_groups }} groupes</span></li>{% endfor %}</ul>
+        {% else %}<p class="muted">Aucun.</p>{% endif %}
+      </details>
+    {% endfor %}
+  </section>
+
+  <section class="panel">
+    <h2>Premier à publier</h2>
+    <p class="note">Sur {{ n_events_big }} événements couverts par au moins 3 groupes : combien de fois chaque groupe a publié en premier.</p>
+    <table class="data">
+      <thead><tr><th scope="col">Groupe</th><th scope="col" class="num">En premier</th><th scope="col" class="num">Présent</th><th scope="col" class="num">Taux</th></tr></thead>
+      <tbody>
+        {% for r in firsts %}
+          <tr><td>{{ r.group }}</td><td class="num">{{ r.first }}</td><td class="num">{{ r.present }}</td>
+              <td class="num"><span class="rate"><span style="width: {{ (100 * r.rate) | round }}%"></span></span>{{ (100 * r.rate) | round | int }} %</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+    <p class="note">Les heures viennent des flux des médias ; les titres via Google News (La Presse, L'actualité) peuvent arriver avec un léger retard.</p>
+  </section>
+</div>
+{% endblock %}

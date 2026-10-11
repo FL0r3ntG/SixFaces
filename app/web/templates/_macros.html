@@ -1,0 +1,59 @@
+{% macro status_badge(status, n=None) -%}
+  {%- set s = STATUS.get(status, STATUS["source_unique"]) -%}
+  <span class="badge badge-{{ s[1] }}" data-tip="{{ s[3] }}{% if n %} ({{ n }} groupe{{ 's' if n > 1 }}){% endif %}">
+    <span class="badge-icon" aria-hidden="true">{{ s[2] }}</span>{{ s[0] }}
+  </span>
+{%- endmacro %}
+
+{% macro coverage_bar(cov, tall=False) -%}
+  <div class="cov{% if tall %} cov-tall{% endif %}" role="img"
+       aria-label="Couverture : {% for s in cov.segments %}{{ s.name }} {{ s.n }}{{ ', ' if not loop.last }}{% endfor %}">
+    {%- for s in cov.segments -%}
+      <span class="cov-seg s{{ s.slot }}" style="flex-grow: {{ s.n }}"
+            data-tip="<b>{{ s.name }}</b><br>{{ s.n }} article{{ 's' if s.n > 1 }} · {{ '%.0f' | format(s.pct) }} %"></span>
+    {%- endfor -%}
+  </div>
+{%- endmacro %}
+
+{% macro dot(slot) -%}<span class="dot s{{ slot }}" aria-hidden="true"></span>{%- endmacro %}
+
+{% macro sparkline(sp) -%}
+  <svg class="spark" viewBox="0 0 100 24" preserveAspectRatio="none" role="img"
+       aria-label="Articles publiés sur 48 h, pic de {{ sp.peak }} par tranche de {{ sp.step_h | int }} h">
+    <polygon points="{{ sp.area }}" class="spark-area"/>
+    <polyline points="{{ sp.points }}" class="spark-line" vector-effect="non-scaling-stroke"/>
+  </svg>
+{%- endmacro %}
+
+{% macro legend_row() -%}
+  <ul class="legend" aria-label="Groupes de presse">
+    {% for g in legend() %}
+      <li {% if g.detail %}data-tip="{{ g.detail }}"{% endif %}>{{ dot(g.slot) }}{{ g.name }}</li>
+    {% endfor %}
+  </ul>
+{%- endmacro %}
+
+{% macro photo(c, size="card") -%}
+  {%- if c.image -%}
+  <span class="ph ph-{{ size }}">
+    <img src="{{ c.image }}" alt="" loading="lazy" decoding="async" referrerpolicy="no-referrer" onerror="this.parentNode.remove()">
+    {%- if size == "wide" %}<span class="ph-credit">Photo : {{ c.image_source }}</span>{% endif -%}
+  </span>
+  {%- endif -%}
+{%- endmacro %}
+
+{% macro cov_line(c, small=False) -%}
+  <div class="cov-line{% if small %} cov-line-sm{% endif %}">
+    {{ coverage_bar(c.coverage) }}
+    <span class="cov-n">{{ c.sujet.n_sources }} média{{ 's' if c.sujet.n_sources > 1 }} · {{ c.sujet.n_groups }} groupe{{ 's' if c.sujet.n_groups > 1 }}</span>
+  </div>
+{%- endmacro %}
+
+{% macro pill(name, slot, title=None) -%}
+  <span class="pill s{{ slot }}"{% if title %} title="{{ title }}"{% endif %}>{{ name }}</span>
+{%- endmacro %}
+
+{% macro status_mark(status) -%}
+  {%- set s = STATUS.get(status, STATUS["source_unique"]) -%}
+  <span class="mark mark-{{ s[1] }}" title="{{ s[3] }}">{{ s[2] }} {{ s[0] }}</span>
+{%- endmacro %}

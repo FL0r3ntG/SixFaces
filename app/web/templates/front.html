@@ -1,0 +1,108 @@
+{% extends "base.html" %}
+{% from "_macros.html" import status_badge, coverage_bar, dot, sparkline, legend_row, photo, pill %}
+{% block title %}À la une · {{ APP_NAME }}{% endblock %}
+{% block content %}
+<div class="front">
+  <section class="feed" aria-labelledby="feed-title">
+    <div class="feed-head">
+      <div>
+        <h1 id="feed-title">{% if cat %}{{ cat | category }}{% else %}Tous les sujets{% endif %}</h1>
+        <p class="sub">
+          {% if periode == "24h" %}Classés par importance : nombre de groupes de presse indépendants, fraîcheur, présence en une.
+          {% else %}Les plus gros sujets de la période, par nombre de groupes qui les ont couverts.{% endif %}
+        </p>
+      </div>
+      <div class="seg" role="group" aria-label="Période">
+        {% for p, label in [("24h", "24 h"), ("3j", "3 jours"), ("7j", "7 jours"), ("30j", "30 jours")] %}
+          <a href="?vue=liste&periode={{ p }}{% if cat %}&cat={{ cat }}{% endif %}" {% if p == periode %}aria-current="true"{% endif %}>{{ label }}</a>
+        {% endfor %}
+      </div>
+    </div>
+
+    <nav class="chips" aria-label="Catégories">
+      <a class="chip" href="?vue=liste&periode={{ periode }}" {% if not cat %}aria-current="true"{% endif %}>Tout</a>
+      {% for key, label in CATEGORIES.items() %}
+        {% if counts.get(key) %}
+          <a class="chip" href="?vue=liste&periode={{ periode }}&cat={{ key }}" {% if cat == key %}aria-current="true"{% endif %}>
+            {{ label }} <span class="chip-n">{{ counts[key] }}</span></a>
+        {% endif %}
+      {% endfor %}
+    </nav>
+
+    {% if not cards %}
+      <div class="empty">
+        <p><b>Aucun sujet pour l'instant.</b></p>
+        <p>La collecte tourne toutes les 15 minutes ; le regroupement suit. Voir <a href="/sources">l'état des sources</a>.</p>
+      </div>
+    {% endif %}
+
+    <ol class="cards">
+      {% for c in cards %}
+        {% set s = c.sujet %}
+        <li class="card{% if loop.index <= 3 and periode == '24h' and not cat %} card-lead{% endif %}">
+          <div class="card-rank" aria-hidden="true">{{ loop.index }}</div>
+          <a class="card-thumb" href="/sujet/{{ s.id }}" tabindex="-1" aria-hidden="true">{{ photo(c, "list") }}</a>
+          <div class="card-body">
+            <div class="card-meta">
+              <span class="cat">{{ s.category | category }}</span>
+              <span class="sep">·</span>
+              <span title="{{ s.last_at | when }}">{{ s.last_at | ago }}</span>
+              {{ status_badge(c.status, c.n_independent) }}
+              {% if c.figures_divergent %}<span class="badge badge-warn" data-tip="Les sources ne donnent pas les mêmes chiffres (bilan, blessés…). Voir le détail."><span class="badge-icon" aria-hidden="true">#</span>Chiffres divergents</span>{% endif %}
+              {% if s.n_events > 1 %}<span class="badge badge-neutral" data-tip="Ce sujet regroupe {{ s.n_events }} développements successifs">{{ s.n_events }} développements</span>{% endif %}
+            </div>
+            <h2 class="card-title"><a href="/sujet/{{ s.id }}">{{ s.title }}</a></h2>
+            {% if c.headlines %}
+              <ul class="alt-heads" aria-label="Autres titres">
+                {% for h in c.headlines %}
+                  <li>{{ pill(h.source, h.slot) }} {{ h.title }}</li>
+                {% endfor %}
+              </ul>
+            {% endif %}
+            <div class="card-cov">
+              {{ coverage_bar(c.coverage) }}
+              <div class="card-nums">
+                <span><b>{{ s.n_articles }}</b> article{{ 's' if s.n_articles > 1 }}</span>
+                <span><b>{{ s.n_sources }}</b> média{{ 's' if s.n_sources > 1 }}</span>
+                <span><b>{{ s.n_groups }}</b> groupe{{ 's' if s.n_groups > 1 }}</span>
+                {% if c.coverage.absent_major and s.n_groups >= 2 %}
+                  <span class="absent" data-tip="Grands groupes qui n'ont rien publié sur ce sujet">Absents : {{ c.coverage.absent_major | join(", ") }}</span>
+                {% endif %}
+              </div>
+            </div>
+          </div>
+          <div class="card-spark" data-tip="Articles publiés sur ce sujet, dernières 48 h">
+            {{ sparkline(c.spark) }}
+            <span class="spark-cap">48 h</span>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+
+  <aside class="side">
+    <div class="panel">
+      <h3>Groupes de presse</h3>
+      {{ legend_row() }}
+      <p class="note">Les médias d'un même propriétaire comptent pour <b>un</b> groupe : Journal de Montréal + Journal de Québec + TVA = Québecor.</p>
+    </div>
+    <div class="panel">
+      <h3>Vérification</h3>
+      <ul class="keylist">
+        {% for k in ["confirme", "corrobore", "source_unique", "depeche"] %}
+          <li>{{ status_badge(k) }}<span>{{ STATUS[k][3] }}</span></li>
+        {% endfor %}
+      </ul>
+      <p class="note">La copie d'agence (La Presse Canadienne, AFP…) reprise par plusieurs médias ne compte pas comme une confirmation indépendante.</p>
+    </div>
+    <div class="panel">
+      <h3>Dernières 24 h</h3>
+      <dl class="mini-stats">
+        <div><dt>Articles</dt><dd>{{ stats.articles_24h }}</dd></div>
+        <div><dt>Sujets</dt><dd>{{ stats.sujets_24h }}</dd></div>
+        <div><dt>En attente</dt><dd>{{ stats.pending }}</dd></div>
+      </dl>
+    </div>
+  </aside>
+</div>
+{% endblock %}

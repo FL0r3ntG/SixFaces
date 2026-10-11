@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+{% from "_macros.html" import dot, pill %}
+{% block title %}Recherche · {{ APP_NAME }}{% endblock %}
+{% block content %}
+<div class="feed-head">
+  <div>
+    <h1>Recherche{% if q %} : « {{ q }} »{% endif %}</h1>
+    <p class="sub">{% if q %}{{ results | length }} article{{ 's' if results | length != 1 }}{% if results | length == 80 %} (les 80 plus récents){% endif %}{% else %}Cherchez dans les titres et résumés.{% endif %}</p>
+  </div>
+</div>
+{% if results %}
+<section class="panel">
+  <ul class="results">
+    {% for r in results %}
+      {% set a = r.article %}
+      <li>
+        <span class="res-src">{{ pill(r.outlet.name, r.outlet.slot, r.outlet.sites | join(", ") if r.outlet.multi else None) }}</span>
+        <span class="res-when muted">{{ a.published_at | when }}</span>
+        <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">{{ a.title }}</a>
+        {% if r.sujet_id %}<a class="tag" href="/sujet/{{ r.sujet_id }}">Voir le sujet →</a>{% endif %}
+      </li>
+    {% endfor %}
+  </ul>
+</section>
+{% endif %}
+{% endblock %}

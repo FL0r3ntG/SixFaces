@@ -1,0 +1,197 @@
+{% extends "base.html" %}
+{% from "_macros.html" import status_badge, coverage_bar, dot, legend_row, photo, pill %}
+{% block title %}{{ sujet.title }} · {{ APP_NAME }}{% endblock %}
+{% block content %}
+<article class="sujet">
+  <div class="sujet-hero">
+    <div>
+      <nav class="crumbs"><a href="/">À la une</a> <span aria-hidden="true">›</span> <a href="/?cat={{ sujet.category }}">{{ sujet.category | category }}</a></nav>
+      <h1 class="sujet-title">{{ sujet.title }}</h1>
+      {% if card.lede %}<p class="sujet-lede">{{ card.lede }}</p>{% endif %}
+      <p class="sub">
+        Du {{ sujet.first_at | when }} au {{ sujet.last_at | when }} · mis à jour {{ sujet.last_at | ago }}
+        {% if sujet.n_events > 1 %}· titre du développement le plus important en ce moment{% endif %}
+      </p>
+    </div>
+    {% if card.image %}<div>{{ photo(card, "wide") }}</div>{% endif %}
+  </div>
+
+  <div class="tiles">
+    <div class="tile"><span class="tile-v">{{ sujet.n_articles }}</span><span class="tile-l">articles</span></div>
+    <div class="tile"><span class="tile-v">{{ sujet.n_sources }}</span><span class="tile-l">médias</span></div>
+    <div class="tile"><span class="tile-v">{{ sujet.n_groups }}</span><span class="tile-l">groupes de presse</span></div>
+    <div class="tile"><span class="tile-v">{{ sujet.n_events }}</span><span class="tile-l">développement{{ 's' if sujet.n_events > 1 }}</span></div>
+    <div class="tile"><span class="tile-v">{{ n_wire }}</span><span class="tile-l">dépêches d'agence</span></div>
+    <div class="tile"><span class="tile-v">{{ n_opinion }}</span><span class="tile-l">opinions / chroniques</span></div>
+  </div>
+
+  {% if n_copies %}
+    <p class="note copies-note">{{ n_copies }} reprise{{ 's' if n_copies > 1 }} du même article sur d'autres sites du même propriétaire (ex. Journal de Montréal → Journal de Québec, TVA) {{ 'ne sont' if n_copies > 1 else "n'est" }} pas comptée{{ 's' if n_copies > 1 }} : chaque article n'apparaît qu'une fois, sous le nom du groupe.</p>
+  {% endif %}
+  <div class="grid-2">
+    <section class="panel">
+      <h2>Qui en parle</h2>
+      {{ coverage_bar(coverage, tall=True) }}
+      <table class="cov-table">
+        <tbody>
+          {% for s in coverage.segments %}
+            <tr><td>{{ dot(s.slot) }}{{ s.name }}</td><td class="num">{{ s.n }}</td><td class="num muted">{{ '%.0f' | format(s.pct) }} %</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if coverage.absent_major %}
+        <p class="absent-block"><b>Absents :</b> {{ coverage.absent_major | join(", ") }}
+          <span class="muted">— aucun article de ces groupes sur ce sujet{% if n_headline_only %} (La Presse et Québecor sont suivis par titres seulement){% endif %}.</span></p>
+      {% endif %}
+    </section>
+
+    <section class="panel">
+      <h2>Course à la nouvelle</h2>
+      <p class="note">Premier article de chaque groupe, et délai par rapport au tout premier.</p>
+      <ol class="race">
+        {% for r in race %}
+          <li>
+            <span class="race-name">{{ dot(r.slot) }}{{ r.name }}</span>
+            <span class="race-bar"><span style="width: {{ [100 * r.delay_h / (race[-1].delay_h or 1), 0] | max if race | length > 1 else 0 }}%"></span></span>
+            <span class="race-t num">{% if loop.first %}{{ r.at | day }} {{ r.at | hm }}{% else %}{{ r.delay_h | hours }}{% endif %}</span>
+          </li>
+        {% endfor %}
+      </ol>
+    </section>
+  </div>
+
+  {% if volume.columns | length > 1 %}
+  <section class="panel">
+    <div class="panel-head">
+      <h2>Volume de couverture</h2>
+      <span class="muted">articles par tranche de {{ volume.step_h | int }} h{% if volume.step_h >= 24 %} (par jour){% endif %}</span>
+    </div>
+    {{ legend_row() }}
+    {% set n = volume.columns | length %}
+    {% set H = 140 %}
+    <div class="vol" role="img" aria-label="Articles par période et par groupe de presse">
+      <svg viewBox="0 0 {{ n * 24 }} {{ H + 18 }}" preserveAspectRatio="none" class="vol-svg">
+        <line x1="0" x2="{{ n * 24 }}" y1="{{ H }}" y2="{{ H }}" class="axis"/>
+        {% for col in volume.columns %}
+          {% set x = loop.index0 * 24 + 4 %}
+          <g class="vol-col" data-tip="<b>{{ col.at | when }}</b>{% for s in col.segments %}<br>{{ s.name }} : {{ s.n }}{% endfor %}{% if not col.segments %}<br>aucun article{% endif %}">
+            <rect x="{{ x - 4 }}" y="0" width="24" height="{{ H }}" class="hit"/>
+            {% for s in col.segments %}
+              {% set h = H * s.n / volume.max %}
+              {% set y = H - H * (s.y + s.n) / volume.max %}
+              <rect x="{{ x }}" y="{{ y + 1 }}" width="16" height="{{ [h - 2, 1] | max }}" rx="{{ 2 if loop.last else 0 }}" class="f{{ s.slot }}"/>
+            {% endfor %}
+          </g>
+        {% endfor %}
+      </svg>
+      <div class="vol-axis">
+        <span>{{ volume.columns[0].at | day }}, {{ volume.columns[0].at | hm }}</span><span>{{ volume.columns[-1].at | day }}, {{ volume.columns[-1].at | hm }}</span>
+      </div>
+    </div>
+  </section>
+  {% endif %}
+
+  <section class="timeline-wrap">
+    <div class="panel-head">
+      <h2>Chronologie</h2>
+      <div class="tl-tools">
+        <span class="muted">{{ timeline | length }} développement{{ 's' if timeline | length > 1 }} · le plus récent en haut</span>
+        <button type="button" class="btn-ghost btn-sm" id="toggle-articles" aria-pressed="false">Afficher tous les articles</button>
+      </div>
+    </div>
+    {% if days | length > 1 %}
+      <div class="evolution" aria-label="Évolution jour par jour">
+        <p class="evo-h">Évolution sur {{ days | length }} jours{% if n_links %} · chaîne de {{ n_links + 1 }} développements reliés de proche en proche{% endif %}</p>
+        {% set peak = days | map(attribute="articles") | max %}
+        <ol class="evo-days">
+          {% for d in days %}
+            <li>
+              <span class="evo-bar" style="--h: {{ (100 * d.articles / peak) | round }}%" title="{{ d.articles }} articles"></span>
+              <span class="evo-n">Jour {{ d.n }}</span>
+              <span class="evo-d">{{ d.date | dayname }}</span>
+              <span class="evo-c">{{ d.articles }} art. · {{ d.events }} dév. actif{{ 's' if d.events > 1 }}{% if d.new %} · {{ d.new }} nouveau{{ 'x' if d.new > 1 }}{% endif %}</span>
+            </li>
+          {% endfor %}
+        </ol>
+      </div>
+    {% endif %}
+    <ol class="timeline">
+      {% for t in timeline %}
+        {% if loop.first or t.day != timeline[loop.index0 - 1].day %}
+          <li class="tl-day-sep"><span>Jour {{ t.day_n }}</span> · {{ t.day | dayname }}</li>
+        {% endif %}
+        {% set e = t.event %}
+        {% set v = t.verification %}
+        <li class="tl-item" id="dev-{{ e.id }}">
+          <div class="tl-when">
+            <span class="tl-day">{{ e.first_at | day }}</span>
+            <span class="tl-hour">{{ e.first_at | hm }}</span>
+            {% if (e.last_at | local).date() != (e.first_at | local).date() %}<span class="tl-until">→ {{ e.last_at | day }}, {{ e.last_at | hm }}</span>{% endif %}
+          </div>
+          <div class="tl-node" aria-hidden="true"></div>
+          <div class="tl-body">
+            {% if t.image %}<div class="tl-thumb"><span class="ph"><img src="{{ t.image }}" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.parentNode.parentNode.remove()"></span></div>{% endif %}
+            <div class="tl-meta">
+              {{ status_badge(v.status, v.n_independent) }}
+              <span>{{ e.n_articles }} article{{ 's' if e.n_articles > 1 }} · {{ e.n_groups }} groupe{{ 's' if e.n_groups > 1 }}</span>
+              {% if v.agencies %}<span class="badge badge-neutral" data-tip="Copie d'agence détectée (signature ou titre identique dans plusieurs groupes)">Agence : {{ v.agencies | join(", ") | replace("copie", "copie reprise") }}</span>{% endif %}
+            </div>
+            <h3 class="tl-title">{{ e.title }}</h3>
+            {% if t.follows %}
+              <p class="tl-follows"><span aria-hidden="true">↳</span> Fait suite à
+                <a href="#dev-{{ t.follows.event.id }}">« {{ t.follows.event.title }} »</a>
+                <span class="muted">· Jour {{ t.follows.day_n }}{% if e.follows_p %} · lien {{ (100 * e.follows_p) | round | int }} %{% endif %}</span></p>
+            {% elif not loop.last %}
+              <p class="tl-follows muted">Nouveau fil dans ce sujet</p>
+            {% elif timeline | length > 1 %}
+              <p class="tl-follows muted">Point de départ de l'histoire</p>
+            {% endif %}
+            {{ coverage_bar(t.coverage) }}
+
+            {% for f in v.figures if f.divergent %}
+              <div class="figures">
+                <b>Chiffres différents : {{ f.unit }}</b>
+                <span class="muted">— un bilan qui monte avec le temps est souvent une mise à jour, pas une contradiction.</span>
+                <ul>
+                  {% for v in f.by_value %}<li><b class="num">{{ v.value }} {{ f.unit }}</b> · {{ v.sources | join(", ") }} <span class="muted">· dès {{ v.at | when }}</span></li>{% endfor %}
+                </ul>
+              </div>
+            {% endfor %}
+
+            <details class="tl-articles">
+              <summary>
+                <span class="tl-who">{% for g in t.groups[:4] %}{{ dot(g.slot) }}{{ g.name }}{{ ", " if not loop.last }}{% endfor %}{% if t.groups | length > 4 %} +{{ t.groups | length - 4 }}{% endif %}</span>
+                <span class="tl-open">{% if e.n_articles == 1 %}Voir l'article{% else %}Voir les {{ e.n_articles }} articles{% endif %}</span>
+              </summary>
+              <div class="by-group">
+                {% for g in t.groups %}
+                  <div class="grp">
+                    <div class="grp-name">{{ dot(g.slot) }}{{ g.name }}</div>
+                    <ul>
+                      {% for a in g.articles %}
+                        <li>
+                          <a href="{{ a.url }}" target="_blank" rel="noopener noreferrer">{{ a.title }}</a>
+                          <span class="art-meta">
+                            {% set o = outlets[a.id] %}
+                            {{ pill(o.name, o.slot, ("Même article publié sur : " ~ o.sites | join(", ")) if o.multi else None) }}
+                            {%- if o.multi %} <span class="tag tag-muted">{{ o.sites | length }} sites : {{ o.sites | join(" · ") }}</span>{% endif %} · {{ a.published_at | when }}
+                            {% if a.featured %}<span class="tag tag-une" title="Présent dans le fil « à la une » du média">À la une</span>{% endif %}
+                            {% if a.wire %}<span class="tag">Dépêche {{ a.wire }}</span>{% endif %}
+                            {% if a.opinion %}<span class="tag">Opinion</span>{% endif %}
+                            {% if a.headline_only %}<span class="tag tag-muted" title="Pages protégées : seul le titre est disponible">Titre seul</span>{% endif %}
+                            {% if a.lang == "en" %}<span class="tag tag-muted">EN</span>{% endif %}
+                          </span>
+                        </li>
+                      {% endfor %}
+                    </ul>
+                  </div>
+                {% endfor %}
+              </div>
+            </details>
+          </div>
+        </li>
+      {% endfor %}
+    </ol>
+  </section>
+</article>
+{% endblock %}

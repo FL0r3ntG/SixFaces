@@ -1,0 +1,22 @@
+# Six-Faces, local 24/7 run on the laptop (same setup as appart_finder).
+# Install: cp deploy/six-faces.container ~/.config/containers/systemd/ && systemctl --user daemon-reload
+# Manage: systemctl --user {status,restart,stop} six-faces ; logs: journalctl --user -u six-faces -f
+[Unit]
+Description=Six-Faces (la presse québécoise, sous toutes ses faces)
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+Image=localhost/six-faces:latest
+ContainerName=six-faces
+PublishPort=127.0.0.1:8010:8000
+Volume=%h/workspace/six_faces/data:/data:Z
+
+[Service]
+Restart=always
+RestartSec=30
+# first start downloads the embedding model
+TimeoutStartSec=600
+
+[Install]
+WantedBy=default.target

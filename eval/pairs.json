@@ -1,0 +1,4074 @@
+{
+ "about": "Hand-labelled cross-outlet article pairs (2026-10-11). E = same event (same development), S = same story, other development, N = unrelated. Labelled blind to the algorithm's output.",
+ "pairs": [
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/vive-la-musique-quebecoise---le-cri-du-cur--zero-reflechi--de-thierry-larose-qui-a-souleve-une-generation",
+    "source": "jdm",
+    "title": "« Vive la musique québécoise » : le cri du cœur « zéro réfléchi » de Thierry Larose qui a soulevé une génération"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9VNFNIQ0RXV3I1UVZqa1B3N25SanVFMFNlWG16ZEdhZ3puRUlFT3M4QlZxMEhiX1h3cVBtM0ZZV1QzeGhhM19XdGU2d0NjcGc?oc=5",
+    "source": "lapresse",
+    "title": "L’actualité autrement"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/coupe-du-monde-de-la-fifa-2030--ce-quebecois-decroche-un-contrat-historique-au-maroc",
+    "source": "jdm",
+    "title": "Coupe du monde de la FIFA 2030 : ce Québécois décroche un contrat historique au Maroc"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/about-last-night-jacob-fowler-makes-case-to-be-top-dog-in-goal-for-canadiens/",
+    "source": "gazette",
+    "title": "About Last Night: Jacob Fowler makes case to be top dog in goal for Canadiens"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/libre-opinion/1015331/il-est-temps-passer-promesses-itinerance-actes",
+    "source": "devoir",
+    "title": "Il est temps de passer des promesses en itinérance aux actes"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779521/maire-quebec-s-en-prend-a-eric-duhaime-et-sa-tribu",
+    "source": "rc",
+    "title": "Le maire de Québec s’en prend à Éric Duhaime et « sa tribu »"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/des-skis-quebecois-au-service-des-militaires-canadiens-dans-le-grand-nord-ferreol-skis-carbure-a-linnovation",
+    "source": "jdm",
+    "title": "Des skis québécois au service des militaires canadiens dans le Grand Nord: Ferreol Skis carbure à l’innovation"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780232/sebaste-toujours-boude-par-pecheurs",
+    "source": "rc",
+    "title": "Le sébaste, toujours boudé par les pêcheurs"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/plaisirs-liquides-du-long-week-end",
+    "source": "jdm",
+    "title": "Plaisirs liquides du (long) week-end"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10781061/derapages-confrontation-marchand-duhaime",
+    "source": "rc",
+    "title": "Les dérapages de la confrontation Marchand-Duhaime"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWXRzd2dIbWh1SWtUNnhJZTVpRXZyY1dkQ3RfV2prLTl6V2VxZUtvdU1QT3JKQXdzUDFDX1MyR3R1Z1JTb0NTMEZ4ME5CQVE3U3p0R2YyT2NiRHl1ZGxlaGtQZjJxNGx4YVZwR3JiVmQ2UnBPaXh0aFJlb1dqcHdVYm9pOFNoT1FKcFVyenhWaUNsdHRjbk9j?oc=5",
+    "source": "lapresse",
+    "title": "Deuxième période | Red Wings 0 – Canadien 0"
+   },
+   "b": {
+    "url": "https://www.latribune.ca/sports/sport-local/2026/10/10/georges-guilbault-se-souvient-du-vert-or-hockey-DVBAKVO5PZCANBS6O4FZRA3WLQ/",
+    "source": "tribune",
+    "title": "Georges Guilbault se souvient du Vert & Or hockey"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/idees/1015637/jeunesse-leve-parce-nous-ne-faisons-pas",
+    "source": "devoir",
+    "title": "La jeunesse se lève parce que nous ne le faisons pas"
+   },
+   "b": {
+    "url": "https://pivot.quebec/2026/10/08/qui-sont-ces-gens-que-lon-vient-delire/",
+    "source": "pivot",
+    "title": "Qui sont ces gens que l’on vient d’élire?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/canada/1015982/pierre-poilievre-fera-campagne-faveur-unite-canadienne",
+    "source": "devoir",
+    "title": "Pierre Poilievre fera campagne en faveur de l’unité canadienne"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/hockey-junior/2026/10/11/des-champions-differents-encore-cette-annee-QTX3EVDRTFBIJOC2GWMI2DKIDU/",
+    "source": "soleil",
+    "title": "Des champions différents encore cette année?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--finalement-une-victoire-pour-les-flyers",
+    "source": "jdm",
+    "title": "Ça va de mal en pis pour les Flyers"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779521/maire-quebec-s-en-prend-a-eric-duhaime-et-sa-tribu",
+    "source": "rc",
+    "title": "Le maire de Québec s’en prend à Éric Duhaime et « sa tribu »"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/lhistoire-se-repete-pour-le-canadien",
+    "source": "jdm",
+    "title": "L’histoire se répète pour le Canadien"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/opinion/idees/1015634/donner-moyens-rectifier-faits",
+    "source": "devoir",
+    "title": "Se donner les moyens de rectifier les faits"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/03/pourquoi-les-anglais-ont-echoue-a-prendre-quebec-avant-la-bataille-des-plaines-dabraham",
+    "source": "jdm",
+    "title": "Pourquoi les Anglais ont échoué à prendre Québec avant la bataille des Plaines d'Abraham"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/idees/1015325/cornell-boys-club-nous",
+    "source": "devoir",
+    "title": "Cornell, le «boys’ club» et nous"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/science/2026/10/09/robert-kennedy-des-techniques-de-desinformation-bien-etablies-IHD4LEHOE5G7XJJOQYJ54XHJPI/",
+    "source": "soleil",
+    "title": "Robert Kennedy: des techniques de désinformation bien établies"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/economie/1015190/optimiser-tourisme-affaires-retombees-durables",
+    "source": "devoir",
+    "title": "Optimiser le tourisme d’affaires pour des retombées durables"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291740/aeroports-prive-public-finances-canada",
+    "source": "rc",
+    "title": "Privatisation des aéroports : votre prochain billet d’avion coûtera-t-il plus cher?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX01LRDNndk9WbUhCY2hpOGhEZUVGWGIxUkd6ay01X0JPdXVGeHhFc2ZsSkM5MXhYS2xXVFI3WWF5c0VDam9sQkRibkhNcUdMRzZxYmZTYXNYV0Q0V2JKa1RBT2Z0UVAxUEZfdDJlaDYzdFZuTXFVX1BnWjNPNlVKdEdjWVg5SmtTM29CZDhPRGpsWjAza1VQS0wzSjZSRU9HdnB3c2k2OUNUQWFCbVFZ?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Un heureux problème de gardiens"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10780875/reconquete-territoriale-kahnawake",
+    "source": "rc",
+    "title": "La reconquête territoriale de Kahnawà:ke"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015514/duhaime-defend-museler-deputes",
+    "source": "devoir",
+    "title": "Duhaime se défend de museler ses députés"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/chroniques/konrad-sioui/2026/10/10/lalliance-ou-le-veto-PJBUUY3UDJCJNC5GZUQIHQH64M/",
+    "source": "soleil",
+    "title": "L’Alliance ou le véto"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/ni-femmes-ni-profils-exotiques-un-logiciel-de-recrutement-discriminatoire-avec-laide-de-lia",
+    "source": "jdm",
+    "title": "Ni femmes ni profils «exotiques»: un logiciel de recrutement discriminatoire avec l'aide de l'IA"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/economie/1015196/lac-epaule-changer-decor",
+    "source": "devoir",
+    "title": "Le lac-à-l’épaule pour changer de décor"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/culture/theatre/1015283/martin-genest-traces-felix-leclerc",
+    "source": "devoir",
+    "title": "Martin Genest, sur les traces de Félix Leclerc"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/long-format/2291545/fado-portugal-",
+    "source": "rc",
+    "title": "Du « pas cool d’être Portugais » au grand public : le fado trace sa voix"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/justice-et-faits-divers/2026/10/09/jardin-de-robi-le-tribunal-du-travail-declare-inoperante-la-loi-14-SSBUKCYVLRCVXCEB75CXWM4YS4/",
+    "source": "soleil",
+    "title": "Jardin de Robi: le Tribunal du travail déclare inopérante la loi 14"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10778329/un-premier-appel-constructif-entre-paul-st-pierre-plamondon-et-mark-carney",
+    "source": "rc",
+    "title": "Un premier appel « constructif » entre Paul St-Pierre Plamondon et Mark Carney"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledroit.com/affaires/2026/10/09/pertes-d-emplois-le-quebec-est-maintenant-touche-davantage-26HGE35PCJFVRCMMA4TUACVFDI/",
+    "source": "droit",
+    "title": "Pertes d'emplois: «le Québec est maintenant touché davantage»"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292019/ingerence-renseignement-scrs-rogers-espionnage",
+    "source": "rc",
+    "title": "Ingérence étrangère : le patron du renseignement canadien lance un appel à la vigilance"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi1gFBVV95cUxOS2cxQkszMERWZmFudzlQa1NpLXhpdE1GdEN5S3hmSklOOTgwZUV5Wks1enJWS2pHYWF3c1EtMTlZVV84RUJXdlRKYjYzSzV3UWlYWU1VOTU4U3hIZzVtY3huRUJHZno5clF6RjlfODRJN2YxV19lTk1FM2NqemJJVUxMMmVQRmlpV1hLd3pQTDg3YzZoMkE5WU43VXZNMklwY3RmcjhaVDRzTFhnbnRRZ1puUEI2NlJlaEktTzBTbEdNYjhQT0Nmc1lQdWNXX21KeDdNWlVR?oc=5",
+    "source": "lapresse",
+    "title": "Réponse à Trump | C’est aux Ukrainiens de choisir leur dirigeant, affirme Zelensky"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10636469/election-a-terrebonne-une-bataille-feroce-sur-terrain",
+    "source": "rc",
+    "title": "Élection à Terrebonne : une bataille féroce sur le terrain"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1015715/canadien-gaspille-avance-deux-buts-perd-contre-predators",
+    "source": "devoir",
+    "title": "Le Canadien gaspille une avance de deux buts et perd contre les Predators"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10700381/bilan-mark-carney-question-referendaire-au-quebec-et-en-alberta",
+    "source": "rc",
+    "title": "Bilan de Mark Carney : la question référendaire au Québec et en Alberta"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/des-retards-de-developpements-intenses-pourraient-marquer-les-enfants-maltraites-par-leur-beau-pere-a-granby",
+    "source": "jdm",
+    "title": "«Des retards de développements intenses» pourraient marquer les enfants maltraités par leur beau-père à Granby"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/actualites/justice-et-faits-divers/2026/10/09/contrat-bbq-mortel-mon-fils-a-ete-sacrifie-L4NHOVAQ7VHDVLWPQN2E3WGOEI/",
+    "source": "soleil",
+    "title": "«Contrat BBQ» mortel: «Mon fils a été sacrifié»"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/09/16/course-automobile--a-16-ans-ce-pilote-quebecois--est-incroyable-et-rapide",
+    "source": "jdm",
+    "title": "Course automobile : À 16 ans, ce pilote Québécois « est incroyable et rapide »"
+   },
+   "b": {
+    "url": "https://www.lequotidien.com/opinions/caricatures/2026/10/10/loeil-de-lacroix-QZHQDDGQGZAVVLCCYTYVLM3LOM/",
+    "source": "quotidien",
+    "title": "L'œil de Lacroix"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX01LRDNndk9WbUhCY2hpOGhEZUVGWGIxUkd6ay01X0JPdXVGeHhFc2ZsSkM5MXhYS2xXVFI3WWF5c0VDam9sQkRibkhNcUdMRzZxYmZTYXNYV0Q0V2JKa1RBT2Z0UVAxUEZfdDJlaDYzdFZuTXFVX1BnWjNPNlVKdEdjWVg5SmtTM29CZDhPRGpsWjAza1VQS0wzSjZSRU9HdnB3c2k2OUNUQWFCbVFZ?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Un heureux problème de gardiens"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/hockey-junior/drakkar/2026/10/10/un-dernier-tour-de-piste-pour-robin-benoit-TLHSLGWTSBBXXLT266EUFPYMCY/",
+    "source": "soleil",
+    "title": "Un dernier tour de piste pour Robin Benoit?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lequotidien.com/actualites/actualites-locales/2026/10/11/un-stationnement-a-etages-a-alma-se-refait-une-beaute-F475LBAEORCU3D3KNXCWUIFHQI/",
+    "source": "quotidien",
+    "title": "Un stationnement à étages à Alma se refait une beauté"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10780860/voyez-demolition-usine-difco",
+    "source": "rc",
+    "title": "Voyez la démolition de l’usine Difco"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/roxanne-bouchard-toutes-mes-histoires-parlent-dautre-chose-que-du-mort",
+    "source": "jdm",
+    "title": "Roxanne Bouchard: la nouvelle reine du polar québécois"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/arts/arts-visuels/expositions/2026/10/07/un-artiste-quebecois-dejoue-les-tarifs-de-trump-YYP6MEJC3RBUNEBIHGGK4GA6LE/",
+    "source": "soleil",
+    "title": "Un artiste québécois déjoue les tarifs de Trump"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/les-unites-speciales-du-canadien-en-arrachent",
+    "source": "jdm",
+    "title": "Les unités spéciales du Canadien en arrachent"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291884/debuts-tatons-moral-talons-canadien-montreal-predators-nashville",
+    "source": "rc",
+    "title": "Débuts à tâtons, moral dans les talons"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/09/echec-du-pq-a-quebec-gariepy-blame-le-troisieme-lien-KFSWP35MCJFRXFG6EILFALKNQ4/",
+    "source": "soleil",
+    "title": "Échec du PQ à Québec: Gariépy blâme le troisième lien"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10745693/chicoutimi-fjord-une-election-partielle-marquee-par-surenchere-tarifaire",
+    "source": "rc",
+    "title": "Chicoutimi–Le Fjord : une élection partielle marquée par la surenchère tarifaire"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/vive-la-musique-quebecoise---le-cri-du-cur--zero-reflechi--de-thierry-larose-qui-a-souleve-une-generation",
+    "source": "jdm",
+    "title": "« Vive la musique québécoise » : le cri du cœur « zéro réfléchi » de Thierry Larose qui a soulevé une génération"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780032/tramway-quebec-est-il-en-peril",
+    "source": "rc",
+    "title": "Le tramway de Québec est-il en péril?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10700381/bilan-mark-carney-question-referendaire-au-quebec-et-en-alberta",
+    "source": "rc",
+    "title": "Bilan de Mark Carney : la question référendaire au Québec et en Alberta"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZm5EbV9oRW9IZ1RnZ3A4UDBjT2pDY2IxUk9QMmk4QVlSN0JOMUNXZ2ZwYTdFUzYyVmk0ZmZHQkRiRFVQRE0waDI2RVhIMzFSWFlVOUFlYjlIMHBHX3ZPRE9hMDJlNkdZMV9wcW1ybVFuSUhvZ1FiWkVQcXJKd1VhYnFMUndERzZkM0FWeWtzLUFsb3h5MGducU1UcS1MU1JwV0FRRDRad3B5Zw?oc=5",
+    "source": "lactualite",
+    "title": "Élections Alberta est prête pour le vote en personne pour le référendum"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledroit.com/actualites/politique/2026/10/09/le-pq-doit-se-preparer-a-une-campagne-electorale-eventuellement-TTCB76GDKFDWHOZPRBFB27NGWY/",
+    "source": "droit",
+    "title": "Le PQ doit se préparer à une campagne électorale «éventuellement»"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10781797/gouvernement-st-pierre-plamondon-qui-seront-nouveaux-ministres-pequistes",
+    "source": "rc",
+    "title": "Gouvernement St-Pierre Plamondon : qui seront les nouveaux ministres péquistes?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/hidden-game-hockey/",
+    "source": "gazette",
+    "title": "Hidden Game: Third time’s the charm as Canadiens finally win one at the Bell Centre"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015928/congestion-routiere-pousse-electeurs-quebec-vers-pcq-croit-francois-gariepy-defait",
+    "source": "devoir",
+    "title": "La congestion routière à Québec a poussé des péquistes vers le PCQ, croit François Gariépy"
+   },
+   "b": {
+    "url": "https://www.latribune.ca/actualites/actualites-locales/estrie-et-regions/2026/10/10/quels-ont-ete-les-taux-de-participation-en-estrie-FHYYMFIAYZB6LNQCODY6NKTLR4/",
+    "source": "tribune",
+    "title": "Quels ont été les taux de participation en Estrie?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015199/nouvelle-assemblee-nationale-est-peine-paritaire-mais-moins-2022",
+    "source": "devoir",
+    "title": "L’Assemblée nationale demeure paritaire, mais comptera une députée de moins qu’en 2022"
+   },
+   "b": {
+    "url": "https://www.latribune.ca/actualites/actualites-locales/estrie-et-regions/2026/10/10/quels-ont-ete-les-taux-de-participation-en-estrie-FHYYMFIAYZB6LNQCODY6NKTLR4/",
+    "source": "tribune",
+    "title": "Quels ont été les taux de participation en Estrie?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/avec-cette-autre-bonne-performance-jacob-fowler-va-donner-des-maux-de-tete-a-la-direction-du-canadien",
+    "source": "jdm",
+    "title": "Avec cette autre bonne performance, Jacob Fowler va donner des maux de tête à la direction du Canadien"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10636469/election-a-terrebonne-une-bataille-feroce-sur-terrain",
+    "source": "rc",
+    "title": "Élection à Terrebonne : une bataille féroce sur le terrain"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxOZm5EbV9oRW9IZ1RnZ3A4UDBjT2pDY2IxUk9QMmk4QVlSN0JOMUNXZ2ZwYTdFUzYyVmk0ZmZHQkRiRFVQRE0waDI2RVhIMzFSWFlVOUFlYjlIMHBHX3ZPRE9hMDJlNkdZMV9wcW1ybVFuSUhvZ1FiWkVQcXJKd1VhYnFMUndERzZkM0FWeWtzLUFsb3h5MGducU1UcS1MU1JwV0FRRDRad3B5Zw?oc=5",
+    "source": "lactualite",
+    "title": "Élections Alberta est prête pour le vote en personne pour le référendum"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lenouvelliste.ca/affaires/affaires-locales/2026/10/10/quel-heritage-economique-pour-la-caq-dans-la-region-HLTZDEWIHNDDJI7XG7VTNDDPRA/",
+    "source": "nouvelliste",
+    "title": "Quel héritage économique pour la CAQ dans la région?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780893/a-quoi-ressemblera-relation-entre-carney-et-pspp",
+    "source": "rc",
+    "title": "À quoi ressemblera la relation entre Carney et PSPP?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/alouettes--un-match-revanche-qui-sest-fait-trop-attendre",
+    "source": "jdm",
+    "title": "Alouettes: un match revanche qui s’est fait (trop) attendre"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxPWXRzd2dIbWh1SWtUNnhJZTVpRXZyY1dkQ3RfV2prLTl6V2VxZUtvdU1QT3JKQXdzUDFDX1MyR3R1Z1JTb0NTMEZ4ME5CQVE3U3p0R2YyT2NiRHl1ZGxlaGtQZjJxNGx4YVZwR3JiVmQ2UnBPaXh0aFJlb1dqcHdVYm9pOFNoT1FKcFVyenhWaUNsdHRjbk9j?oc=5",
+    "source": "lapresse",
+    "title": "Deuxième période | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/canada/1015610/conservateurs-votent-faveur-reforme-approbation-projets",
+    "source": "devoir",
+    "title": "Les conservateurs votent en faveur de la réforme d’approbation des projets"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291855/charles-milliard-parti-liberal-reforme-mode-scrutin",
+    "source": "rc",
+    "title": "Charles Milliard ne ferme pas la porte à une réforme du mode de scrutin"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/attaque-contre-zelensky-et-entente-avec-moscou-trump-fragilise-la-credibilite-des-etats-unis-selon-un-analyste",
+    "source": "jdm",
+    "title": "Attaque contre Zelensky et entente avec Moscou: Trump fragilise la crédibilité des États-Unis, selon un analyste"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10757332/un-partenariat-100-ans-avec-ukraine",
+    "source": "rc",
+    "title": "Un partenariat de 100 ans avec l'Ukraine"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/chroniques/1015931/reparer-democratie-quebecoise-quatre-etapes-faciles",
+    "source": "devoir",
+    "title": "Réparer la démocratie québécoise en quatre étapes faciles"
+   },
+   "b": {
+    "url": "https://www.lequotidien.com/actualites/politique/2026/10/10/quaurait-donne-un-mode-de-scrutin-proportionnel-dans-la-region-NR3OMDBMPFBLFHDNHZQIESMXQI/",
+    "source": "quotidien",
+    "title": "Qu’aurait donné un mode de scrutin proportionnel dans la région?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lenouvelliste.ca/affaires/affaires-locales/2026/10/10/quel-heritage-economique-pour-la-caq-dans-la-region-HLTZDEWIHNDDJI7XG7VTNDDPRA/",
+    "source": "nouvelliste",
+    "title": "Quel héritage économique pour la CAQ dans la région?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779350/est-ce-que-parti-quebecois-pq-pourra-mettre-en-oeuvre-ses-priorites",
+    "source": "rc",
+    "title": "Est-ce que le Parti québécois (PQ) pourra mettre en œuvre ses priorités ?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/la-hausse-des-tarifs-d-electricite-ne-devrait-pas-dissuader-les-centres-de-donnees-JB7EPV73T5EEJBFA3PKKNNM3BM/",
+    "source": "soleil",
+    "title": "La hausse des tarifs d'électricité ne devrait pas dissuader les centres de données"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292224/calgary-collaboration-scientifique-energie",
+    "source": "rc",
+    "title": "L’Université de Calgary veut décloisonner la recherche sur l’électricité"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilAFBVV95cUxNQVlVWHZpUFJhSEswZ18xZkk4MS1OVmk4bG50UWcwVkRrYW42bHlJbGF6anlMVE16X1g2dVE0d1BYLWhib1pDVTdsaERKbnlwU1Q4NUMwS0ctWWxRYkcyRndvVFZYbU5CZ2dodjRBSTYzVmlFdlRsR3ZJT1JvdmctTFpPZFJYS2lrMS1OLVZacEp5Z29f?oc=5",
+    "source": "lapresse",
+    "title": "À Paris avec le trio sherbrookois 2120"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/culture/theatre/1015556/planches",
+    "source": "devoir",
+    "title": "Sur les planches"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780893/a-quoi-ressemblera-relation-entre-carney-et-pspp",
+    "source": "rc",
+    "title": "À quoi ressemblera la relation entre Carney et PSPP?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/arts/arts-visuels/expositions/2026/10/07/un-artiste-quebecois-dejoue-les-tarifs-de-trump-YYP6MEJC3RBUNEBIHGGK4GA6LE/",
+    "source": "soleil",
+    "title": "Un artiste québécois déjoue les tarifs de Trump"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780275/caricaturiste-andre-philippe-cote-presente-sa-nouvelle-exposition",
+    "source": "rc",
+    "title": "Le caricaturiste André-Philippe Côté présente sa nouvelle exposition"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.lenouvelliste.ca/opinions/parole-aux-lecteurs/2026/10/11/sacrifier-lessentiel-pour-une-vision-a-court-terme-23DEEPD7BNEZNDBYFMFSDLGN5Q/",
+    "source": "nouvelliste",
+    "title": "Sacrifier l’essentiel... pour une vision à court terme"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291835/c-39-franchit-premiere-etape-communes",
+    "source": "rc",
+    "title": "Accélération des grands projets : le PL C-39 franchit une première étape aux Communes"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016036/equipe-canadienne-soccer-feminin-soutire-nulle-danoises",
+    "source": "devoir",
+    "title": "L’équipe canadienne de soccer féminin soutire une nulle aux Danoises"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/hockey/2026/10/11/chloe-primerano-sera-le-prochain-gros-nom-dequipe-canada-QBZYCGHQVZEHDEX4IBGFEYH5PI/",
+    "source": "soleil",
+    "title": "Chloe Primerano sera le prochain gros nom d’Équipe Canada"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledroit.com/actualites/actualites-locales/ottawa/2026/10/10/sondage-sutcliffe-loin-devant-leiper-seduit-les-jeunes-et-le-centre-ville-XVGNAY3RJJDA7CBN3K5UKTPOSM/",
+    "source": "droit",
+    "title": "Sondage: Sutcliffe loin devant, Leiper séduit les jeunes et le centre-ville"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291656/hausse-taxe-foncier-candidat-maire-ottawa",
+    "source": "rc",
+    "title": "Hausse des taxes : Que proposent les candidats à la mairie d’Ottawa?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/pas-de-casier-judiciaire-pour-deux-mules-coupables-de-fraudes-grands-parents",
+    "source": "jdm",
+    "title": "Pas de casier judiciaire pour deux mules coupables de fraudes grands-parents"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxOdE1uMzdPR21WWlY1OHdTR3V6LUdKWVg0bXQtd0NjN00zNjNpMktxMDJ3NnpJVDV4b1hrZ05rQWk1N3d6MkZ0RU1uVVV5Nlp4eFUyVmh2cmwybnBMc2g4ZnhDUFZ4dU1lbm1EcGxRUHpBc3Z4UE10Y2J5YTJIQkdCRGhDLTZuQ1p0dmZ1eFVqTmNDOHlEdTVXaUJfTUd6X2d2TVA4Q3FtaTgxX0pXeW91bzlvTTdiaEhHTG43Yg?oc=5",
+    "source": "lactualite",
+    "title": "Un homme de Moncton est condamné aux États-Unis pour avoir fraudé des personnes âgées"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/visiter-la-rochelle-les-incontournables-entre-marche-des-halles-musee-maritime-et-parcours-quebec",
+    "source": "jdm",
+    "title": "Visiter La Rochelle: les incontournables entre marché des Halles, Musée maritime et Parcours Québec"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10781377/5-minutes-avec-renaud",
+    "source": "rc",
+    "title": "5 minutes avec Renaud"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/telephones-sur-haut-parleur-en-public-le-civisme-se-perd-il",
+    "source": "jdm",
+    "title": "Téléphones sur haut-parleur en public: le civisme se perd-il?"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiT0FVX3lxTE9VNFNIQ0RXV3I1UVZqa1B3N25SanVFMFNlWG16ZEdhZ3puRUlFT3M4QlZxMEhiX1h3cVBtM0ZZV1QzeGhhM19XdGU2d0NjcGc?oc=5",
+    "source": "lapresse",
+    "title": "L’actualité autrement"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/lambert-en-campagne-voici-comment-le-pq-a-construit-son-discours-de-victoire",
+    "source": "jdm",
+    "title": "«Lambert en campagne»: voici comment le PQ a construit son discours de victoire"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/opinion/libre-opinion/1015331/il-est-temps-passer-promesses-itinerance-actes",
+    "source": "devoir",
+    "title": "Il est temps de passer des promesses en itinérance aux actes"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/chroniques/konrad-sioui/2026/10/10/lalliance-ou-le-veto-PJBUUY3UDJCJNC5GZUQIHQH64M/",
+    "source": "soleil",
+    "title": "L’Alliance ou le véto"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10778329/un-premier-appel-constructif-entre-paul-st-pierre-plamondon-et-mark-carney",
+    "source": "rc",
+    "title": "Un premier appel « constructif » entre Paul St-Pierre Plamondon et Mark Carney"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMVhGNDNVcFZYY1ZNeHZhaTA3SkRBRVhLZ3FPcXZZOER4QnpzdmdLUnlMdUY3MDVsVUd5MzBjMXRHUmNCM09jSnBKUHFhN3hzM0taQjEydGVIMmpmVkk0UnQ2VVpZeFYwektXMTZHMzVUT0hEYVotNkMtLTRwQkdMVzlwSVZrTG4xR3QyNlBJcHJja1NyeEZoUHl1WTJkOXhaWmFMVDdwOE9FLVd5eWNYUUEzMEhfQ0xJN2JmRFBFWW5nVjZzOHhWZw?oc=5",
+    "source": "lapresse",
+    "title": "Séisme | Les Panaméens nettoient les décombres dans la crainte"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/seismes-nous-nous-sentons-vraiment-abandonnees-dit-une-mere-coincee-au-panama-avec-sa-fille/",
+    "source": "noovo",
+    "title": "Séismes: «Nous nous sentons vraiment abandonnées», dit une mère coincée au Panama avec sa fille"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/des-retards-de-developpements-intenses-pourraient-marquer-les-enfants-maltraites-par-leur-beau-pere-a-granby",
+    "source": "jdm",
+    "title": "«Des retards de développements intenses» pourraient marquer les enfants maltraités par leur beau-père à Granby"
+   },
+   "b": {
+    "url": "https://www.lavoixdelest.ca/actualites/justice-et-faits-divers/2026/10/09/deux-perquisitions-en-lien-avec-le-trafic-de-drogue-a-granby-QSTUCR6SHVEJTKDKBKHQTZYCWM/",
+    "source": "voixdelest",
+    "title": "Deux perquisitions en lien avec le trafic de drogue à Granby"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/editoriaux/1015640/abdication-parlementaire",
+    "source": "devoir",
+    "title": "L’abdication parlementaire"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779452/ottawa-exclura-cas-maladie-mentale-aide-medicale-a-mourir",
+    "source": "rc",
+    "title": "Ottawa exclura les cas de maladie mentale de l’aide médicale à mourir"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/trump-affirme-quil-est-temps-pour-lukraine-davoir-un-nouveau-president",
+    "source": "jdm",
+    "title": "Trump affirme qu'«il est temps pour l'Ukraine d'avoir un nouveau président»"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016102/russie-ukraine-ont-conclu-cessez-feu-energetique-selon-trump",
+    "source": "devoir",
+    "title": "La Russie et l’Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi3AFBVV95cUxOYWhXMUpsRmxoblQyTkN5ZXhrcjlKNl80SjB0WHBoUzRCZWhVSlJtaWozSTRJTjhtcnlIRmNGUG1LS2tZeGhIMGRCeUJERHltc2hhQ0RadmJhYTBLR1YyeXd2c1N6S0lNRG5zQjRIb0FlQXliTDFUMlpCZ3JianctUk9FaDRyYUl6VjZ1bk51Tk1LYkYtcThOakNqZEdHTXhMSnRVMHZ3YTllZ05KaXJ4VFBIaGdPekZtNGp0cFpkbUNaWGhhVFJPaGRPVFpEZHBTaXdCekowOHlrdy1T?oc=5",
+    "source": "lapresse",
+    "title": "Ahuntsic-Cartierville | Un homme de 21 ans victime d’une agression armée"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/patrouille/article/enquete-sur-une-agression-armee-dans-louest-de-lile-de-montreal-le-suspect-arrete/",
+    "source": "noovo",
+    "title": "Enquête sur une agression armée dans l'ouest de l'île de Montréal; le suspect arrêté"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledroit.com/actualites/politique/2026/10/09/le-pq-doit-se-preparer-a-une-campagne-electorale-eventuellement-TTCB76GDKFDWHOZPRBFB27NGWY/",
+    "source": "droit",
+    "title": "Le PQ doit se préparer à une campagne électorale «éventuellement»"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10778329/un-premier-appel-constructif-entre-paul-st-pierre-plamondon-et-mark-carney",
+    "source": "rc",
+    "title": "Un premier appel « constructif » entre Paul St-Pierre Plamondon et Mark Carney"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/linvestisseur-fute-a-laide-mon-conseiller-financier-utilise-lia",
+    "source": "jdm",
+    "title": "L’investisseur futé: à l’aide, mon conseiller financier utilise l’IA!"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/opinion/chroniques/1015895/geants-ia-sont-ils-capables-autoregulation",
+    "source": "devoir",
+    "title": "Les géants de l’IA sont-ils capables d’autorégulation ?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015928/congestion-routiere-pousse-electeurs-quebec-vers-pcq-croit-francois-gariepy-defait",
+    "source": "devoir",
+    "title": "La congestion routière à Québec a poussé des péquistes vers le PCQ, croit François Gariépy"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10780958/trois-rivieres-veut-en-finir-avec-congestions",
+    "source": "rc",
+    "title": "Trois-Rivières veut en finir avec les congestions"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/telephones-sur-haut-parleur-en-public-le-civisme-se-perd-il",
+    "source": "jdm",
+    "title": "Téléphones sur haut-parleur en public: le civisme se perd-il?"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/actualites/actualites-locales/la-capitale/2026/10/10/les-cabines-telephoniques-reliques-du-passe-mais-pas-tout-a-fait-BE4BQLZZJRGU3PGHFTCXI7HMSU/",
+    "source": "soleil",
+    "title": "Les cabines téléphoniques, reliques du passé... mais pas tout à fait"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/attaque-contre-zelensky-et-entente-avec-moscou-trump-fragilise-la-credibilite-des-etats-unis-selon-un-analyste",
+    "source": "jdm",
+    "title": "Attaque contre Zelensky et entente avec Moscou: Trump fragilise la crédibilité des États-Unis, selon un analyste"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/voici-sept-destinations-de-randonnee-accessibles-aux-debutants-partout-au-quebec",
+    "source": "jdm",
+    "title": "Voici sept destinations de randonnée accessibles aux débutants partout au Québec"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxPbkhLRmY4b2FlVWY1NklLcVBmQlhmOU9hVjNaWVIwTGo2Vnp0QmIySGl1cVRzenV4Y0o1a1Izc0FKT2Nmd0JGekxPOGwwZnRWbnZYdlJBRnJTb1BvaDBvNTlpenhWd0lyWXo4MU9JSjVCVWZobUdhbS0zUU5hLXdJcDMwcDBuQzNtUVYzN2Y4NVM3aGk0WWFqYWwyc2hOVFp5THZsSU8zMEM3TnJ3aDFoMA?oc=5",
+    "source": "lapresse",
+    "title": "Cinq destinations nature à découvrir près du REM"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/struble-deja-pret-a-aider-les-predators",
+    "source": "jdm",
+    "title": "Jayden Struble n'a «que du positif à tirer de Montréal»"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/montreal-canadiens-jayden-struble-trade-nashville-predators-9.7377118",
+    "source": "cbc",
+    "title": "Canadiens deal defenceman Struble to Predators"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi9gFBVV95cUxObXNnUDBoS1FkS2U0dENyQXJreTZpM3dhc0d1TXVuTTVHbk9pMlprXzhuVzVCZk9neTdzajQtOU1xVlN5T1BMZXF0QlVBUnB2Wk5BeWtsYWpYM0xYMTdzVW5GQXV1alRDVG9TTENaV3ZUbTZyQ1hxVXJ4Wm8yVWJvSFBrRW5jejl2azE0UWU4aFNsakd0MHlyR2NDZGJqWDV3bXd0Z3VBU055b1Z5TG5jZVVZZTlmaUJBcFNRTGQtVjJBblNORHpPWWJvQ0pvSFlZQWxjdUxCbkM0SnlLNmZZTnFmSWo3ZE9NcTJQSWY0SXFVNHBmVEE?oc=5",
+    "source": "lapresse",
+    "title": "Longueuil | Un homme possiblement armé qui s’est barricadé a été maîtrisé par les policiers"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/patrouille/article/enquete-sur-une-agression-armee-dans-louest-de-lile-de-montreal-le-suspect-arrete/",
+    "source": "noovo",
+    "title": "Enquête sur une agression armée dans l'ouest de l'île de Montréal; le suspect arrêté"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/chroniques/1015931/reparer-democratie-quebecoise-quatre-etapes-faciles",
+    "source": "devoir",
+    "title": "Réparer la démocratie québécoise en quatre étapes faciles"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/retour-de-guhle-fowler-devant-le-filet-voici-les-cinq-choses-a-surveiller-pour-ce-match-du-canadien-face-aux-red-wings",
+    "source": "jdm",
+    "title": "Retour de Guhle, Fowler devant le filet: voici les cinq choses à surveiller pour ce match du Canadien face aux Red Wings"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/canadiens-trade-jayden-struble-to-nashville-for-second-round-draft-pick/",
+    "source": "gazette",
+    "title": "Kaiden Guhle returns to Canadiens’ lineup after Jayden Struble traded to Nashville"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/present-au-party-du-pq-mathieu-lacombe-presente-ses-excuses",
+    "source": "jdm",
+    "title": "Présent au party du PQ: Mathieu Lacombe présente ses excuses"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/mathieu-lacombe-culture-minister-expelled-from-caq-9.7375931",
+    "source": "cbc",
+    "title": "CAQ culture minister booted from party after attending PQ victory rally"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015958/seront-allies-ennemis-chemin-pq-debut-session",
+    "source": "devoir",
+    "title": "Qui seront les alliés et les ennemis sur le chemin du PQ au début de la session?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291538/itinerance-sommet-gatineau-pspp-maude-marquis-bissonnette",
+    "source": "rc",
+    "title": "Sommet sur l’itinérance : Gatineau veut « un plan de match national »"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/blessure-a-samuel-montembeault-le-verdict-est-tombe",
+    "source": "jdm",
+    "title": "Blessure de Samuel Montembeault: le verdict est tombé"
+   },
+   "b": {
+    "url": "https://www.ledroit.com/sports/hockey/canadiens/2026/10/09/montembeault-absent-pour-une-periode-de-10-a-14-jours-UHY5ZCZC4ND5VJIAFECNH5TWMY/",
+    "source": "droit",
+    "title": "Montembeault absent pour une période de 10 à 14 jours"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeWxQRHRkSm50M2FRdTU0TVl1Z2VCTzd4Wlk5RktOY3VPVHdMVDdURG92azV5ZDQxQ1J0ZnZodnFIa0g4cXpsVUUwVjJfVHNWZi1ULXJpdzF5SDFqVVNnWVJxZnBUX0hnNlpvcm9jcGR0aHlSS2dqNWF2NmEwNHE5OTFFVE5fZ2NqbnVidHpvWTB5LUtJcmhrU05WTUFnMGlFV3NzSnZRX3NaMmVoM1FqVEtCd2xJZ2FpMWtqcVJWS1pNdzV6dllONUR6Vk50T0xnYXY4VGVYczNEemVBQldFUTV5cw?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Trump assure que Moscou et Kyiv ont conclu « un cessez-le-feu énergétique »"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/verification-faite/2026/10/10/acces-a-un-medecin-de-famille-discrimination-envers-les-personnes-agees-3FX4IYJQNFCUVOYH7AN3XEUDXM/",
+    "source": "soleil",
+    "title": "Accès à un médecin de famille: discrimination envers les personnes âgées?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292092/medecin-famille-outaouais-attente-pq",
+    "source": "rc",
+    "title": "Les médecins de famille se tournent vers le PQ pour mettre fin à la pénurie"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/liveblog-jacob-fowler-starts-again-for-canadiens-vs-red-wings/",
+    "source": "gazette",
+    "title": "Liveblog replay: Fans chant “we want Larkin” as Canadiens beat Red Wings 1-0 in shootout"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQjk4d0w1T3dVVWUzUHlsc3U1MWwtQ1dnbF9EMVVoRk96clVCaWk4MlhMSkRLZjdOZkZ5Z0dlUEllTmpCdk1ONTg1WHZEeHViQk53UjdKTVl5WWJ2YXNiYjktVDlCLUtXTDVqUTRqSHJWaS13cW01Q0FCbzQzU2M2WnQ1YlIzVHp4SkRtanJWT2wxc3UwRC1v?oc=5",
+    "source": "lapresse",
+    "title": "Première période | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMVhGNDNVcFZYY1ZNeHZhaTA3SkRBRVhLZ3FPcXZZOER4QnpzdmdLUnlMdUY3MDVsVUd5MzBjMXRHUmNCM09jSnBKUHFhN3hzM0taQjEydGVIMmpmVkk0UnQ2VVpZeFYwektXMTZHMzVUT0hEYVotNkMtLTRwQkdMVzlwSVZrTG4xR3QyNlBJcHJja1NyeEZoUHl1WTJkOXhaWmFMVDdwOE9FLVd5eWNYUUEzMEhfQ0xJN2JmRFBFWW5nVjZzOHhWZw?oc=5",
+    "source": "lapresse",
+    "title": "Séisme | Les Panaméens nettoient les décombres dans la crainte"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWF9neWgzWTFhTnVKNkxZc1U3TlhYWEJ4bzd5b3phRW1HVkJPWFE5Uk0wR0ROMmNfTlFETDJhSGlwcWxmdXJEQTZYdnpONVd5U0F6ZFc2anJLSGNUTk85WDQwQ24yVVpHdlZUTUhuQkszOS1UX1E2cTFEV3NPU2dvanVqWnMtREM4cmxyOXN3bi1MT1JBQjN3RFBBWjRYSFppdGdfYy1PN0c1VEVpeV9kOHpQQQ?oc=5",
+    "source": "lactualite",
+    "title": "Le Panama déclare l’état d’urgence après deux séismes et de nombreuses répliques"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOS1RJVTUtNHR5ODUtRFJGMlBaeHFWMkpSMEVWWDEtVDJPUXhVVXJhWjBXaG5uX05sSkVaclEyOENYWTBTTmwyRFNGeUVqNV9KTnJUZmN6OFp0cXdLdzdTMEFhem02VzFuUVVQeTNvYkNZWmVkNFl4bGZrT3RVTTBPclhzcVdsRG00Nkpjb2s1d0d3cDUwTGY3YWRuTXlLWHltSWR5VVgtSzB3YnNLM1E?oc=5",
+    "source": "lapresse",
+    "title": "Pourquoi Donald Trump réclame-t-il le départ de Zelensky ?"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/les-joueurs-les-plus-efficaces-du-canadien-ne-sont-pas-ceux-que-vous-pensez",
+    "source": "jdm",
+    "title": "Les joueurs les plus efficaces du Canadien ne sont pas ceux auxquels vous pensez"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291874/canadien-predators-centre-bell-fowler-saros",
+    "source": "rc",
+    "title": "Le Canadien gaspille une avance de deux buts et s’incline devant les Predators"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeWxQRHRkSm50M2FRdTU0TVl1Z2VCTzd4Wlk5RktOY3VPVHdMVDdURG92azV5ZDQxQ1J0ZnZodnFIa0g4cXpsVUUwVjJfVHNWZi1ULXJpdzF5SDFqVVNnWVJxZnBUX0hnNlpvcm9jcGR0aHlSS2dqNWF2NmEwNHE5OTFFVE5fZ2NqbnVidHpvWTB5LUtJcmhrU05WTUFnMGlFV3NzSnZRX3NaMmVoM1FqVEtCd2xJZ2FpMWtqcVJWS1pNdzV6dllONUR6Vk50T0xnYXY4VGVYczNEemVBQldFUTV5cw?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Trump assure que Moscou et Kyiv ont conclu « un cessez-le-feu énergétique »"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292147/allemagne-ue-sanctions-russie-diesel-trump",
+    "source": "rc",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/attaque-contre-zelensky-et-entente-avec-moscou-trump-fragilise-la-credibilite-des-etats-unis-selon-un-analyste",
+    "source": "jdm",
+    "title": "Attaque contre Zelensky et entente avec Moscou: Trump fragilise la crédibilité des États-Unis, selon un analyste"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeFl5S2RKX0RsQ1RxX050YVJvMHRzZjZoVjZiYlc2YUdTM1VvMUdMa2RHNEdMVGNVNEFNM2pUWjVVU3BiRFE4cWE1Q1FjRzVyWFpBRlgxYzZPNUtyc1hXbWJBaHZuRlMwb1Y2UUNWcUFRODAzNzZXNk1RM2RZeWZ4dmItTlk2VGNsUXd0UFNsZGxuRjREdGVmRTdscDdNR2NKbzlqS0MxZE1adFFjcHR2UnhkVmwzOFdrbnNZMVRMNFhxaGVQVFZDZXlSOXpERTlNR2ZJTHhlVy1taFhySWd0a2ZaTUJEbW1SdEhKNlVn?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Zelensky pose ses conditions pour cesser les frappes sur les raffineries russes"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMllsUnFTTUlsaUUxUUxPamVfd3dSRklfX0wya0hnQlFpRXJkYjVkU3dEVDRmQ1hjWUJrWFg5azVhdGpIYV91dVptNURpSDF4Y3FEZG1hd3owTXZOZC1TZDR2a1BvVmdKU29LQTczR2ZWbFp6ZHFNNjZIRVo2VWtodnhsTzltUlBmX3VvbVJSb3l1NktEWHlyTw?oc=5",
+    "source": "lapresse",
+    "title": "Troisième période | Red Wings 0 – Canadien 0"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291784/gouverneure-generale-louise-arbour-pspp",
+    "source": "rc",
+    "title": "La gouverneure générale doute que PSPP puisse abolir la monarchie au Québec"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/opinion/letters-to-the-editor/letters-no-pspp-we-are-not-all-in-the-same-boat/",
+    "source": "gazette",
+    "title": "Letters: No, PSPP, we are not all in the same boat"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/actualites/environnement/1016009/cinq-defis-environnementaux-relever-gouvernement-parti-quebecois",
+    "source": "devoir",
+    "title": "Cinq défis environnementaux à relever pour le gouvernement du Parti québécois"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780878/apres-vague-conservatrice-pari-risque-eric-duhaime",
+    "source": "rc",
+    "title": "Après la vague conservatrice, le pari risqué d'Éric Duhaime"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292147/allemagne-ue-sanctions-russie-diesel-trump",
+    "source": "rc",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNb21vTmJBcTJTcjFwX0t3Sm5YR3Q3NURsMDJ5LUN1bFE5ODdxSFZRd19GRS16WFctVmxvN3pudS1sWW1ETTI3ZGo1UUxCSVFLQlBZNkQxcGFodzhraWszd09fU1VBWGRHN2JtN1Z5czllUUktNWFtMnd6X04xb0JkWWhyTnVBM1pxNzFDU2E3VGtMRmVDdmRmT0I5TUdvdWV4SnhlVHotdkY?oc=5",
+    "source": "lactualite",
+    "title": "Kyiv rejette l’appel de Trump en faveur d’un nouveau président ukrainien"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.noovo.info/nouvelles/sport/canadiens/article/toujours-legalite-au-centre-bell/",
+    "source": "noovo",
+    "title": "Rédemption pour Bolduc après trois buts refusés"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONk1mZDR2YTFvamRQVFgwSTZQZHA5LXl3ODZBUUk3eTJ0M3M1aDIySU8zcTZEdF9fbzR3Qi1WYlpqbDdSckNqVWdEeFlQaGxNd0NjNUEzc3RaY1EwclRZSFlWM0o1ODJVcmprbExTTGg0YjlzT0J0TWxSU1RqTEp1YXFpQUZyTmkwV1NJZHlidzNxWXhVSnZF?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Relisez notre couverture en direct"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilgFBVV95cUxPUlM4T1BDTGhRQ3kxYldoa2tLMTczTmhzMEh6VUZhUGQ3QU0xdERaYXp5X3RLcTMyMVJsU0hjZGE2c0dUVVVGdG5WVy1jTThiNllwQ0E0NTVySnRzTEpVSy16ZkFEaXMzR282NGxYUFJaa3QtUlRxdlVWRFdXaUpiSHNDZ3RZbmxIOG9wVHVWSFdJSGJDbEE?oc=5",
+    "source": "lapresse",
+    "title": "Tirs de barrage | Red Wings 0 – Canadien 0"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirgFBVV95cUxOS1RJVTUtNHR5ODUtRFJGMlBaeHFWMkpSMEVWWDEtVDJPUXhVVXJhWjBXaG5uX05sSkVaclEyOENYWTBTTmwyRFNGeUVqNV9KTnJUZmN6OFp0cXdLdzdTMEFhem02VzFuUVVQeTNvYkNZWmVkNFl4bGZrT3RVTTBPclhzcVdsRG00Nkpjb2s1d0d3cDUwTGY3YWRuTXlLWHltSWR5VVgtSzB3YnNLM1E?oc=5",
+    "source": "lapresse",
+    "title": "Pourquoi Donald Trump réclame-t-il le départ de Zelensky ?"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016048/frappes-russes-zaporijjia-ont-fait-15-morts-samedi",
+    "source": "devoir",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONk1mZDR2YTFvamRQVFgwSTZQZHA5LXl3ODZBUUk3eTJ0M3M1aDIySU8zcTZEdF9fbzR3Qi1WYlpqbDdSckNqVWdEeFlQaGxNd0NjNUEzc3RaY1EwclRZSFlWM0o1ODJVcmprbExTTGg0YjlzT0J0TWxSU1RqTEp1YXFpQUZyTmkwV1NJZHlidzNxWXhVSnZF?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Relisez notre couverture en direct"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292213/canadien-montreal-fowler-red-wings",
+    "source": "rc",
+    "title": "Le Canadien renoue avec la victoire, Fowler blanchit les Red Wings"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/le-musee-provincial-ancetre-du-musee-national-des-beaux-arts-du-quebec-celebre-son-centieme-anniversaire",
+    "source": "jdm",
+    "title": "Le «Musée provincial», ancêtre du Musée national des beaux-arts du Québec, célèbre son centième anniversaire"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780598/visite-gouverneure-generale-au-musee-saint-boniface",
+    "source": "rc",
+    "title": "Visite de la gouverneure générale au Musée de Saint-Boniface"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/08/ma-legitimite-est-plus-grosse-que-la-tienne",
+    "source": "jdm",
+    "title": "Ma légitimité est plus grosse que la tienne"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQTVg4eDZocEhoY3p6U0VrVTRoNTdmOHhuZTV3eEl0ZmZpckNURHdWYS1ZdWR5Qzl6X1FoOFlRV2Ffekk1M3dOZmRYV05MX25JQUwyTEoxd0VBRVdjTi1TUFlpYktjc1RQVHNfYkxEQWN5WXZTR2s5N3VVNkRMV3ZXdnlzWnhGTFpmeGVwc0FrVTZCcXlQY3YwanNwQUlKYnVk?oc=5",
+    "source": "lapresse",
+    "title": "A-t-on encore besoin de la CAQ ? Et du TGV ?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016066/cf-montreal-laisse-filer-avance-arrets-jeu-perd-toronto",
+    "source": "devoir",
+    "title": "Le CF Montréal laisse filer son avance dans les arrêts de jeu et perd à Toronto"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291884/debuts-tatons-moral-talons-canadien-montreal-predators-nashville",
+    "source": "rc",
+    "title": "Débuts à tâtons, moral dans les talons"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/sport/canadiens/article/toujours-legalite-au-centre-bell/",
+    "source": "noovo",
+    "title": "Rédemption pour Bolduc après trois buts refusés"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/retour-de-guhle-fowler-devant-le-filet-voici-les-cinq-choses-a-surveiller-pour-ce-match-du-canadien-face-aux-red-wings",
+    "source": "jdm",
+    "title": "Retour de Guhle, Fowler devant le filet: voici les cinq choses à surveiller pour ce match du Canadien face aux Red Wings"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/nos-predictions-pour-la-semaine-5-dans-la-nfl-des-choc-au-sommet-mettant-en-vedette-49ers-seahawks-et-bills-rams",
+    "source": "jdm",
+    "title": "Nos prédictions pour la semaine 5 dans la NFL: des chocs au sommet mettant en vedette 49ers-Seahawks et Bills-Rams"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/chroniques/matthew-bergeron/2026/10/11/le-monde-de-la-nfl-vu-par-matthew-bergeron-les-subtilites-dun-appel-de-jeu-au-football-OZ4YQQGPCZF7VNJA6Q3O2MI2KY/",
+    "source": "soleil",
+    "title": "Le monde de la NFL vu par Matthew Bergeron: les subtilités d’un appel de jeu au football"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.noovo.info/nouvelles/international/monde-sous-tension/article/larabie-saoudite-prolonge-la-fermeture-dun-aeroport-apres-une-attaque-meurtriere/",
+    "source": "noovo",
+    "title": "L'Arabie saoudite prolonge la fermeture d'un aéroport après une attaque meurtrière"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOE1zc3ozbG9aXzJEWGkya0F6OUh1WG1mVFZDT1prRWstR3NDMG5Zb3BvNHZEeWlhVXhVVEN3MWM2dmI1SlpwNU9vb1JnYVlJNEJBYmVTbjZ0NTB3enV0ZFl6SU5JWnVOdEpNWVJTQjRPeG9ZTElaTnB6dUNZOHo3cWZEWkd6TU1lb1EyaHNlTHRmMTR5TXBhaFNCTzdUSllmWVNMRHpGV2Y?oc=5",
+    "source": "lapresse",
+    "title": "Nouvelle frappe sur l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/la-hausse-des-tarifs-d-electricite-ne-devrait-pas-dissuader-les-centres-de-donnees-JB7EPV73T5EEJBFA3PKKNNM3BM/",
+    "source": "soleil",
+    "title": "La hausse des tarifs d'électricité ne devrait pas dissuader les centres de données"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10781136/n-e-a-t-elle-moyens-heberger-un-centre-donnees",
+    "source": "rc",
+    "title": "La N.-É. a-t-elle les moyens d’héberger un centre de données?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/une-intervention-policiere-en-cours-a-longueuil-en-raison-de-menaces",
+    "source": "jdm",
+    "title": "Un homme arrêté après une importante intervention policière à Longueuil"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMizAFBVV95cUxNZjFrV1J0RVRuRVN1TzFBeDFNQW1QbTVlR1F4Q2RNaDZScEdWV1NlcXZjSldQNVFqQUJ5cVYwOTEwZDg4dWE1V0VsR2dRN0pMTUdtZDRaZEhTZlBPMzhHaHlETGtDaUtfUk1EamNLOS1BTWFsNVNVWXVKWEcxQlF6VFFCd19rTUF3aDZHNk1EVmY5S3dJOGUzN0FDS3gwaDg4ajN1ZnZTRlFfME8wYXVuNWdaa184MEVWVzM0N2JIYTFWVkJJOHR3YnFuQjA?oc=5",
+    "source": "lapresse",
+    "title": "Longueuil | Intervention policière majeure après des menaces"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779350/est-ce-que-parti-quebecois-pq-pourra-mettre-en-oeuvre-ses-priorites",
+    "source": "rc",
+    "title": "Est-ce que le Parti québécois (PQ) pourra mettre en œuvre ses priorités ?"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/5-points-a-surveiller-cette-semaine-dans-la-nfl-un-nombre-record-dequipes-toujours-en-quete-dune-victoire",
+    "source": "jdm",
+    "title": "5 points à surveiller cette semaine dans la NFL: un nombre record d'équipes toujours en quête d'une victoire"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/chroniques/matthew-bergeron/2026/10/11/le-monde-de-la-nfl-vu-par-matthew-bergeron-les-subtilites-dun-appel-de-jeu-au-football-OZ4YQQGPCZF7VNJA6Q3O2MI2KY/",
+    "source": "soleil",
+    "title": "Le monde de la NFL vu par Matthew Bergeron: les subtilités d’un appel de jeu au football"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/gouvernement-st-pierre-plamondon-voici-des-elus-pequistes-ministrables",
+    "source": "jdm",
+    "title": "Gouvernement St-Pierre Plamondon: Voici des élus péquistes ministrables"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10778329/un-premier-appel-constructif-entre-paul-st-pierre-plamondon-et-mark-carney",
+    "source": "rc",
+    "title": "Un premier appel « constructif » entre Paul St-Pierre Plamondon et Mark Carney"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/la-hausse-des-tarifs-d-electricite-ne-devrait-pas-dissuader-les-centres-de-donnees-JB7EPV73T5EEJBFA3PKKNNM3BM/",
+    "source": "soleil",
+    "title": "La hausse des tarifs d'électricité ne devrait pas dissuader les centres de données"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780170/hausse-tarifs-electricite-demande-energie-nb-mal-recue",
+    "source": "rc",
+    "title": "Hausse des tarifs d'électricité : la demande d'Énergie NB mal reçue"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/alouettes--un-match-revanche-qui-sest-fait-trop-attendre",
+    "source": "jdm",
+    "title": "Alouettes: un match revanche qui s’est fait (trop) attendre"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292094/alouettes-montreal-roughriders--saskatchwan-novembre",
+    "source": "rc",
+    "title": "Les Alouettes attendaient ce match contre les Roughriders depuis novembre"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/canadiens-trade-jayden-struble-to-nashville-for-second-round-draft-pick/",
+    "source": "gazette",
+    "title": "Kaiden Guhle returns to Canadiens’ lineup after Jayden Struble traded to Nashville"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/europe/1016048/frappes-russes-zaporijjia-ont-fait-15-morts-samedi",
+    "source": "devoir",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNb21vTmJBcTJTcjFwX0t3Sm5YR3Q3NURsMDJ5LUN1bFE5ODdxSFZRd19GRS16WFctVmxvN3pudS1sWW1ETTI3ZGo1UUxCSVFLQlBZNkQxcGFodzhraWszd09fU1VBWGRHN2JtN1Z5czllUUktNWFtMnd6X04xb0JkWWhyTnVBM1pxNzFDU2E3VGtMRmVDdmRmT0I5TUdvdWV4SnhlVHotdkY?oc=5",
+    "source": "lactualite",
+    "title": "Kyiv rejette l’appel de Trump en faveur d’un nouveau président ukrainien"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/les-houthis-renouvellent-leurs-menaces-contre-les-aeroports-saoudiens-au-lendemain-de-lattaque-meurtriere-a-ryad",
+    "source": "jdm",
+    "title": "Les Houthis renouvellent leurs menaces contre les aéroports saoudiens, au lendemain de l’attaque meurtrière à Riyad"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292175/blesses-aeroport-riyad-tir-missile-houthis",
+    "source": "rc",
+    "title": "Au moins 12 morts dans une attaque imputée aux Houthis contre l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10757406/mark-carney-repond-a-appel-volodymyr-zelensky",
+    "source": "rc",
+    "title": "Mark Carney répond à l’appel de Volodymyr Zelensky"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdnlYcDVrUDhpd0FzQWgzYk1NWFZzcThWUVIzcnZNamtGa2Q5czFkanFXdUhicWk5a3lmV0RlSXlMeDJ1UWVrMUVrZjR6d1pmN2JseDNqWVZyWFFYNW9KdjlBZktSWnNqSE5oQXFNcHZ5cktCQTdEYzdMNngycHMxRElOYlh0QTZQdUJzM2IwUmM5SEgyczVwbnI5UFR1dlFETWtsbG1sQ0hxT3lYYTYyZ3A5Q3lkd3ItTXE5cl9sdVBoVzRjR2VsMEg5WHc5MXNvd0VnY0ptVHhjOERaOWdnemZR?oc=5",
+    "source": "lapresse",
+    "title": "Arrondissement de Pierrefonds-Roxboro | Un homme poignardé, le suspect arrêté"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/actualites/justice/1016090/enquete-agression-armee-ouest-ile-montreal",
+    "source": "devoir",
+    "title": "Enquête sur une agression armée dans l’ouest de l’île de Montréal"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/libre-opinion/1015331/il-est-temps-passer-promesses-itinerance-actes",
+    "source": "devoir",
+    "title": "Il est temps de passer des promesses en itinérance aux actes"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-quebecoises-coincees-au-panama-apres-un-puissant-seisme",
+    "source": "jdm",
+    "title": "Des Québécoises coincées au Panama après un puissant séisme"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/11/le-panama-declare-l-etat-d-urgence-apres-deux-seismes-et-de-nombreuses-repliques-IVPJK4GHRNERTCBOBY62C3XRS4/",
+    "source": "soleil",
+    "title": "Séismes: le Panama déclare l’état d’urgence"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/la-facture-d-electricite-pourrait-s-alourdir-pour-les-centres-de-donnees-5AEVHKRGWJEABGUWNKTJ35OVPE/",
+    "source": "soleil",
+    "title": "La facture d'électricité pourrait s'alourdir pour les centres de données"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10781136/n-e-a-t-elle-moyens-heberger-un-centre-donnees",
+    "source": "rc",
+    "title": "La N.-É. a-t-elle les moyens d’héberger un centre de données?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQjk4d0w1T3dVVWUzUHlsc3U1MWwtQ1dnbF9EMVVoRk96clVCaWk4MlhMSkRLZjdOZkZ5Z0dlUEllTmpCdk1ONTg1WHZEeHViQk53UjdKTVl5WWJ2YXNiYjktVDlCLUtXTDVqUTRqSHJWaS13cW01Q0FCbzQzU2M2WnQ1YlIzVHp4SkRtanJWT2wxc3UwRC1v?oc=5",
+    "source": "lapresse",
+    "title": "Première période | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/struble-deja-pret-a-aider-les-predators",
+    "source": "jdm",
+    "title": "Jayden Struble n'a «que du positif à tirer de Montréal»"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/hockey/canadiens/2026/10/10/transaction-de-jayden-struble-je-ne-mattendais-pas-a-ca-4BHAWNQZ5NFGPIAI4L5JIPE3UE/",
+    "source": "soleil",
+    "title": "Transaction de Jayden Struble: «Je ne m’attendais pas à ça»"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/un-homme-de-21-ans-blesse-par-un-objet-tranchant-a-ahuntsic-cartierville",
+    "source": "jdm",
+    "title": "Un homme de 21 ans blessé par un objet tranchant à Ahuntsic-Cartierville"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/patrouille/article/enquete-sur-une-agression-armee-dans-louest-de-lile-de-montreal-le-suspect-arrete/",
+    "source": "noovo",
+    "title": "Enquête sur une agression armée dans l'ouest de l'île de Montréal; le suspect arrêté"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015958/seront-allies-ennemis-chemin-pq-debut-session",
+    "source": "devoir",
+    "title": "Qui seront les alliés et les ennemis sur le chemin du PQ au début de la session?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779350/est-ce-que-parti-quebecois-pq-pourra-mettre-en-oeuvre-ses-priorites",
+    "source": "rc",
+    "title": "Est-ce que le Parti québécois (PQ) pourra mettre en œuvre ses priorités ?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMikgFBVV95cUxNOXZlZk1iMTAwbjRwNy0xZ3ZTSlB6N2ZfaVpRamJpWk5jQTZna3JmX3VycjdXNHp6RTAxMEIxU09wUEZGRkhZemlSNUtMaXplMmp5N0FSWXRDSTg2dGltVHRzZmhoT0FfNm9zTi1acE9fcHlPQ3ZkTXA1d0lNM1JHeDFrTkU4RWlpMnZ2SVZBelNhdw?oc=5",
+    "source": "lapresse",
+    "title": "Prolongation | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/mort-par-peloton-dexecution-diffusee-en-direct-la-decision-du-pentagone-souleve-lindignation",
+    "source": "jdm",
+    "title": "Mort par peloton d’exécution diffusée en direct: la décision du Pentagone soulève l'indignation"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/09/vance-exprime-des-doutes-quant-au-projet-de-diffuser-une-execution-en-direct-SRASPFF66FE57I4TJ34LJ4CQNI/",
+    "source": "soleil",
+    "title": "Vance exprime des doutes sur la diffusion d’une exécution en direct"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/trump-annonce-un-cessez-le-feu-energetique-entre-lukraine-et-la-russie",
+    "source": "jdm",
+    "title": "Trump annonce un «cessez-le-feu énergétique» entre l’Ukraine et la Russie"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeFl5S2RKX0RsQ1RxX050YVJvMHRzZjZoVjZiYlc2YUdTM1VvMUdMa2RHNEdMVGNVNEFNM2pUWjVVU3BiRFE4cWE1Q1FjRzVyWFpBRlgxYzZPNUtyc1hXbWJBaHZuRlMwb1Y2UUNWcUFRODAzNzZXNk1RM2RZeWZ4dmItTlk2VGNsUXd0UFNsZGxuRjREdGVmRTdscDdNR2NKbzlqS0MxZE1adFFjcHR2UnhkVmwzOFdrbnNZMVRMNFhxaGVQVFZDZXlSOXpERTlNR2ZJTHhlVy1taFhySWd0a2ZaTUJEbW1SdEhKNlVn?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Zelensky pose ses conditions pour cesser les frappes sur les raffineries russes"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.tvanouvelles.ca/2026/10/09/chefferie-de-la-caq-qui-pourrait-remplacer-christine-frechette",
+    "source": "tva",
+    "title": "Chefferie de la CAQ: qui pourrait remplacer Christine Fréchette?"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015904/christine-frechette-aurait-ete-poussee-falaise-verre-lors-elections",
+    "source": "devoir",
+    "title": "Christine Fréchette aurait été poussée de la «falaise de verre» lors des élections"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/la-plupart-des-gens-etaient-inquiets-certains-pleuraient--un-puissant-seisme-surprend-des-quebecoises-installees-au-panama",
+    "source": "jdm",
+    "title": "«La plupart des gens étaient inquiets, certains pleuraient»: un puissant séisme surprend des Québécoises installées au Panama"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/ameriques/1016051/puissant-seisme-provoque-importants-degats-panama",
+    "source": "devoir",
+    "title": "Un puissant séisme provoque d’importants dégâts au Panama"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/actualites/1015784/ouvert-ou-ferme-action-grace",
+    "source": "devoir",
+    "title": "Ouvert ou fermé à l’Action de grâce?"
+   },
+   "b": {
+    "url": "https://www.latribune.ca/actualites/actualites-locales/estrie-et-regions/2026/10/11/ouvert-ou-ferme-a-laction-de-grace-AN7USU5HLVD5ZGWS4XKRDE7YTA/",
+    "source": "tribune",
+    "title": "Ouvert ou fermé à l’Action de grâce"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292239/canadien-montreal-en-rodage-red-wings-detroit-bolduc-fowler",
+    "source": "rc",
+    "title": "Le Canadien encore en rodage, mais récompensé"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUGRFWm16cklZTXNCVHYtYlJuQU9xV2NfNnN3TDhHeG1SU1BVME5BVHRWZzE4eTVrTmdIZEVEUDZuUFBYeXhrZERKeDY4MUQ5cEE1a3ZUMGE0WUdvbzFCUVZzT1dLN20zNU1GcU42ZUFuZE9QcFMzLWtfV0xTUThXcFh6WU4tek45ZjFjS1Y2VlZUM3VJQmUtUlVPbVFmZ1ctWTdFbWh6eWJ5bmNfcVhZeEdkb1lKUFhyaWU5akhzb1VPSE9LWnlrbEZmR1F1dw?oc=5",
+    "source": "lapresse",
+    "title": "La tempête Isaias s’affaiblit après avoir frappé la Floride, deux mort"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292150/ouragan-isais-cyclone-etats-unis-cyclone",
+    "source": "rc",
+    "title": "La tempête Isaias fait quatre morts dans le sud des États-Unis"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/seisme-au-panama--les-participants-doccupation-double-sont-sains-et-saufs",
+    "source": "jdm",
+    "title": "Séisme au Panama: les participants d'«Occupation double» sont sains et saufs"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWF9neWgzWTFhTnVKNkxZc1U3TlhYWEJ4bzd5b3phRW1HVkJPWFE5Uk0wR0ROMmNfTlFETDJhSGlwcWxmdXJEQTZYdnpONVd5U0F6ZFc2anJLSGNUTk85WDQwQ24yVVpHdlZUTUhuQkszOS1UX1E2cTFEV3NPU2dvanVqWnMtREM4cmxyOXN3bi1MT1JBQjN3RFBBWjRYSFppdGdfYy1PN0c1VEVpeV9kOHpQQQ?oc=5",
+    "source": "lactualite",
+    "title": "Le Panama déclare l’état d’urgence après deux séismes et de nombreuses répliques"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lenouvelliste.ca/actualites/2026/10/11/jean-pellerin-a-du-pain-sur-la-planche-N4AGUL5KYJAUTKN3UQGL62UK2M/",
+    "source": "nouvelliste",
+    "title": "Jean Pellerin a du pain sur la planche"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292076/conseil-des-ministres-deputes-assermentation",
+    "source": "rc",
+    "title": "Le Conseil des ministres du PQ sera présenté le 21 octobre"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/trump-annonce-un-cessez-le-feu-energetique-entre-lukraine-et-la-russie",
+    "source": "jdm",
+    "title": "Trump annonce un «cessez-le-feu énergétique» entre l’Ukraine et la Russie"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292147/allemagne-ue-sanctions-russie-diesel-trump",
+    "source": "rc",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/la-plupart-des-gens-etaient-inquiets-certains-pleuraient--un-puissant-seisme-surprend-des-quebecoises-installees-au-panama",
+    "source": "jdm",
+    "title": "«La plupart des gens étaient inquiets, certains pleuraient»: un puissant séisme surprend des Québécoises installées au Panama"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/seismes-nous-nous-sentons-vraiment-abandonnees-dit-une-mere-coincee-au-panama-avec-sa-fille/",
+    "source": "noovo",
+    "title": "Séismes: «Nous nous sentons vraiment abandonnées», dit une mère coincée au Panama avec sa fille"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/jayden-struble-echange-aux-predators",
+    "source": "jdm",
+    "title": "Jayden Struble échangé aux Predators"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/hockey/canadiens/2026/10/10/transaction-de-jayden-struble-je-ne-mattendais-pas-a-ca-4BHAWNQZ5NFGPIAI4L5JIPE3UE/",
+    "source": "soleil",
+    "title": "Transaction de Jayden Struble: «Je ne m’attendais pas à ça»"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/retour-de-guhle-fowler-devant-le-filet-voici-les-cinq-choses-a-surveiller-pour-ce-match-du-canadien-face-aux-red-wings",
+    "source": "jdm",
+    "title": "Retour de Guhle, Fowler devant le filet: voici les cinq choses à surveiller pour ce match du Canadien face aux Red Wings"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledroit.com/actualites/politique/2026/10/09/le-pq-doit-se-preparer-a-une-campagne-electorale-eventuellement-TTCB76GDKFDWHOZPRBFB27NGWY/",
+    "source": "droit",
+    "title": "Le PQ doit se préparer à une campagne électorale «éventuellement»"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/quebec-elections/pq-leader-potential-election-campaign-swearing-in-cabinet/",
+    "source": "gazette",
+    "title": "PQ leader urges party to stay ‘mobilized’ for a potential election campaign"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/08/musk-en-faveur-de-lindependance-du-quebec-une-sortie-pour-renouveler-sa-bromance-avec-trump",
+    "source": "jdm",
+    "title": "Musk en faveur de l’indépendance du Québec: une sortie pour renouveler sa «bromance» avec Trump"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780293/panel]-est-ce-qu-elon-musk-veut-menacer-unite-canadienne",
+    "source": "rc",
+    "title": "[PANEL] Est-ce qu'Elon Musk veut menacer l'unité canadienne?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMVhGNDNVcFZYY1ZNeHZhaTA3SkRBRVhLZ3FPcXZZOER4QnpzdmdLUnlMdUY3MDVsVUd5MzBjMXRHUmNCM09jSnBKUHFhN3hzM0taQjEydGVIMmpmVkk0UnQ2VVpZeFYwektXMTZHMzVUT0hEYVotNkMtLTRwQkdMVzlwSVZrTG4xR3QyNlBJcHJja1NyeEZoUHl1WTJkOXhaWmFMVDdwOE9FLVd5eWNYUUEzMEhfQ0xJN2JmRFBFWW5nVjZzOHhWZw?oc=5",
+    "source": "lapresse",
+    "title": "Séisme | Les Panaméens nettoient les décombres dans la crainte"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/09/un-seisme-de-magnitude-7-7-secoue-le-panama-provoquant-des-evacuations-OWPCD3CTUJD7FEXIMEINMG6ROQ/",
+    "source": "soleil",
+    "title": "Un séisme de magnitude 7,7 secoue le Panama, provoquant des évacuations"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/les-houthis-renouvellent-leurs-menaces-contre-les-aeroports-saoudiens-au-lendemain-de-lattaque-meurtriere-a-ryad",
+    "source": "jdm",
+    "title": "Les Houthis renouvellent leurs menaces contre les aéroports saoudiens, au lendemain de l’attaque meurtrière à Riyad"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaHZMSkpXN2xzWXBVM1p5bThFZExiRWdDM0VBY2F3d3o1UHhpY0Q1aFIwY0JSNjRzTnhZaE5odVFTZS1nUWhCdUxNanBGNjhCNVBuNlZRYjNwZ1IzMTlqLUpoOFJfUzhacHY2RkR3aGJNaDQ5SUM5WTJDSXlLUGVobWFWV1VrMV9xcl9PUGYwakE1Z2hhNHhnd014eW84b1pqM3czbjNJNy1wWV90MHBvcEg3VmRSeXItQ0c5eHFB?oc=5",
+    "source": "lapresse",
+    "title": "Un nouveau projectile aurait frappé l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/la-hausse-des-tarifs-d-electricite-ne-devrait-pas-dissuader-les-centres-de-donnees-JB7EPV73T5EEJBFA3PKKNNM3BM/",
+    "source": "soleil",
+    "title": "La hausse des tarifs d'électricité ne devrait pas dissuader les centres de données"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10779085/vers-une-hausse-tarifs-electricite-174",
+    "source": "rc",
+    "title": "Vers une hausse des tarifs d’électricité de 17,4 %?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxONk1mZDR2YTFvamRQVFgwSTZQZHA5LXl3ODZBUUk3eTJ0M3M1aDIySU8zcTZEdF9fbzR3Qi1WYlpqbDdSckNqVWdEeFlQaGxNd0NjNUEzc3RaY1EwclRZSFlWM0o1ODJVcmprbExTTGg0YjlzT0J0TWxSU1RqTEp1YXFpQUZyTmkwV1NJZHlidzNxWXhVSnZF?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Relisez notre couverture en direct"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQjk4d0w1T3dVVWUzUHlsc3U1MWwtQ1dnbF9EMVVoRk96clVCaWk4MlhMSkRLZjdOZkZ5Z0dlUEllTmpCdk1ONTg1WHZEeHViQk53UjdKTVl5WWJ2YXNiYjktVDlCLUtXTDVqUTRqSHJWaS13cW01Q0FCbzQzU2M2WnQ1YlIzVHp4SkRtanJWT2wxc3UwRC1v?oc=5",
+    "source": "lapresse",
+    "title": "Première période | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/marathon-beneva-de-montreal-plus-de-35-000-coureurs-rassembles-en-2-jours",
+    "source": "jdm",
+    "title": "Marathon Beneva de Montréal: plus de 35 000 coureurs rassemblés en deux jours"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/montreal-marathon-2026-road-closures-9.7375346",
+    "source": "cbc",
+    "title": "Montreal marathon road closures to be aware of this weekend"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/linvestisseur-fute-a-laide-mon-conseiller-financier-utilise-lia",
+    "source": "jdm",
+    "title": "L’investisseur futé: à l’aide, mon conseiller financier utilise l’IA!"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxNOW5jLVpDQ2IzbHFKOTBYWTNaRnFsdG56RjhJakhjTExYN0NoYk8zZG5ON0xhZUJGQnVmc0NyX1lkRmM0ZzBLYkJ4bk9qZHR3YXdxWkE2RTdyN0hVRUowUkJSZVBoR0tiRE1WQmN5ZWVyclhaSWR3MXJjRGk4WDNzUG10U1ZjTkVaSTJMM29udVEwR0x2Z2R1VUdIdlJuZ1NqV09wcHR0WjhsUjVnd2xR?oc=5",
+    "source": "lapresse",
+    "title": "L’investisseur avisé | Un vendeur chez Power Corporation"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292150/ouragan-isais-cyclone-etats-unis-cyclone",
+    "source": "rc",
+    "title": "La tempête Isaias fait quatre morts dans le sud des États-Unis"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQRFBPZV9jVmZ6VXV1bVdwX01HTHlhZnVISzJRa0NadkRDWmRqRTVIMXlqZURXb01waHRMbFRzeG5sOFo1TEFfRl9jQ1IwLVBoYk5yS280Vm1MV0lteUtOSFQyZG1DaC0yZkl2RG9YaXpGLV93dVA3MmRnbXZwWjNUUEkzd0xaaFlYaTA5YUpDSEFGVlFSX19meEJwZHNNd2VCZ2FXMlV2azdWbFIxY2RCUXdFWG5ZX2M?oc=5",
+    "source": "lactualite",
+    "title": "Isaias s’affaiblit, mais le risque de marées et de tornades menace les États du sud"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/une-premiere-victoire-pour-auger-aliassime-avec-son-nouvel-entraineur",
+    "source": "jdm",
+    "title": "Une première victoire pour Auger-Aliassime avec son nouvel entraîneur"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292154/felix-auger-aliassime-masters-shanghai",
+    "source": "rc",
+    "title": "Félix Auger-Aliassime passe au troisième tour du Masters de Shanghai"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHhiTjNteVJfS0N1a2lOQkpyNFQzZnhBUGlGQm9tNWcwYTZkWEFwRWg0ajFmajIwZjFhbVltaEhTOFBJZ0hWdjFwUlhjQkV6OFlNZDdmdDhkbm9fT0ZCckJRRmdvOHAzNDN2OGZ6Y09xbmVWWXVPMG95YVQ5bUFKX19GRDFrRWNxQlB2c2ZDQ2NMeHBjRGhxbHU0V29wRjZ4VngtQnlLZy1Gb1VQM3RNRGRuSlhDNExQN2xvbG5hbnN1dEdOZ1E?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Zachary Bolduc joue les héros en tirs de barrage"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/sport/canadiens/article/toujours-legalite-au-centre-bell/",
+    "source": "noovo",
+    "title": "Rédemption pour Bolduc après trois buts refusés"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/11/une-attaque-a-l-aeroport-international-de-riyad-fait-12-morts-et-plus-de-300-blesses-LS6P74LPYVENJD5WWDDHQV6UVM/",
+    "source": "soleil",
+    "title": "Une attaque à l'aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/monde-sous-tension/article/larabie-saoudite-prolonge-la-fermeture-dun-aeroport-apres-une-attaque-meurtriere/",
+    "source": "noovo",
+    "title": "L'Arabie saoudite prolonge la fermeture d'un aéroport après une attaque meurtrière"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/affaire-thelyson-orelien-et-lia",
+    "source": "jdm",
+    "title": "Affaire Thélyson Orélien et l'IA"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291523/thelyson-orelien-prix-renaudot",
+    "source": "rc",
+    "title": "C’était ça ou mourir, de Thélyson Orélien, reste en lice pour le prix Renaudot"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/hockey/2026/10/10/une-victoire-pour-les-enfants-de-la-region-ZSJYDLUHNNFFRHHEXVFE4W33VI/",
+    "source": "soleil",
+    "title": "Stützle et Chabot verseront 1872 $ pour chaque victoire des Sénateurs"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291878/senateurs-ottawa-rentree-locale-thomas-chabot",
+    "source": "rc",
+    "title": "Rentrée locale émouvante et victorieuse des Sénateurs"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/jacob-fowler-ecrit-une-page-dhistoire-du-canadien",
+    "source": "jdm",
+    "title": "Jacob Fowler écrit une page d’histoire du Canadien"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaFRrMlBUYzFBazZRdmRsdmZabHdaZWplRnQ2T2lhNEFvaE5DNThZRzJyR2k4SnhWcWg1VUVpMThoVDA5T2JleVA5ZU91U1p2NXdrTUVZcGxHUlE2cVBpTEZIYmNOUlpUeVcwUVg5cGZTbEZRRS1Ta0NEakpuTDBHaU5PenZHNkFuUWowekRTWnlxTVg0Ym9PYzNSWUVNMmVwSDNHbk1fdzV2VUdlMXRr?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings – Canadien | Guhle de retour, Fowler devant le filet"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZTBCcFJkb0ZfWVNqdkg1d2FtNVhvU0ZBMzJRQlBlRzBCZE1lZ1ZUVTdVcFBnTVdMMHRvbk52a0NkRVdxbllEd0NJaDBuTGNQQ1hnUzJOZTlOcy1kX3V6eDRRMGktOTdtWDE3Y1ltSUF0VDU1U2tOMnktQVhTWE9NTVFkdmF2dHh6NkIzY0JXTkJEUU9YR0N5MFJITExpMEpSc3NsR1RTTlQ1VDV5WnNlYXNJNUZ1eU96Sm9sOG5DZXg?oc=5",
+    "source": "lapresse",
+    "title": "C’est aux Ukrainiens de choisir leur dirigeant, affirme Zelensky"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016048/frappes-russes-zaporijjia-ont-fait-15-morts-samedi",
+    "source": "devoir",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMVhGNDNVcFZYY1ZNeHZhaTA3SkRBRVhLZ3FPcXZZOER4QnpzdmdLUnlMdUY3MDVsVUd5MzBjMXRHUmNCM09jSnBKUHFhN3hzM0taQjEydGVIMmpmVkk0UnQ2VVpZeFYwektXMTZHMzVUT0hEYVotNkMtLTRwQkdMVzlwSVZrTG4xR3QyNlBJcHJja1NyeEZoUHl1WTJkOXhaWmFMVDdwOE9FLVd5eWNYUUEzMEhfQ0xJN2JmRFBFWW5nVjZzOHhWZw?oc=5",
+    "source": "lapresse",
+    "title": "Séisme | Les Panaméens nettoient les décombres dans la crainte"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/ameriques/1016051/puissant-seisme-provoque-importants-degats-panama",
+    "source": "devoir",
+    "title": "Un puissant séisme provoque d’importants dégâts au Panama"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.cbc.ca/news/canada/montreal/pq-minority-government-sworn-in-9.7376650",
+    "source": "cbc",
+    "title": "PQ to take power as legal battle over oath to King continues"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/quebec-elections/pq-leader-potential-election-campaign-swearing-in-cabinet/",
+    "source": "gazette",
+    "title": "PQ leader urges party to stay ‘mobilized’ for a potential election campaign"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxPSEdUSm1GNWp1NmdqWkQ0S3J1T3BOZVRtNjlaNTM0RklmNmFXQk56WEY5TVhJbUljeDdqemJkcURTaGgyNWpuZ1ROOHJKVTMxQ1FqeWVGdTNjUjIwOHZxckxBWUp4aFY1MGQzMV9oUHY2Q09QQ2ZJVzRPeUd1Z2dsU1ZsLXRvaVJFdGhJSUMxZzdTZ1hNZVdtV2FHV200eEZ2d09TTFVuVWNKeVNaZU1N?oc=5",
+    "source": "lapresse",
+    "title": "Alberta | Des Québécois replongés dans un référendum"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292193/danielle-smith-referendum-alberta-independance",
+    "source": "rc",
+    "title": "Danielle Smith écarte l’idée d’un 2e référendum en Alberta si l’option fédéraliste gagne"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/retour-de-guhle-fowler-devant-le-filet-voici-les-cinq-choses-a-surveiller-pour-ce-match-du-canadien-face-aux-red-wings",
+    "source": "jdm",
+    "title": "Retour de Guhle, Fowler devant le filet: voici les cinq choses à surveiller pour ce match du Canadien face aux Red Wings"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHhiTjNteVJfS0N1a2lOQkpyNFQzZnhBUGlGQm9tNWcwYTZkWEFwRWg0ajFmajIwZjFhbVltaEhTOFBJZ0hWdjFwUlhjQkV6OFlNZDdmdDhkbm9fT0ZCckJRRmdvOHAzNDN2OGZ6Y09xbmVWWXVPMG95YVQ5bUFKX19GRDFrRWNxQlB2c2ZDQ2NMeHBjRGhxbHU0V29wRjZ4VngtQnlLZy1Gb1VQM3RNRGRuSlhDNExQN2xvbG5hbnN1dEdOZ1E?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Zachary Bolduc joue les héros en tirs de barrage"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291874/canadien-predators-centre-bell-fowler-saros",
+    "source": "rc",
+    "title": "Le Canadien gaspille une avance de deux buts et s’incline devant les Predators"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/canada/1015511/souverainete-veulent-quebecois-est-rapport-geants-web-repond-carney",
+    "source": "devoir",
+    "title": "La souveraineté que veulent les Québécois est par rapport aux géants du Web, répond Carney"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291802/carney-musk-avenir-canada-decision-canadiens",
+    "source": "rc",
+    "title": "Carney répond à Musk que l’avenir du Canada dépend seulement des Canadiens"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/igor-shesterkin-se-tord-de-douleur",
+    "source": "jdm",
+    "title": "Igor Shesterkin se tord de douleur"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMivwFBVV95cUxNVTFVZWJiYmIteFhwM3pHZGxoNE5KbUhUNlFvSmNfT1J1ck9YUm9sZTFOY1dkOFBfMExMLVNDQjgwSUFGSHl1eHh1V3F5SEl0VTRrWnFlM0pCTDh3WThOWlNjNkRsRG9HTUgwT2V1WFFaMTNKcURZSDNqNGhuR0xya2dWQy1fS3VfTFEtS053QnNrb2x3TVU5QnZnMG1NWWFBOENpcG4zY3RtSFl5d0lscGtleExybVhIQUFuSXVTSQ?oc=5",
+    "source": "lapresse",
+    "title": "Rangers de New York | La saison du gardien Igor Shesterkin est terminée"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/un-seisme-de-magnitude-76-secoue-le-panama",
+    "source": "jdm",
+    "title": "Un puissant séisme provoque d'importants dégâts matériels au Panama"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/le-panama-declare-letat-durgence-apres-deux-seismes-et-de-nombreuses-repliques/",
+    "source": "noovo",
+    "title": "Le Panama déclare l'état d'urgence après deux séismes et de nombreuses répliques"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016099/max-verstappen-remporte-grand-prix-singapour-formule-1",
+    "source": "devoir",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291952/f1-qualifs-sprint-singapour-verstappen",
+    "source": "rc",
+    "title": "Verstappen partira en tête de la course sprint à Singapour"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/trump-affirme-que-poutine-aimerait-voir-un-reglement-avec-lukraine",
+    "source": "jdm",
+    "title": "Trump affirme que Poutine «aimerait voir un règlement» avec l'Ukraine"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/musiqc-devoile-quatre-listes-de-lecture-pour-courir",
+    "source": "jdm",
+    "title": "Voici les meilleures chansons québécoises pour courir le Marathon de Montréal"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNdjRqTmJKN2FXYTMwYW5NODRYYS1yY3ppRWJnOVF3QllJMEJadjR1ck5tM2pYZ08wLVNUWEJUdzRtbldMb194bWItZk12THV0X1NRYlVxc1RfOUxvWTBfWUNTXzNLYXVYUmhRV2RFNGZNMDJTTlA1MUJpcHQzeGU2SHdBMDRoZ3A1bE1rX2JraHVQYXhqOE9wMm02UzhtOGhXNXdGWDQ4LXlxdWJDUndTQU0yNlV2SnFHTm5vaWRpc1VtOXFuREpiWl9xYW10ZU1YaXYwRTlJaFNfaEdmN1czTm1UcUhoeWhHWXc?oc=5",
+    "source": "lapresse",
+    "title": "Marathon de Montréal | Les entraves à surveiller pour éviter les coureurs et les fermetures"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-quebecoises-coincees-au-panama-apres-un-puissant-seisme",
+    "source": "jdm",
+    "title": "Des Québécoises coincées au Panama après un puissant séisme"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/09/un-seisme-de-magnitude-7-7-secoue-le-panama-provoquant-des-evacuations-OWPCD3CTUJD7FEXIMEINMG6ROQ/",
+    "source": "soleil",
+    "title": "Un séisme de magnitude 7,7 secoue le Panama, provoquant des évacuations"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292213/canadien-montreal-fowler-red-wings",
+    "source": "rc",
+    "title": "Le Canadien renoue avec la victoire, Fowler blanchit les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/le-rocket-fait-sa-loi-a-springfield",
+    "source": "jdm",
+    "title": "Le Rocket fait sa loi à Springfield"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMioAFBVV95cUxQZlNwa0tDbnZlcWpaek4tUkpXaUVUX3VHdnVJWHIyd3hXcG51SWhuNEtQLTRHWHRnY1lZbUo1R2ttNnBiV1VhUC1Bb1FEZTZwU2hkem4tdjlXSHhsS1FVOFd6UzJRU1E2QzY3QnBPNDRlXzJWV2c5WE9FYmU2eVg0dlhCX3F3WVBxQm9VV01qWDc4VkxQdW5aM09ZMVptRngx?oc=5",
+    "source": "lapresse",
+    "title": "Le Rocket signe une deuxième victoire de suite"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX01LRDNndk9WbUhCY2hpOGhEZUVGWGIxUkd6ay01X0JPdXVGeHhFc2ZsSkM5MXhYS2xXVFI3WWF5c0VDam9sQkRibkhNcUdMRzZxYmZTYXNYV0Q0V2JKa1RBT2Z0UVAxUEZfdDJlaDYzdFZuTXFVX1BnWjNPNlVKdEdjWVg5SmtTM29CZDhPRGpsWjAza1VQS0wzSjZSRU9HdnB3c2k2OUNUQWFCbVFZ?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Un heureux problème de gardiens"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://ici.radio-canada.ca/sports/2291952/f1-qualifs-sprint-singapour-verstappen",
+    "source": "rc",
+    "title": "Verstappen partira en tête de la course sprint à Singapour"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/sport/article/max-verstappen-remporte-le-grand-prix-de-singapour-de-formule-1/",
+    "source": "noovo",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/08/tramway-de-quebec-eric-duhaime-evoque-desormais-une--voie-de-passage",
+    "source": "jdm",
+    "title": "Tramway de Québec: Éric Duhaime évoque désormais une «voie de passage»"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780032/tramway-quebec-est-il-en-peril",
+    "source": "rc",
+    "title": "Le tramway de Québec est-il en péril?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi4gFBVV95cUxQdnlYcDVrUDhpd0FzQWgzYk1NWFZzcThWUVIzcnZNamtGa2Q5czFkanFXdUhicWk5a3lmV0RlSXlMeDJ1UWVrMUVrZjR6d1pmN2JseDNqWVZyWFFYNW9KdjlBZktSWnNqSE5oQXFNcHZ5cktCQTdEYzdMNngycHMxRElOYlh0QTZQdUJzM2IwUmM5SEgyczVwbnI5UFR1dlFETWtsbG1sQ0hxT3lYYTYyZ3A5Q3lkd3ItTXE5cl9sdVBoVzRjR2VsMEg5WHc5MXNvd0VnY0ptVHhjOERaOWdnemZR?oc=5",
+    "source": "lapresse",
+    "title": "Arrondissement de Pierrefonds-Roxboro | Un homme poignardé, le suspect arrêté"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/news/man-stabbed-in-pierrefonds-roxboro-early-sunday/",
+    "source": "gazette",
+    "title": "Man stabbed in Pierrefonds-Roxboro early Sunday"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNb21vTmJBcTJTcjFwX0t3Sm5YR3Q3NURsMDJ5LUN1bFE5ODdxSFZRd19GRS16WFctVmxvN3pudS1sWW1ETTI3ZGo1UUxCSVFLQlBZNkQxcGFodzhraWszd09fU1VBWGRHN2JtN1Z5czllUUktNWFtMnd6X04xb0JkWWhyTnVBM1pxNzFDU2E3VGtMRmVDdmRmT0I5TUdvdWV4SnhlVHotdkY?oc=5",
+    "source": "lactualite",
+    "title": "Kyiv rejette l’appel de Trump en faveur d’un nouveau président ukrainien"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/le-conseil-des-ministres-pequiste-devoile-le-21-octobre",
+    "source": "jdm",
+    "title": "Le Conseil des ministres péquiste dévoilé le 21 octobre"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10781797/gouvernement-st-pierre-plamondon-qui-seront-nouveaux-ministres-pequistes",
+    "source": "rc",
+    "title": "Gouvernement St-Pierre Plamondon : qui seront les nouveaux ministres péquistes?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/igor-shesterkin-se-tord-de-douleur",
+    "source": "jdm",
+    "title": "Igor Shesterkin se tord de douleur"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292179/la-saison-du-gardien-des-rangers-igor-shesterkin-est-terminee",
+    "source": "rc",
+    "title": "La saison du gardien des Rangers Igor Shesterkin est terminée"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQjk4d0w1T3dVVWUzUHlsc3U1MWwtQ1dnbF9EMVVoRk96clVCaWk4MlhMSkRLZjdOZkZ5Z0dlUEllTmpCdk1ONTg1WHZEeHViQk53UjdKTVl5WWJ2YXNiYjktVDlCLUtXTDVqUTRqSHJWaS13cW01Q0FCbzQzU2M2WnQ1YlIzVHp4SkRtanJWT2wxc3UwRC1v?oc=5",
+    "source": "lapresse",
+    "title": "Première période | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZFhpZEwyRnNyYngtSzc5Y05ETVU1QnFrWW9WNXQ4WDhoRERRcDB6b29fWTRLYmtUVFMtYzc3cEdoSXNPbWZfdk1ZRjl4RmtEdUJMLWZSYmtXdnZqQ2d6eVN3WTV4NEpCUkU5R2ZqazBlLTJLci1HNzdyRGNvUWplM0ZCVmFwV1VzUnByTEYySFhkY3NzWHloYVVHU2ljRFhEUHRYdU9UR1UwTkpWT2NlNUFOa2l3elVm?oc=5",
+    "source": "lactualite",
+    "title": "L’aéroport de la capitale saoudienne de nouveau pris pour cible, selon les autorités"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOE1zc3ozbG9aXzJEWGkya0F6OUh1WG1mVFZDT1prRWstR3NDMG5Zb3BvNHZEeWlhVXhVVEN3MWM2dmI1SlpwNU9vb1JnYVlJNEJBYmVTbjZ0NTB3enV0ZFl6SU5JWnVOdEpNWVJTQjRPeG9ZTElaTnB6dUNZOHo3cWZEWkd6TU1lb1EyaHNlTHRmMTR5TXBhaFNCTzdUSllmWVNMRHpGV2Y?oc=5",
+    "source": "lapresse",
+    "title": "Nouvelle frappe sur l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/struble-deja-pret-a-aider-les-predators",
+    "source": "jdm",
+    "title": "Jayden Struble n'a «que du positif à tirer de Montréal»"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/2026/10/09/le-canadien-de-montreal-echange-le-defenseur-jayden-struble-aux-predators-EH35K7ZZ3ZDPXNVV6A4QGC7MRU/",
+    "source": "soleil",
+    "title": "Le Canadien échange le défenseur Jayden Struble aux Predators"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/monde/2026/10/09/un-seisme-de-magnitude-7-7-secoue-le-panama-provoquant-des-evacuations-OWPCD3CTUJD7FEXIMEINMG6ROQ/",
+    "source": "soleil",
+    "title": "Un séisme de magnitude 7,7 secoue le Panama, provoquant des évacuations"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxNWF9neWgzWTFhTnVKNkxZc1U3TlhYWEJ4bzd5b3phRW1HVkJPWFE5Uk0wR0ROMmNfTlFETDJhSGlwcWxmdXJEQTZYdnpONVd5U0F6ZFc2anJLSGNUTk85WDQwQ24yVVpHdlZUTUhuQkszOS1UX1E2cTFEV3NPU2dvanVqWnMtREM4cmxyOXN3bi1MT1JBQjN3RFBBWjRYSFppdGdfYy1PN0c1VEVpeV9kOHpQQQ?oc=5",
+    "source": "lactualite",
+    "title": "Le Panama déclare l’état d’urgence après deux séismes et de nombreuses répliques"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMimAFBVV95cUxQMllsUnFTTUlsaUUxUUxPamVfd3dSRklfX0wya0hnQlFpRXJkYjVkU3dEVDRmQ1hjWUJrWFg5azVhdGpIYV91dVptNURpSDF4Y3FEZG1hd3owTXZOZC1TZDR2a1BvVmdKU29LQTczR2ZWbFp6ZHFNNjZIRVo2VWtodnhsTzltUlBmX3VvbVJSb3l1NktEWHlyTw?oc=5",
+    "source": "lapresse",
+    "title": "Troisième période | Red Wings 0 – Canadien 0"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://montrealgazette.com/news/norovirus-warning-expands-to-nine-more-montreal-area-bakeries/",
+    "source": "gazette",
+    "title": "Norovirus warning expands to nine more Montreal-area bakeries"
+   },
+   "b": {
+    "url": "https://journalmetro.com/actualites/3230122/norovirus-dans-des-patisseries-aux-framboises-des-boulangeries-ange-mise-en-gard/",
+    "source": "metro",
+    "title": "Norovirus dans des pâtisseries des boulangeries Ange"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/trump-affirme-que-poutine-aimerait-voir-un-reglement-avec-lukraine",
+    "source": "jdm",
+    "title": "Trump affirme que Poutine «aimerait voir un règlement» avec l'Ukraine"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016102/russie-ukraine-ont-conclu-cessez-feu-energetique-selon-trump",
+    "source": "devoir",
+    "title": "La Russie et l’Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledroit.com/actualites/sante/2026/10/09/deux-cas-de-rougeole-sous-enquete-a-ottawa-KLQCBNSBYFHMTEH65PQ3BD3FLI/",
+    "source": "droit",
+    "title": "Deux cas de rougeole sous enquête à Ottawa"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291859/rougeole-avis-ottawa-sante-publique-exposition",
+    "source": "rc",
+    "title": "Un avis d’exposition à la rougeole émis à Ottawa"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/lasik-md-coupe-les-ponts-avec-lophtalmologiste-qui-serait-implique-dans-un-reseau-de-prostitution",
+    "source": "jdm",
+    "title": "LASIK MD coupe les ponts avec l'ophtalmologiste qui serait impliqué dans un réseau de prostitution"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292227/mounir-bashour-enquete-lasikmd",
+    "source": "rc",
+    "title": "Lasik MD annonce le congédiement du Dr Mounir Bashour"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/monde/2026/10/10/isaias-s-affaiblit-mais-le-risque-de-marees-et-de-tornades-menace-les-etats-du-sud-KLW4TAAYBRARFMI2MV35R7PHPM/",
+    "source": "soleil",
+    "title": "Isaias s’affaiblit, mais le risque de marées et de tornades menace les États du sud"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292150/ouragan-isais-cyclone-etats-unis-cyclone",
+    "source": "rc",
+    "title": "La tempête Isaias fait quatre morts dans le sud des États-Unis"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/canada/1015601/carney-annonce-eventuelle-subvention-jusqu-10-000-achat-thermopompe",
+    "source": "devoir",
+    "title": "Carney annonce une éventuelle subvention jusqu’à 10 000$ pour l’achat d’une thermopompe"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780280/ottawa-entend-reduire-ges-entrevue-avec-ministre-melanie-joly",
+    "source": "rc",
+    "title": "Ottawa entend réduire les GES : entrevue avec la ministre Mélanie Joly"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/monde/2026/10/10/isaias-touche-terre-sur-la-cote-americaine-en-tant-qu-ouragan-de-categorie-2-2YDCFKQS5JF5ZPRF5TDKU573EM/",
+    "source": "soleil",
+    "title": "Isaias touche terre sur la côte américaine en tant qu’ouragan de catégorie 2"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291902/ouragan-isaias-menace-sud-etats-unis",
+    "source": "rc",
+    "title": "L’ouragan Isaias a touché terre dans le sud des États-Unis"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/moyen-orient/1016057/aeroport-riyad-nouveau-pris-cible-selon-autorites",
+    "source": "devoir",
+    "title": "Une attaque à l’aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/conflit-moyen-orient/article/laeroport-de-la-capitale-saoudienne-de-nouveau-pris-pour-cible-selon-les-autorites/",
+    "source": "noovo",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l’aéroport de Ryad"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/actualites/1016078/homme-meurt-apres-avoir-ete-attaque-tigre-zoo-britannique",
+    "source": "devoir",
+    "title": "Un homme meurt après avoir été attaqué par un tigre dans un zoo britannique"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqgFBVV95cUxPWUtVb2c0bmRveHhibjd5TTRLWEJBVnBMX1Y2LURFXzM2VUxEWUVnRnZNdW5YRV91YTQ1eVlud2ItaG5lQmhuZUk3b3E0MXFQaEt0SXFTQVkyWXd2Y3EyWTdvNS1mM1JFdkdXZFM1MU9yZ1dCSUllSzFaTExqUF90cXpTRGdJZ2FHQXdQeFgyM0JoRGdWejhzX0xpc1NjY2VrUHJfQ2R4dklkQQ?oc=5",
+    "source": "lactualite",
+    "title": "Un tigre a tué un homme qui s’était introduit dans l’enclos en Angleterre"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/10/verstappen-remporte-l-epreuve-du-sprint-au-gp-de-f1-de-singapour-sous-la-pluie-DMN6S6DLKZDPVDDEI2CNRCBFOI/",
+    "source": "soleil",
+    "title": "Max Verstappen réalise le doublé avec la position de tête et la victoire au sprint"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQNXRpamlkb2FrcXhKV2U5RHJ6S1dXcGdjZlVHdW0tMHdtSjk0Y05RdzBfWmRTa01EMHBPdDd2OU1iZ3dOZkFSaW9lZ016T0dwX2tLbER3YnNzMVZZUnNhRTNsMEVWVHZfcGh3OUJyWXVUd3oxNEtHN1gtdWtBdlk2bDRfVm5zU2RnXzJYU2tZbm1PQk1TNlZuQ3JibUx5RmFZdU8tNlJId1E4ZWZfRURiZ1FCcTFCNlJGVjE3Ym9TZDl6c2hFaE5JX3gta0x1S0lUR3FtT1BQbDJsVGdManN3SXhkeVFJM3NXREdsQ1B0UlNRRm0tazBxWG5GNW1oQQ?oc=5",
+    "source": "lapresse",
+    "title": "Grand Prix de Singapour | Verstappen conclut un week-end parfait, Antonelli creuse son avance au championnat"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/jacob-fowler-ecrit-une-page-dhistoire-du-canadien",
+    "source": "jdm",
+    "title": "Jacob Fowler écrit une page d’histoire du Canadien"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292239/canadien-montreal-en-rodage-red-wings-detroit-bolduc-fowler",
+    "source": "rc",
+    "title": "Le Canadien encore en rodage, mais récompensé"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016036/equipe-canadienne-soccer-feminin-soutire-nulle-danoises",
+    "source": "devoir",
+    "title": "L’équipe canadienne de soccer féminin soutire une nulle aux Danoises"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292141/canadiennes-verdict-nul-danoises-soccer",
+    "source": "rc",
+    "title": "Les Canadiennes soutirent un verdict nul aux Danoises"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/la-saison-de-shesterkin-deja-terminee",
+    "source": "jdm",
+    "title": "La saison de Shesterkin déjà terminée"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292179/la-saison-du-gardien-des-rangers-igor-shesterkin-est-terminee",
+    "source": "rc",
+    "title": "La saison du gardien des Rangers Igor Shesterkin est terminée"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/sports/2292213/canadien-montreal-fowler-red-wings",
+    "source": "rc",
+    "title": "Le Canadien renoue avec la victoire, Fowler blanchit les Red Wings"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxOQjk4d0w1T3dVVWUzUHlsc3U1MWwtQ1dnbF9EMVVoRk96clVCaWk4MlhMSkRLZjdOZkZ5Z0dlUEllTmpCdk1ONTg1WHZEeHViQk53UjdKTVl5WWJ2YXNiYjktVDlCLUtXTDVqUTRqSHJWaS13cW01Q0FCbzQzU2M2WnQ1YlIzVHp4SkRtanJWT2wxc3UwRC1v?oc=5",
+    "source": "lapresse",
+    "title": "Première période | Red Wings 0 – Canadien 0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/verstappen-poursuit-sa-sequence-de-succes-a-singapour",
+    "source": "jdm",
+    "title": "Verstappen poursuit sa séquence de succès à Singapour"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/max-verstappen-remporte-le-grand-prix-de-singapour-de-formule-1-WHJEBAMN3ZGAVJ2YBYD3Y7J5TM/",
+    "source": "soleil",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10778329/un-premier-appel-constructif-entre-paul-st-pierre-plamondon-et-mark-carney",
+    "source": "rc",
+    "title": "Un premier appel « constructif » entre Paul St-Pierre Plamondon et Mark Carney"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/jayden-struble-echange-aux-predators",
+    "source": "jdm",
+    "title": "Jayden Struble échangé aux Predators"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/montreal-canadiens-jayden-struble-trade-nashville-predators-9.7377118",
+    "source": "cbc",
+    "title": "Canadiens deal defenceman Struble to Predators"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZ0ZLWGlOMnRGSW9PVmdQLWszaEMxQVBOVVFaazVuYmZ4VzY0TGJiTVIyQ0xZMExpay1KLXJpWVdDREZad2FCMWRxY1B1LUlSd0hCOFp6dk1hMHhTVjFKTXdsRVVlNVBuVVNfRkhBTnVpa2tSNjhabjNRRElEZTVWV0hXb2c0LUdYd0tWWm1PY0dqeGgzbnVZbG50dWZpdEZhSVBBbXFoeWdDTXZjcUNtNlNKTUtxX2ZJNlM4UXI5V2Q2N2VSU0tmd09R?oc=5",
+    "source": "lapresse",
+    "title": "Ligue américaine | Les Guardians signent un gain décisif contre les White Sox"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292231/guardians-cleveland-remontee-white-sox-chicago",
+    "source": "rc",
+    "title": "Les Guardians complètent la remontée contre les White Sox en série de division"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ctvnews.ca/montreal/article/montreals-notre-dame-basilica-to-unveil-new-facade-after-10-year-restoration-project/",
+    "source": "ctv",
+    "title": "Montreal’s Notre-Dame Basilica to unveil new façade after 10-year restoration project"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOd19XQW5DTjd0a2FtLXFxQzFHSmt5UGNwZVEwUHRGVzY1OVdOekNJajEwelh3NXJENFBGU0RGeDl4dWt1aWxwWTlaN25vdFA2RUhHTV9pVEVCWmJ4M3FvYnNfcnM3NFg1THZ2X19wM1JnejJUZlYyQmMzQ205NzNOdU02eGFTM3VwYkhsbFVpUnJHR2VmTjdyTHNQVFRwX2tBME1pb3NXbWRHekFW?oc=5",
+    "source": "lactualite",
+    "title": "Les échafaudages quitteront la façade de la basilique Notre-Dame de Montréal"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/trump-annonce-un-cessez-le-feu-energetique-entre-lukraine-et-la-russie",
+    "source": "jdm",
+    "title": "Trump annonce un «cessez-le-feu énergétique» entre l’Ukraine et la Russie"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSXVDUkpVQVFaaE95WXBYQlg5LXZiSVBwZVpzcFdULTBoWWNfaW9iLUZJRTNnanFUc2hYZlFSRURBNVI5bWtva2ZNWVBPMEZ0c20wT2ItSkVxSVdzNFFGbTN0RW1lOGNlMGtDaDZzX1ZKd1dNWDNrN2wzRnA5VWh4NUhLSmxyMVFlZ2lfa21CZ3dOVlg1X1FzS2dLSUJnRVZES2xKRFNjM0QzRWx3NDRXVDA4Q216dDJCMXBWaG0yTGs?oc=5",
+    "source": "lapresse",
+    "title": "Il est temps pour l’Ukraine d’avoir un nouveau président, affirme Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292213/canadien-montreal-fowler-red-wings",
+    "source": "rc",
+    "title": "Le Canadien renoue avec la victoire, Fowler blanchit les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016099/max-verstappen-remporte-grand-prix-singapour-formule-1",
+    "source": "devoir",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292259/max-verstappen-remporte-le-gp-de-singapour",
+    "source": "rc",
+    "title": "Max Verstappen remporte le GP de Singapour"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/jayden-struble-echange-aux-predators",
+    "source": "jdm",
+    "title": "Jayden Struble échangé aux Predators"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292127/jayden-struble-predators-nashville-canadien",
+    "source": "rc",
+    "title": "Jayden Struble prend la direction de Nashville"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015226/elon-musk-affirme-faveur-independance-quebec",
+    "source": "devoir",
+    "title": "Elon Musk se montre en faveur de l’indépendance du Québec"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2291802/carney-musk-avenir-canada-decision-canadiens",
+    "source": "rc",
+    "title": "Carney répond à Musk que l’avenir du Canada dépend seulement des Canadiens"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/11/une-attaque-a-l-aeroport-international-de-riyad-fait-12-morts-et-plus-de-300-blesses-LS6P74LPYVENJD5WWDDHQV6UVM/",
+    "source": "soleil",
+    "title": "Une attaque à l'aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/conflit-moyen-orient/article/laeroport-de-la-capitale-saoudienne-de-nouveau-pris-pour-cible-selon-les-autorites/",
+    "source": "noovo",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l’aéroport de Ryad"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/un-puissant-seisme-frappe-le-panama-plusieurs-blesses-des-batiments-et-des-routes-effondres",
+    "source": "jdm",
+    "title": "Un puissant séisme frappe le Panama: plusieurs blessés, des bâtiments et des routes effondrés"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/le-panama-declare-letat-durgence-apres-deux-seismes-et-de-nombreuses-repliques/",
+    "source": "noovo",
+    "title": "Le Panama déclare l'état d'urgence après deux séismes et de nombreuses répliques"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/je-me-sentais-un-peu-coupable---zachary-bolduc",
+    "source": "jdm",
+    "title": "«Je me sentais un peu coupable» - Zachary Bolduc"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015514/duhaime-defend-museler-deputes",
+    "source": "devoir",
+    "title": "Duhaime se défend de museler ses députés"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/en-bref/1-10781061/derapages-confrontation-marchand-duhaime",
+    "source": "rc",
+    "title": "Les dérapages de la confrontation Marchand-Duhaime"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292260/cessez-feu-energetiques-kiev-moscou-trump-truth-social",
+    "source": "rc",
+    "title": "Cessez-le-feu sur les infrastructures énergétiques entre Kiev et Moscou, selon Trump"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016102/russie-ukraine-ont-conclu-cessez-feu-energetique-selon-trump",
+    "source": "devoir",
+    "title": "La Russie et l’Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lenouvelliste.ca/actualites/actualites-locales/2026/10/11/operation-policiere-a-trois-rivieres-300-personnes-et-160-vehicules-a-des-courses-de-rue-IQZQGDVCCFH6XEFVBJH6ISYTPM/",
+    "source": "nouvelliste",
+    "title": "Opération policière à Trois-Rivières: 300 personnes et 160 véhicules font des courses de rue"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxQMGctLVZLM0FMdEs5dTN2c2dORnhWb2hDM3ZIYl80blpHSzR4S3RLLWlhTzhkWHdrUkZOOF9iQVdiY2Z6X1JUamlva0dyTHI1XzFWYURBWU5ER0xHcGVGV1Q2WWFZdmFFNVV0aldIT3hPVnBXT0R6bG5GQ2pSbTUxVk5xTlhfRTdybkxqeWl4WU9hUlI5RUFGNGthRnB1eGFEa0l2VGF1MXJtWllwMFVDZXZwcDJhTGNU?oc=5",
+    "source": "lactualite",
+    "title": "Courses de rue: la police met fin à un rassemblement de 300 jeunes à Trois-Rivières"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/moyen-orient/1016057/aeroport-riyad-nouveau-pris-cible-selon-autorites",
+    "source": "devoir",
+    "title": "Une attaque à l’aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOE1zc3ozbG9aXzJEWGkya0F6OUh1WG1mVFZDT1prRWstR3NDMG5Zb3BvNHZEeWlhVXhVVEN3MWM2dmI1SlpwNU9vb1JnYVlJNEJBYmVTbjZ0NTB3enV0ZFl6SU5JWnVOdEpNWVJTQjRPeG9ZTElaTnB6dUNZOHo3cWZEWkd6TU1lb1EyaHNlTHRmMTR5TXBhaFNCTzdUSllmWVNMRHpGV2Y?oc=5",
+    "source": "lapresse",
+    "title": "Nouvelle frappe sur l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/etats-unis/1016045/ouragan-isaias-retrograde-cyclone-post-tropical",
+    "source": "devoir",
+    "title": "La tempête «Isaias» fait quatre morts dans le sud des États-Unis"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/10/isaias-s-affaiblit-mais-le-risque-de-marees-et-de-tornades-menace-les-etats-du-sud-KLW4TAAYBRARFMI2MV35R7PHPM/",
+    "source": "soleil",
+    "title": "Isaias s’affaiblit, mais le risque de marées et de tornades menace les États du sud"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMizgFBVV95cUxOUGRFWm16cklZTXNCVHYtYlJuQU9xV2NfNnN3TDhHeG1SU1BVME5BVHRWZzE4eTVrTmdIZEVEUDZuUFBYeXhrZERKeDY4MUQ5cEE1a3ZUMGE0WUdvbzFCUVZzT1dLN20zNU1GcU42ZUFuZE9QcFMzLWtfV0xTUThXcFh6WU4tek45ZjFjS1Y2VlZUM3VJQmUtUlVPbVFmZ1ctWTdFbWh6eWJ5bmNfcVhZeEdkb1lKUFhyaWU5akhzb1VPSE9LWnlrbEZmR1F1dw?oc=5",
+    "source": "lapresse",
+    "title": "La tempête Isaias s’affaiblit après avoir frappé la Floride, deux mort"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/10/isaias-s-affaiblit-mais-le-risque-de-marees-et-de-tornades-menace-les-etats-du-sud-KLW4TAAYBRARFMI2MV35R7PHPM/",
+    "source": "soleil",
+    "title": "Isaias s’affaiblit, mais le risque de marées et de tornades menace les États du sud"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/07/projet-de-tramway-on-ne-peut-pas-faire-des-sophismes-affirme-le-maire-bruno-marchand",
+    "source": "jdm",
+    "title": "Tramway critiqué par Éric Duhaime: «On ne peut pas faire des sophismes», affirme Bruno Marchand"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015514/duhaime-defend-museler-deputes",
+    "source": "devoir",
+    "title": "Duhaime se défend de museler ses députés"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSXVDUkpVQVFaaE95WXBYQlg5LXZiSVBwZVpzcFdULTBoWWNfaW9iLUZJRTNnanFUc2hYZlFSRURBNVI5bWtva2ZNWVBPMEZ0c20wT2ItSkVxSVdzNFFGbTN0RW1lOGNlMGtDaDZzX1ZKd1dNWDNrN2wzRnA5VWh4NUhLSmxyMVFlZ2lfa21CZ3dOVlg1X1FzS2dLSUJnRVZES2xKRFNjM0QzRWx3NDRXVDA4Q216dDJCMXBWaG0yTGs?oc=5",
+    "source": "lapresse",
+    "title": "Il est temps pour l’Ukraine d’avoir un nouveau président, affirme Trump"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/europe/1016048/frappes-russes-zaporijjia-ont-fait-15-morts-samedi",
+    "source": "devoir",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/retour-de-guhle-fowler-devant-le-filet-voici-les-cinq-choses-a-surveiller-pour-ce-match-du-canadien-face-aux-red-wings",
+    "source": "jdm",
+    "title": "Retour de Guhle, Fowler devant le filet: voici les cinq choses à surveiller pour ce match du Canadien face aux Red Wings"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaFRrMlBUYzFBazZRdmRsdmZabHdaZWplRnQ2T2lhNEFvaE5DNThZRzJyR2k4SnhWcWg1VUVpMThoVDA5T2JleVA5ZU91U1p2NXdrTUVZcGxHUlE2cVBpTEZIYmNOUlpUeVcwUVg5cGZTbEZRRS1Ta0NEakpuTDBHaU5PenZHNkFuUWowekRTWnlxTVg0Ym9PYzNSWUVNMmVwSDNHbk1fdzV2VUdlMXRr?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings – Canadien | Guhle de retour, Fowler devant le filet"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016099/max-verstappen-remporte-grand-prix-singapour-formule-1",
+    "source": "devoir",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292153/max-verstappen-sprint-gp-f1-singapour",
+    "source": "rc",
+    "title": "Verstappen fait le doublé pole et sprint à Singapour"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHhiTjNteVJfS0N1a2lOQkpyNFQzZnhBUGlGQm9tNWcwYTZkWEFwRWg0ajFmajIwZjFhbVltaEhTOFBJZ0hWdjFwUlhjQkV6OFlNZDdmdDhkbm9fT0ZCckJRRmdvOHAzNDN2OGZ6Y09xbmVWWXVPMG95YVQ5bUFKX19GRDFrRWNxQlB2c2ZDQ2NMeHBjRGhxbHU0V29wRjZ4VngtQnlLZy1Gb1VQM3RNRGRuSlhDNExQN2xvbG5hbnN1dEdOZ1E?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Zachary Bolduc joue les héros en tirs de barrage"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/11/kyiv-rejette-l-appel-de-trump-en-faveur-d-un-nouveau-president-ukrainien-YQ6A25BKG5FD7PQFVFGA26X3LA/",
+    "source": "soleil",
+    "title": "La Russie et l'Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/la-russie-et-lukraine-ont-conclu-un-cessez-le-feu-energetique-selon-trump/",
+    "source": "noovo",
+    "title": "La Russie et l'Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi2wFBVV95cUxQSDVsYTF6ZnA2ZjNNRjFHUlFtTlhrZDJuRVhGQnJQT29zT0xNOS1RTVZlRWZBNmduTHhQVnV5Q2xhRXViS0J5OUNIWjB0TTRRa1l5bzZuTnpoVkRGbjFWbWNBajhvX3MxQkdkczVVUlhXeXBkQklDSGtZQ3pZUmFaYktvaWE3MW56Q1FoM0g4VlR6UjR4WWdMYXdDcFV0MUdsVzRFMm5BM0pCRDIwRHBCR2ItVS1pcFlMUnNNaUQyN2otbE1VZWg1aWtsU1ZwZWRCWnRYbmRlUTZTMkE?oc=5",
+    "source": "lapresse",
+    "title": "Grand Prix de Singapour | Max Verstappen remporte une deuxième course consécutive"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/sport/article/max-verstappen-remporte-le-grand-prix-de-singapour-de-formule-1/",
+    "source": "noovo",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/la-police-de-trois-rivieres-met-fin-a-une-course-de-rue-rassemblant-300-jeunes-et-160-vehicules",
+    "source": "jdm",
+    "title": "La police de Trois-Rivières met fin à une course de rue rassemblant 300 jeunes et 160 véhicules"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/patrouille/article/courses-de-rue-la-police-met-fin-a-un-rassemblement-de-300-jeunes-a-trois-rivieres/",
+    "source": "noovo",
+    "title": "Courses de rue: la police met fin à un rassemblement de 300 jeunes à Trois-Rivières"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/ameriques/1016051/puissant-seisme-provoque-importants-degats-panama",
+    "source": "devoir",
+    "title": "Un puissant séisme provoque d’importants dégâts au Panama"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/09/un-seisme-de-magnitude-7-7-secoue-le-panama-provoquant-des-evacuations-OWPCD3CTUJD7FEXIMEINMG6ROQ/",
+    "source": "soleil",
+    "title": "Un séisme de magnitude 7,7 secoue le Panama, provoquant des évacuations"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-dizaines-de-blesses-dans-une-attaque-houthie-sur-laeroport-de-la-capitale-saoudienne",
+    "source": "jdm",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l'aéroport de Ryad"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/conflit-moyen-orient/article/laeroport-de-la-capitale-saoudienne-de-nouveau-pris-pour-cible-selon-les-autorites/",
+    "source": "noovo",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l’aéroport de Ryad"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/verstappen-remporte-le-sprint-a-singapour",
+    "source": "jdm",
+    "title": "Verstappen remporte le sprint à Singapour"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/max-verstappen-remporte-le-grand-prix-de-singapour-de-formule-1-WHJEBAMN3ZGAVJ2YBYD3Y7J5TM/",
+    "source": "soleil",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/trump-affirme-quil-est-temps-pour-lukraine-davoir-un-nouveau-president",
+    "source": "jdm",
+    "title": "Trump affirme qu'«il est temps pour l'Ukraine d'avoir un nouveau président»"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSXVDUkpVQVFaaE95WXBYQlg5LXZiSVBwZVpzcFdULTBoWWNfaW9iLUZJRTNnanFUc2hYZlFSRURBNVI5bWtva2ZNWVBPMEZ0c20wT2ItSkVxSVdzNFFGbTN0RW1lOGNlMGtDaDZzX1ZKd1dNWDNrN2wzRnA5VWh4NUhLSmxyMVFlZ2lfa21CZ3dOVlg1X1FzS2dLSUJnRVZES2xKRFNjM0QzRWx3NDRXVDA4Q216dDJCMXBWaG0yTGs?oc=5",
+    "source": "lapresse",
+    "title": "Il est temps pour l’Ukraine d’avoir un nouveau président, affirme Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/le-conseil-des-ministres-pequiste-devoile-le-21-octobre",
+    "source": "jdm",
+    "title": "Le Conseil des ministres péquiste dévoilé le 21 octobre"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292076/conseil-des-ministres-deputes-assermentation",
+    "source": "rc",
+    "title": "Le Conseil des ministres du PQ sera présenté le 21 octobre"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/seisme-au-panama--les-participants-doccupation-double-sont-sains-et-saufs",
+    "source": "jdm",
+    "title": "Séisme au Panama: les participants d'«Occupation double» sont sains et saufs"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMVhGNDNVcFZYY1ZNeHZhaTA3SkRBRVhLZ3FPcXZZOER4QnpzdmdLUnlMdUY3MDVsVUd5MzBjMXRHUmNCM09jSnBKUHFhN3hzM0taQjEydGVIMmpmVkk0UnQ2VVpZeFYwektXMTZHMzVUT0hEYVotNkMtLTRwQkdMVzlwSVZrTG4xR3QyNlBJcHJja1NyeEZoUHl1WTJkOXhaWmFMVDdwOE9FLVd5eWNYUUEzMEhfQ0xJN2JmRFBFWW5nVjZzOHhWZw?oc=5",
+    "source": "lapresse",
+    "title": "Séisme | Les Panaméens nettoient les décombres dans la crainte"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/07/projet-de-tramway-on-ne-peut-pas-faire-des-sophismes-affirme-le-maire-bruno-marchand",
+    "source": "jdm",
+    "title": "Tramway critiqué par Éric Duhaime: «On ne peut pas faire des sophismes», affirme Bruno Marchand"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779521/maire-quebec-s-en-prend-a-eric-duhaime-et-sa-tribu",
+    "source": "rc",
+    "title": "Le maire de Québec s’en prend à Éric Duhaime et « sa tribu »"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledroit.com/sports/hockey/canadiens/2026/10/09/montembeault-absent-pour-une-periode-de-10-a-14-jours-UHY5ZCZC4ND5VJIAFECNH5TWMY/",
+    "source": "droit",
+    "title": "Montembeault absent pour une période de 10 à 14 jours"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291996/hockey-canadien-blessure-samuel-montembeault-absence",
+    "source": "rc",
+    "title": "Le Canadien de 10 à 14 jours sans Samuel Montembeault"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeWxQRHRkSm50M2FRdTU0TVl1Z2VCTzd4Wlk5RktOY3VPVHdMVDdURG92azV5ZDQxQ1J0ZnZodnFIa0g4cXpsVUUwVjJfVHNWZi1ULXJpdzF5SDFqVVNnWVJxZnBUX0hnNlpvcm9jcGR0aHlSS2dqNWF2NmEwNHE5OTFFVE5fZ2NqbnVidHpvWTB5LUtJcmhrU05WTUFnMGlFV3NzSnZRX3NaMmVoM1FqVEtCd2xJZ2FpMWtqcVJWS1pNdzV6dllONUR6Vk50T0xnYXY4VGVYczNEemVBQldFUTV5cw?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Trump assure que Moscou et Kyiv ont conclu « un cessez-le-feu énergétique »"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016102/russie-ukraine-ont-conclu-cessez-feu-energetique-selon-trump",
+    "source": "devoir",
+    "title": "La Russie et l’Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/actualites/1016096/projet-alliance-canada-ue-doit-etre-defini-vite-dit-ambassadrice-francaise",
+    "source": "devoir",
+    "title": "Le projet d’alliance Canada-UE doit être défini et vite, dit l’ambassadrice française"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292253/alliance-canada-eu-farnaud-defromont-carney",
+    "source": "rc",
+    "title": "Le projet d’alliance Canada–UE doit être défini et vite, dit l’ambassadrice française"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/louragan-isaias-retrograde-en-cyclone-post-tropical",
+    "source": "jdm",
+    "title": "La tempête Isaias fait quatre morts dans le sud des États-Unis"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292150/ouragan-isais-cyclone-etats-unis-cyclone",
+    "source": "rc",
+    "title": "La tempête Isaias fait quatre morts dans le sud des États-Unis"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNblFNY0EzVHg3YUN5TFoyeUxjOTVUVENLRmlpWU1UbGtKR1JUck13SUUzRDloT0liRzJVeEpnXzRXZi0xVDhxTXRNbGgxa3JrQ1FMUWUzck56cDd0Zk5qcWF1MGc1d092dURUd19ya2EtclhKV2NXWHRJQUlFWUNybjV4M28tMWIydzFJSlhfOXVJajFYM0d0MDV0UVR5X1FpTHlxc1NXbENKckdHY2pjYQ?oc=5",
+    "source": "lapresse",
+    "title": "Clavardage | Red Wings c. Canadien : notre couverture en direct"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/trump-annonce-un-cessez-le-feu-energetique-entre-lukraine-et-la-russie",
+    "source": "jdm",
+    "title": "Trump annonce un «cessez-le-feu énergétique» entre l’Ukraine et la Russie"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/la-russie-et-lukraine-ont-conclu-un-cessez-le-feu-energetique-selon-trump/",
+    "source": "noovo",
+    "title": "La Russie et l'Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/10/verstappen-remporte-l-epreuve-du-sprint-au-gp-de-f1-de-singapour-sous-la-pluie-DMN6S6DLKZDPVDDEI2CNRCBFOI/",
+    "source": "soleil",
+    "title": "Max Verstappen réalise le doublé avec la position de tête et la victoire au sprint"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292153/max-verstappen-sprint-gp-f1-singapour",
+    "source": "rc",
+    "title": "Verstappen fait le doublé pole et sprint à Singapour"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledroit.com/actualites/justice-et-faits-divers/2026/10/09/autre-arrestation-liee-au-meurtre-dun-homme-de-clarence-rockland-JUE47IWC7NCHROT7AKQPKGJ5BI/",
+    "source": "droit",
+    "title": "Meurtre à Clarence-Rockland: une 6e personne arrêtée"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292083/robert-prevost-meurtre-cathy-percey",
+    "source": "rc",
+    "title": "Une femme arrêtée pour le meurtre de Robert Prevost"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/trump-affirme-quil-est-temps-pour-lukraine-davoir-un-nouveau-president",
+    "source": "jdm",
+    "title": "Trump affirme qu'«il est temps pour l'Ukraine d'avoir un nouveau président»"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292147/allemagne-ue-sanctions-russie-diesel-trump",
+    "source": "rc",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016099/max-verstappen-remporte-grand-prix-singapour-formule-1",
+    "source": "devoir",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi_gFBVV95cUxQNXRpamlkb2FrcXhKV2U5RHJ6S1dXcGdjZlVHdW0tMHdtSjk0Y05RdzBfWmRTa01EMHBPdDd2OU1iZ3dOZkFSaW9lZ016T0dwX2tLbER3YnNzMVZZUnNhRTNsMEVWVHZfcGh3OUJyWXVUd3oxNEtHN1gtdWtBdlk2bDRfVm5zU2RnXzJYU2tZbm1PQk1TNlZuQ3JibUx5RmFZdU8tNlJId1E4ZWZfRURiZ1FCcTFCNlJGVjE3Ym9TZDl6c2hFaE5JX3gta0x1S0lUR3FtT1BQbDJsVGdManN3SXhkeVFJM3NXREdsQ1B0UlNRRm0tazBxWG5GNW1oQQ?oc=5",
+    "source": "lapresse",
+    "title": "Grand Prix de Singapour | Verstappen conclut un week-end parfait, Antonelli creuse son avance au championnat"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeWxQRHRkSm50M2FRdTU0TVl1Z2VCTzd4Wlk5RktOY3VPVHdMVDdURG92azV5ZDQxQ1J0ZnZodnFIa0g4cXpsVUUwVjJfVHNWZi1ULXJpdzF5SDFqVVNnWVJxZnBUX0hnNlpvcm9jcGR0aHlSS2dqNWF2NmEwNHE5OTFFVE5fZ2NqbnVidHpvWTB5LUtJcmhrU05WTUFnMGlFV3NzSnZRX3NaMmVoM1FqVEtCd2xJZ2FpMWtqcVJWS1pNdzV6dllONUR6Vk50T0xnYXY4VGVYczNEemVBQldFUTV5cw?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Trump assure que Moscou et Kyiv ont conclu « un cessez-le-feu énergétique »"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/la-russie-et-lukraine-ont-conclu-un-cessez-le-feu-energetique-selon-trump/",
+    "source": "noovo",
+    "title": "La Russie et l'Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292182/christa-pike-retour-prison-execution-ratee",
+    "source": "rc",
+    "title": "Christa Pike est de retour en prison après avoir survécu à son exécution manquée"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiugFBVV95cUxPdWV3cTF5c2xWZEU0YXJKZnk5Z285b2Yya1NQbGowYm1Cb2liUHQ1dWJlY3Z0UFZVcWxIREFCYlZ0a0tnVDlSQ3dXQk9IdUY3RkxwV0Fhbkg3U2JURTMzQ1RPVFhIOG1kMjJYQjBkQ0lBSHpjZHpHMEZZdTRDQ29TV19hSHdGQS1YV3RDR3VFSVBkbEc2LUE0b3Iybkl5RlZMaUxDaFBJWEVYb2F0V2h6YTg5UjhvNTJvcmc?oc=5",
+    "source": "lactualite",
+    "title": "Christa Pike est de retour en prison après avoir survécu à une tentative d’exécution"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.noovo.info/nouvelles/international/article/la-russie-et-lukraine-ont-conclu-un-cessez-le-feu-energetique-selon-trump/",
+    "source": "noovo",
+    "title": "La Russie et l'Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016102/russie-ukraine-ont-conclu-cessez-feu-energetique-selon-trump",
+    "source": "devoir",
+    "title": "La Russie et l’Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxQMDZ6bWdweG04YmQzZ3Vrb3JxMzhJX2xiUEx5WTl1dEpKTlpmYVlyWVpwWFRUREVaM2xMeUVLa3kzUG1yakc4YnU0VmRzQllxWlczQ3MtTDAzR1J6V3lQSFdNYWNURU5LLWRBZjRjV0syejE2cHl5QUlsTzRSZHE3T1A5NzRQTlRnYlNMelZfZjB4Nk1YbTNXUFoxLUowYUFQbWw4ZXFOSjBBRFpZVWV6QWRpTVp4VmtpN1Nfc01GSEtuYVNybUNneg?oc=5",
+    "source": "lapresse",
+    "title": "Les échafaudages quitteront la façade de la basilique Notre-Dame"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMirAFBVV95cUxOd19XQW5DTjd0a2FtLXFxQzFHSmt5UGNwZVEwUHRGVzY1OVdOekNJajEwelh3NXJENFBGU0RGeDl4dWt1aWxwWTlaN25vdFA2RUhHTV9pVEVCWmJ4M3FvYnNfcnM3NFg1THZ2X19wM1JnejJUZlYyQmMzQ205NzNOdU02eGFTM3VwYkhsbFVpUnJHR2VmTjdyTHNQVFRwX2tBME1pb3NXbWRHekFW?oc=5",
+    "source": "lactualite",
+    "title": "Les échafaudages quitteront la façade de la basilique Notre-Dame de Montréal"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxOX01LRDNndk9WbUhCY2hpOGhEZUVGWGIxUkd6ay01X0JPdXVGeHhFc2ZsSkM5MXhYS2xXVFI3WWF5c0VDam9sQkRibkhNcUdMRzZxYmZTYXNYV0Q0V2JKa1RBT2Z0UVAxUEZfdDJlaDYzdFZuTXFVX1BnWjNPNlVKdEdjWVg5SmtTM29CZDhPRGpsWjAza1VQS0wzSjZSRU9HdnB3c2k2OUNUQWFCbVFZ?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Un heureux problème de gardiens"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi7gFBVV95cUxQeFl5S2RKX0RsQ1RxX050YVJvMHRzZjZoVjZiYlc2YUdTM1VvMUdMa2RHNEdMVGNVNEFNM2pUWjVVU3BiRFE4cWE1Q1FjRzVyWFpBRlgxYzZPNUtyc1hXbWJBaHZuRlMwb1Y2UUNWcUFRODAzNzZXNk1RM2RZeWZ4dmItTlk2VGNsUXd0UFNsZGxuRjREdGVmRTdscDdNR2NKbzlqS0MxZE1adFFjcHR2UnhkVmwzOFdrbnNZMVRMNFhxaGVQVFZDZXlSOXpERTlNR2ZJTHhlVy1taFhySWd0a2ZaTUJEbW1SdEhKNlVn?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Zelensky pose ses conditions pour cesser les frappes sur les raffineries russes"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292147/allemagne-ue-sanctions-russie-diesel-trump",
+    "source": "rc",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxPZ0ZLWGlOMnRGSW9PVmdQLWszaEMxQVBOVVFaazVuYmZ4VzY0TGJiTVIyQ0xZMExpay1KLXJpWVdDREZad2FCMWRxY1B1LUlSd0hCOFp6dk1hMHhTVjFKTXdsRVVlNVBuVVNfRkhBTnVpa2tSNjhabjNRRElEZTVWV0hXb2c0LUdYd0tWWm1PY0dqeGgzbnVZbG50dWZpdEZhSVBBbXFoeWdDTXZjcUNtNlNKTUtxX2ZJNlM4UXI5V2Q2N2VSU0tmd09R?oc=5",
+    "source": "lapresse",
+    "title": "Ligue américaine | Les Guardians signent un gain décisif contre les White Sox"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291897/white-sox-guardians-serie-baseball",
+    "source": "rc",
+    "title": "Les Guardians battent les White Sox 9-5 et forcent la tenue d’un 5e match"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/des-attaques-russes-font-au-moins-20-morts-en-ukraine-K2ROPB6ZWZELDBVBVHTWUPZTMY/",
+    "source": "soleil",
+    "title": "Donald Trump estime que l'Ukraine devrait avoir un nouveau président"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292260/cessez-feu-energetiques-kiev-moscou-trump-truth-social",
+    "source": "rc",
+    "title": "Cessez-le-feu sur les infrastructures énergétiques entre Kiev et Moscou, selon Trump"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/verstappen-remporte-le-sprint-a-singapour",
+    "source": "jdm",
+    "title": "Verstappen remporte le sprint à Singapour"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/sport/article/max-verstappen-remporte-le-grand-prix-de-singapour-de-formule-1/",
+    "source": "noovo",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/la-police-de-trois-rivieres-met-fin-a-une-course-de-rue-rassemblant-300-jeunes-et-160-vehicules",
+    "source": "jdm",
+    "title": "La police de Trois-Rivières met fin à une course de rue rassemblant 300 jeunes et 160 véhicules"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi7AFBVV95cUxNNlNpU0wyanZnQmZQY010eEJFLXRNNno1cUotam1VTnZOSUltMlZNSW80eGpmQ3VWckVjdkpQb0hvcTJkcWl0LTZGMWUyNlRFcGs2WkE4MlEtclpBTE9tVF9QMERLQTd6aU14TXhhSnhyMXktR3hfVjRwaTlaSnVJS2xkU2oyTzQ3eTY0VFJXZEdGTU95ZnRaN2h2d1htMUdpSlpaSkpLX0VZdXc4V3hndGthYkhqNGVhblJIdEhWNUFWX0ZRN0xVTGxsLW41VWlCdWNnOTR1SDhuSVU3Z1FjZFMtX2lFUnowSXFNOA?oc=5",
+    "source": "lapresse",
+    "title": "Courses de rue | La police met fin à un rassemblement de 300 jeunes à Trois-Rivières"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/europe/1016048/frappes-russes-zaporijjia-ont-fait-15-morts-samedi",
+    "source": "devoir",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292260/cessez-feu-energetiques-kiev-moscou-trump-truth-social",
+    "source": "rc",
+    "title": "Cessez-le-feu sur les infrastructures énergétiques entre Kiev et Moscou, selon Trump"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMisAFBVV95cUxNblFNY0EzVHg3YUN5TFoyeUxjOTVUVENLRmlpWU1UbGtKR1JUck13SUUzRDloT0liRzJVeEpnXzRXZi0xVDhxTXRNbGgxa3JrQ1FMUWUzck56cDd0Zk5qcWF1MGc1d092dURUd19ya2EtclhKV2NXWHRJQUlFWUNybjV4M28tMWIydzFJSlhfOXVJajFYM0d0MDV0UVR5X1FpTHlxc1NXbENKckdHY2pjYQ?oc=5",
+    "source": "lapresse",
+    "title": "Clavardage | Red Wings c. Canadien : notre couverture en direct"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/seisme-au-panama--les-participants-doccupation-double-sont-sains-et-saufs",
+    "source": "jdm",
+    "title": "Séisme au Panama: les participants d'«Occupation double» sont sains et saufs"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/le-panama-declare-letat-durgence-apres-deux-seismes-et-de-nombreuses-repliques/",
+    "source": "noovo",
+    "title": "Le Panama déclare l'état d'urgence après deux séismes et de nombreuses répliques"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/vance-dit-quil-ne-regardera-pas-lexecution-du-meurtrier-de-soldats-americains-si-elle-est-diffusee-en-direct",
+    "source": "jdm",
+    "title": "Vance dit qu'il ne regardera pas l'exécution du meurtrier de soldats américains si elle est diffusée en direct"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/monde/2026/10/09/vance-exprime-des-doutes-quant-au-projet-de-diffuser-une-execution-en-direct-SRASPFF66FE57I4TJ34LJ4CQNI/",
+    "source": "soleil",
+    "title": "Vance exprime des doutes sur la diffusion d’une exécution en direct"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMirwFBVV95cUxQaFRrMlBUYzFBazZRdmRsdmZabHdaZWplRnQ2T2lhNEFvaE5DNThZRzJyR2k4SnhWcWg1VUVpMThoVDA5T2JleVA5ZU91U1p2NXdrTUVZcGxHUlE2cVBpTEZIYmNOUlpUeVcwUVg5cGZTbEZRRS1Ta0NEakpuTDBHaU5PenZHNkFuUWowekRTWnlxTVg0Ym9PYzNSWUVNMmVwSDNHbk1fdzV2VUdlMXRr?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings – Canadien | Guhle de retour, Fowler devant le filet"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292213/canadien-montreal-fowler-red-wings",
+    "source": "rc",
+    "title": "Le Canadien renoue avec la victoire, Fowler blanchit les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/08/musk-en-faveur-de-lindependance-du-quebec-une-sortie-pour-renouveler-sa-bromance-avec-trump",
+    "source": "jdm",
+    "title": "Musk en faveur de l’indépendance du Québec: une sortie pour renouveler sa «bromance» avec Trump"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015226/elon-musk-affirme-faveur-independance-quebec",
+    "source": "devoir",
+    "title": "Elon Musk se montre en faveur de l’indépendance du Québec"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/sports/2292249/alexander-zverev-shanghai-masters-1000",
+    "source": "rc",
+    "title": "Alexander Zverev file en huitièmes du Masters de Shanghai"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiswFBVV95cUxOckYycGIzVHFPZl96c25tWE1sUGNBR1BteGhLZW1NVjVTTy1SVG1IWG5VckVyOU9BZUZYUnU2ckJWbEtuV0x4N3h4ZUVmVWxJZXdyQUN5el9EYXdJbm1jdmRyNUZiYld0M3JtcnFvSE9NSUdqcWV0S2NMc2VVbi02bHBpMHRlREtlMEJIX0cwZ0xpdmVGMnhFQ2o2djF2MmNqcFV0cjk4NVQtdXo2b2VjWGEwNA?oc=5",
+    "source": "lapresse",
+    "title": "Tournoi de Shanghai | Zverev avance au 4e tour, Shelton éliminé"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/verstappen-poursuit-sa-sequence-de-succes-a-singapour",
+    "source": "jdm",
+    "title": "Verstappen poursuit sa séquence de succès à Singapour"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/sport/article/max-verstappen-remporte-le-grand-prix-de-singapour-de-formule-1/",
+    "source": "noovo",
+    "title": "Max Verstappen remporte le Grand Prix de Singapour de Formule 1"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/07/ottawa-rejette-lelargissement-de-laide-medicale-a-mourir-aux-troubles-mentaux",
+    "source": "jdm",
+    "title": "Ottawa rejette l'élargissement de l'aide médicale à mourir aux troubles mentaux"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10779367/ottawa-renonce-a-elargir-aide-a-mourir-pour-troubles-mentaux",
+    "source": "rc",
+    "title": "Ottawa renonce à élargir l'aide à mourir pour les troubles mentaux"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/etats-unis/1016045/ouragan-isaias-retrograde-cyclone-post-tropical",
+    "source": "devoir",
+    "title": "La tempête «Isaias» fait quatre morts dans le sud des États-Unis"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292150/ouragan-isais-cyclone-etats-unis-cyclone",
+    "source": "rc",
+    "title": "La tempête Isaias fait quatre morts dans le sud des États-Unis"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/moyen-orient/1016057/aeroport-riyad-nouveau-pris-cible-selon-autorites",
+    "source": "devoir",
+    "title": "Une attaque à l’aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/11/une-attaque-a-l-aeroport-international-de-riyad-fait-12-morts-et-plus-de-300-blesses-LS6P74LPYVENJD5WWDDHQV6UVM/",
+    "source": "soleil",
+    "title": "Une attaque à l'aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMilwFBVV95cUxQdGJybi1SQXNwVTU1eGFESHFKZGU5LU1wWlQtT2l2X0NWbmZ6Tnp0S2M3MXNpclhlbTN1SUxpRlFsUktuX09ZVGloZHBPQ2pjSmk0WmU1ckE3Z2xvRnc5RjZPbzBmMHVJLTJDNjRhTHpnMlZDTkJyN3BjYzZKeE9MTmc0ZTZ2cnVUQ1FHeTRVdWxZQUpIYUow?oc=5",
+    "source": "lapresse",
+    "title": "Marque finale | Red Wings 0 – Canadien 1 (TB)"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/un-seisme-de-magnitude-76-secoue-le-panama",
+    "source": "jdm",
+    "title": "Un puissant séisme provoque d'importants dégâts matériels au Panama"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiyAFBVV95cUxNMVhGNDNVcFZYY1ZNeHZhaTA3SkRBRVhLZ3FPcXZZOER4QnpzdmdLUnlMdUY3MDVsVUd5MzBjMXRHUmNCM09jSnBKUHFhN3hzM0taQjEydGVIMmpmVkk0UnQ2VVpZeFYwektXMTZHMzVUT0hEYVotNkMtLTRwQkdMVzlwSVZrTG4xR3QyNlBJcHJja1NyeEZoUHl1WTJkOXhaWmFMVDdwOE9FLVd5eWNYUUEzMEhfQ0xJN2JmRFBFWW5nVjZzOHhWZw?oc=5",
+    "source": "lapresse",
+    "title": "Séisme | Les Panaméens nettoient les décombres dans la crainte"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/moyen-orient/1016057/aeroport-riyad-nouveau-pris-cible-selon-autorites",
+    "source": "devoir",
+    "title": "Une attaque à l’aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMitgFBVV95cUxOQWlkNUNHZG9XQmRpbEl1QUJhSHlLWHRPSVNZWDB5b2pjN0N4TEtKQUJ0MWZkQ01ocTBUejZyQmtPSlZWa1d0bzFkZlk1dHdMMHQ4QkJPT0tySVE4YkVsWG53X3dYR0czN3BUR3hYc3F6eWFuMVVwekhEeno2ZDRPVVBfUUZCSXRDbVhmLWFlLWU1NTB0cmN3MWEyZ1FqamotRFVpMlFRci1GS2FLRlkxMUkzYi1tUQ?oc=5",
+    "source": "lactualite",
+    "title": "L’Arabie saoudite prolonge la fermeture d’un aéroport après une attaque meurtrière"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-milliers-de-manifestants-propalestiniens-marchent-a-londres-et-a-berlin",
+    "source": "jdm",
+    "title": "Des milliers de manifestants propalestiniens marchent à Londres et à Berlin"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292216/manifestation-palestine-montreal-gaza-israel",
+    "source": "rc",
+    "title": "Des milliers de personnes manifestent en soutien aux Palestiniens à Montréal"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/un-homme-poignarde-a-pierrefonds-roxboro-un-suspect-arrete",
+    "source": "jdm",
+    "title": "Un homme poignardé à Pierrefonds-Roxboro; un suspect arrêté"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMitwFBVV95cUxQTkNZZ2tZSUNnOXVVOVJ1b2JHQ2ZOcGcwb3k3LXVjNXNfMGMyZTBaYi1YVWprMzRrU19tUEpfakZodWhNV3p1eGdZSHZDT1gzQklZMWdUZUw0c1NmenM1WWIyNWNONnZlTkxSaWdMZWtVSEFLS3FUOFJLa09wak1rWEtLbVVKWjNiUEVXZkNHRTV1amhvSlNFLUxSejRxa3U3OGtfeVp1Zk1XXzFQaTNKT0dieTBibjA?oc=5",
+    "source": "lactualite",
+    "title": "Enquête sur une agression armée dans l’ouest de l’île de Montréal; le suspect arrêté"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-quebecoises-coincees-au-panama-apres-un-puissant-seisme",
+    "source": "jdm",
+    "title": "Des Québécoises coincées au Panama après un puissant séisme"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/seismes-nous-nous-sentons-vraiment-abandonnees-dit-une-mere-coincee-au-panama-avec-sa-fille/",
+    "source": "noovo",
+    "title": "Séismes: «Nous nous sentons vraiment abandonnées», dit une mère coincée au Panama avec sa fille"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/trump-negocie-avec-poutine-des-livraisons-massives-de-diesel-russe",
+    "source": "jdm",
+    "title": "Trump négocie avec Poutine des livraisons massives de diesel russe"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxPSXVDUkpVQVFaaE95WXBYQlg5LXZiSVBwZVpzcFdULTBoWWNfaW9iLUZJRTNnanFUc2hYZlFSRURBNVI5bWtva2ZNWVBPMEZ0c20wT2ItSkVxSVdzNFFGbTN0RW1lOGNlMGtDaDZzX1ZKd1dNWDNrN2wzRnA5VWh4NUhLSmxyMVFlZ2lfa21CZ3dOVlg1X1FzS2dLSUJnRVZES2xKRFNjM0QzRWx3NDRXVDA4Q216dDJCMXBWaG0yTGs?oc=5",
+    "source": "lapresse",
+    "title": "Il est temps pour l’Ukraine d’avoir un nouveau président, affirme Trump"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/attaque-contre-zelensky-et-entente-avec-moscou-trump-fragilise-la-credibilite-des-etats-unis-selon-un-analyste",
+    "source": "jdm",
+    "title": "Attaque contre Zelensky et entente avec Moscou: Trump fragilise la crédibilité des États-Unis, selon un analyste"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi4wFBVV95cUxNeWxQRHRkSm50M2FRdTU0TVl1Z2VCTzd4Wlk5RktOY3VPVHdMVDdURG92azV5ZDQxQ1J0ZnZodnFIa0g4cXpsVUUwVjJfVHNWZi1ULXJpdzF5SDFqVVNnWVJxZnBUX0hnNlpvcm9jcGR0aHlSS2dqNWF2NmEwNHE5OTFFVE5fZ2NqbnVidHpvWTB5LUtJcmhrU05WTUFnMGlFV3NzSnZRX3NaMmVoM1FqVEtCd2xJZ2FpMWtqcVJWS1pNdzV6dllONUR6Vk50T0xnYXY4VGVYczNEemVBQldFUTV5cw?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Trump assure que Moscou et Kyiv ont conclu « un cessez-le-feu énergétique »"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/struble-deja-pret-a-aider-les-predators",
+    "source": "jdm",
+    "title": "Jayden Struble n'a «que du positif à tirer de Montréal»"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292127/jayden-struble-predators-nashville-canadien",
+    "source": "rc",
+    "title": "Jayden Struble prend la direction de Nashville"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292175/blesses-aeroport-riyad-tir-missile-houthis",
+    "source": "rc",
+    "title": "Au moins 12 morts dans une attaque imputée aux Houthis contre l’aéroport de Riyad"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/conflit-moyen-orient/article/laeroport-de-la-capitale-saoudienne-de-nouveau-pris-pour-cible-selon-les-autorites/",
+    "source": "noovo",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l’aéroport de Ryad"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/actualites/environnement/1016009/cinq-defis-environnementaux-relever-gouvernement-parti-quebecois",
+    "source": "devoir",
+    "title": "Cinq défis environnementaux à relever pour le gouvernement du Parti québécois"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10700381/bilan-mark-carney-question-referendaire-au-quebec-et-en-alberta",
+    "source": "rc",
+    "title": "Bilan de Mark Carney : la question référendaire au Québec et en Alberta"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/economie/1015964/pourquoi-jeunes-anglophones-continuent-ils-quitter-quebec",
+    "source": "devoir",
+    "title": "Pourquoi les jeunes anglophones continuent-ils de quitter le Québec?"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/this-historian-studied-why-some-english-speaking-youth-choose-to-stay-in-quebec-or-leave/",
+    "source": "ctv",
+    "title": "This historian studied why some English-speaking youth choose to stay in Quebec — or leave"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiuAFBVV95cUxNZFhpZEwyRnNyYngtSzc5Y05ETVU1QnFrWW9WNXQ4WDhoRERRcDB6b29fWTRLYmtUVFMtYzc3cEdoSXNPbWZfdk1ZRjl4RmtEdUJMLWZSYmtXdnZqQ2d6eVN3WTV4NEpCUkU5R2ZqazBlLTJLci1HNzdyRGNvUWplM0ZCVmFwV1VzUnByTEYySFhkY3NzWHloYVVHU2ljRFhEUHRYdU9UR1UwTkpWT2NlNUFOa2l3elVm?oc=5",
+    "source": "lactualite",
+    "title": "L’aéroport de la capitale saoudienne de nouveau pris pour cible, selon les autorités"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMivgFBVV95cUxPaHZMSkpXN2xzWXBVM1p5bThFZExiRWdDM0VBY2F3d3o1UHhpY0Q1aFIwY0JSNjRzTnhZaE5odVFTZS1nUWhCdUxNanBGNjhCNVBuNlZRYjNwZ1IzMTlqLUpoOFJfUzhacHY2RkR3aGJNaDQ5SUM5WTJDSXlLUGVobWFWV1VrMV9xcl9PUGYwakE1Z2hhNHhnd014eW84b1pqM3czbjNJNy1wWV90MHBvcEg3VmRSeXItQ0c5eHFB?oc=5",
+    "source": "lapresse",
+    "title": "Un nouveau projectile aurait frappé l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZTBCcFJkb0ZfWVNqdkg1d2FtNVhvU0ZBMzJRQlBlRzBCZE1lZ1ZUVTdVcFBnTVdMMHRvbk52a0NkRVdxbllEd0NJaDBuTGNQQ1hnUzJOZTlOcy1kX3V6eDRRMGktOTdtWDE3Y1ltSUF0VDU1U2tOMnktQVhTWE9NTVFkdmF2dHh6NkIzY0JXTkJEUU9YR0N5MFJITExpMEpSc3NsR1RTTlQ1VDV5WnNlYXNJNUZ1eU96Sm9sOG5DZXg?oc=5",
+    "source": "lapresse",
+    "title": "C’est aux Ukrainiens de choisir leur dirigeant, affirme Zelensky"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/11/kyiv-rejette-l-appel-de-trump-en-faveur-d-un-nouveau-president-ukrainien-YQ6A25BKG5FD7PQFVFGA26X3LA/",
+    "source": "soleil",
+    "title": "La Russie et l'Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/les-houthis-renouvellent-leurs-menaces-contre-les-aeroports-saoudiens-au-lendemain-de-lattaque-meurtriere-a-ryad",
+    "source": "jdm",
+    "title": "Les Houthis renouvellent leurs menaces contre les aéroports saoudiens, au lendemain de l’attaque meurtrière à Riyad"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/moyen-orient/1015649/faut-il-inquieter-forte-replique-houthis-moyen-orient",
+    "source": "devoir",
+    "title": "Faut-il s’inquiéter de la forte réplique des Houthis au Moyen-Orient?"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/desescalade-en-ukraine-poutine-a-recu-avec-comprehension-des-propositions-de-trump-dit-le-kremlin",
+    "source": "jdm",
+    "title": "«Désescalade» en Ukraine: Poutine a reçu «avec compréhension» des propositions de Trump, dit le Kremlin"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/europe/1016102/russie-ukraine-ont-conclu-cessez-feu-energetique-selon-trump",
+    "source": "devoir",
+    "title": "La Russie et l’Ukraine ont conclu un «cessez-le-feu énergétique», selon Trump"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/desescalade-en-ukraine-poutine-a-recu-avec-comprehension-des-propositions-de-trump-dit-le-kremlin",
+    "source": "jdm",
+    "title": "«Désescalade» en Ukraine: Poutine a reçu «avec compréhension» des propositions de Trump, dit le Kremlin"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292147/allemagne-ue-sanctions-russie-diesel-trump",
+    "source": "rc",
+    "title": "Trump s’en prend à Zelensky et veut un nouveau président en Ukraine"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/09/plusieurs-pays-dont-le-canada-unis-derriere-la-cpi-face-aux-sanctions-americaines",
+    "source": "jdm",
+    "title": "Plusieurs pays, dont le Canada, «unis» derrière la CPI face aux sanctions américaines"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/politique/canada/1015802/sanctions-americaines-contre-cpi-peu-apres-octroi-nobel-paix-ex-juge",
+    "source": "devoir",
+    "title": "Le Canada soutient la Cour pénale internationale après des sanctions des États-Unis"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-dizaines-de-blesses-dans-une-attaque-houthie-sur-laeroport-de-la-capitale-saoudienne",
+    "source": "jdm",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l'aéroport de Ryad"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/monde-sous-tension/article/larabie-saoudite-prolonge-la-fermeture-dun-aeroport-apres-une-attaque-meurtriere/",
+    "source": "noovo",
+    "title": "L'Arabie saoudite prolonge la fermeture d'un aéroport après une attaque meurtrière"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/affaires/2026/10/10/la-facture-d-electricite-pourrait-s-alourdir-pour-les-centres-de-donnees-5AEVHKRGWJEABGUWNKTJ35OVPE/",
+    "source": "soleil",
+    "title": "La facture d'électricité pourrait s'alourdir pour les centres de données"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780170/hausse-tarifs-electricite-demande-energie-nb-mal-recue",
+    "source": "rc",
+    "title": "Hausse des tarifs d'électricité : la demande d'Énergie NB mal reçue"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNb21vTmJBcTJTcjFwX0t3Sm5YR3Q3NURsMDJ5LUN1bFE5ODdxSFZRd19GRS16WFctVmxvN3pudS1sWW1ETTI3ZGo1UUxCSVFLQlBZNkQxcGFodzhraWszd09fU1VBWGRHN2JtN1Z5czllUUktNWFtMnd6X04xb0JkWWhyTnVBM1pxNzFDU2E3VGtMRmVDdmRmT0I5TUdvdWV4SnhlVHotdkY?oc=5",
+    "source": "lactualite",
+    "title": "Kyiv rejette l’appel de Trump en faveur d’un nouveau président ukrainien"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMi2AFBVV95cUxPTGtmUkcxZ1JmN0d0a3gtcWV6RWE4cHJJWndobHVsTGxxcE5jLVhlbTVjNjhhdHZRa2J5VzlaOG1rb0thUXVGc1o5VTFZeWRpVV85M1dlVWQ5SERoQW1XR2E3Ymx5LVoxd0xpMXlxUVZSQU9DSDBaX2FXbXZGQ05GclRKa3lWaVkwbzFvUGkwOEQ2RWUyU3BrU2xsRUVPcV9Ncm14TXRKNmF2NXNrc1IxZUpuRFFHeTFwTmhUd19ZZ095dXpKa2pTOUpDaEdJbmU5bUx2NTFtSVU?oc=5",
+    "source": "lapresse",
+    "title": "Guerre en Ukraine | Trump annonce un « cessez-le-feu énergétique » entre Kyiv et Moscou"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/opinion/idees/1015631/si-contexte-donnait-vrai-test-sante-quebec",
+    "source": "devoir",
+    "title": "Et si le contexte donnait le vrai test à Santé Québec?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780878/apres-vague-conservatrice-pari-risque-eric-duhaime",
+    "source": "rc",
+    "title": "Après la vague conservatrice, le pari risqué d'Éric Duhaime"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/le-pape-annonce-quil-va-etre-opere-dun-nodule-au-poumon-dans-les-prochains-jours",
+    "source": "jdm",
+    "title": "Le pape annonce qu'il va être opéré d'un nodule au poumon «dans les prochains jours»"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiuwFBVV95cUxPT1dlVWNya2h1M3IzeW5wVkJFTG5uVE1QRndqbk96eFVOYzBpdE9ZQ1NVTV9ZUnhiajJPY2UyQVdNSVEzYnN6eVRLZGlhZFF3ancwcWtjdmVrazRiejZhTkNoOWZueENnQXdjRGxqenRJVjg3TkVybnJFREVoQk9DdFRKbzJkRlBmU1l5cV83bmFhVDMtNjNBR19lcGxrRVNQQlNQUEl5WEVuOG5SVE9fSF9oNWlPVXIycHVV?oc=5",
+    "source": "lactualite",
+    "title": "Léon XIV va subir une intervention chirurgicale visant à retirer un nodule au poumon"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.lesoleil.com/chroniques/daniel-germain/2026/10/10/milliardaire-grognon-et-heros-de-roman-le-vrai-stephen-jarislowsky-NDTM4BOKBNDJ5LXUJ35QM72DVA/",
+    "source": "soleil",
+    "title": "Milliardaire, grognon et héros de roman: le vrai Stephen Jarislowsky"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780058/mort-financier-montrealais-stephen-a-jarislowsky-retour-sur-sa-carriere",
+    "source": "rc",
+    "title": "Mort du financier montréalais Stephen A. Jarislowsky : retour sur sa carrière"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldequebec.com/2026/10/09/fraude-du--faux-representant--deux-suspects-arretes-a-saguenay",
+    "source": "jdq",
+    "title": "Fraude du «faux représentant»: deux suspects arrêtés à Saguenay"
+   },
+   "b": {
+    "url": "https://www.lequotidien.com/actualites/actualites-locales/2026/10/09/deux-faux-representants-arretes-a-jonquiere-SI3TTETKOZGCZE2OW7U4PRBOCE/",
+    "source": "quotidien",
+    "title": "Deux «faux représentants» arrêtés à Jonquière"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292045/seisme-magnitude-panama-panique",
+    "source": "rc",
+    "title": "Un puissant séisme secoue le Panama et provoque des dégâts matériels"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/seismes-nous-nous-sentons-vraiment-abandonnees-dit-une-mere-coincee-au-panama-avec-sa-fille/",
+    "source": "noovo",
+    "title": "Séismes: «Nous nous sentons vraiment abandonnées», dit une mère coincée au Panama avec sa fille"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMivAFBVV95cUxPWW5IWTJiWk1rTHdjbnRpRlN1N3gyYmNYZm1XYU81bTl5Zkp5M242azllNURrQnRTTEtPODlSSGVTdTNpMlFUM3A0R1loZzBBNDdKa0dicTBHT2RNREJiZDFQUXVGRWNhbVZpMHpfdzhLQVpZS2owNnBYSGNuMUQ2ZHB6Sm1BcEY3eTRXSjNXYnpoUHRWTXJXbklsSjdoNTAxTHh4a0p1QXdJaHl6Vks4STJYRGk2cThsaWhMQQ?oc=5",
+    "source": "lapresse",
+    "title": "Nodule au poumon | Le pape sera opéré « dans les prochains jours »"
+   },
+   "b": {
+    "url": "https://www.noovo.info/nouvelles/international/article/leon-xiv-va-subir-une-intervention-chirurgicale-visant-a-retirer-un-nodule-au-poumon/",
+    "source": "noovo",
+    "title": "Léon XIV va subir une intervention chirurgicale visant à retirer un nodule au poumon"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292260/cessez-feu-energetiques-kiev-moscou-trump-truth-social",
+    "source": "rc",
+    "title": "Cessez-le-feu sur les infrastructures énergétiques entre Kiev et Moscou, selon Trump"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxNb21vTmJBcTJTcjFwX0t3Sm5YR3Q3NURsMDJ5LUN1bFE5ODdxSFZRd19GRS16WFctVmxvN3pudS1sWW1ETTI3ZGo1UUxCSVFLQlBZNkQxcGFodzhraWszd09fU1VBWGRHN2JtN1Z5czllUUktNWFtMnd6X04xb0JkWWhyTnVBM1pxNzFDU2E3VGtMRmVDdmRmT0I5TUdvdWV4SnhlVHotdkY?oc=5",
+    "source": "lactualite",
+    "title": "Kyiv rejette l’appel de Trump en faveur d’un nouveau président ukrainien"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/le-mystere-quebec--nexiste-pas",
+    "source": "jdm",
+    "title": "«Le mystère Québec» n’existe pas"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/opinion/idees/1015328/gouverner-capitale",
+    "source": "devoir",
+    "title": "Gouverner sans la capitale"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/des-dizaines-de-blesses-dans-une-attaque-houthie-sur-laeroport-de-la-capitale-saoudienne",
+    "source": "jdm",
+    "title": "Douze morts dans une attaque imputée aux Houthis contre l'aéroport de Ryad"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/monde/moyen-orient/1016057/aeroport-riyad-nouveau-pris-cible-selon-autorites",
+    "source": "devoir",
+    "title": "Une attaque à l’aéroport international de Riyad fait 12 morts et plus de 300 blessés"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/gouvernement-st-pierre-plamondon-voici-des-elus-pequistes-ministrables",
+    "source": "jdm",
+    "title": "Gouvernement St-Pierre Plamondon: Voici des élus péquistes ministrables"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292076/conseil-des-ministres-deputes-assermentation",
+    "source": "rc",
+    "title": "Le Conseil des ministres du PQ sera présenté le 21 octobre"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/attaque-contre-zelensky-et-entente-avec-moscou-trump-fragilise-la-credibilite-des-etats-unis-selon-un-analyste",
+    "source": "jdm",
+    "title": "Attaque contre Zelensky et entente avec Moscou: Trump fragilise la crédibilité des États-Unis, selon un analyste"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiwAFBVV95cUxQZTBCcFJkb0ZfWVNqdkg1d2FtNVhvU0ZBMzJRQlBlRzBCZE1lZ1ZUVTdVcFBnTVdMMHRvbk52a0NkRVdxbllEd0NJaDBuTGNQQ1hnUzJOZTlOcy1kX3V6eDRRMGktOTdtWDE3Y1ltSUF0VDU1U2tOMnktQVhTWE9NTVFkdmF2dHh6NkIzY0JXTkJEUU9YR0N5MFJITExpMEpSc3NsR1RTTlQ1VDV5WnNlYXNJNUZ1eU96Sm9sOG5DZXg?oc=5",
+    "source": "lapresse",
+    "title": "C’est aux Ukrainiens de choisir leur dirigeant, affirme Zelensky"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/les-houthis-renouvellent-leurs-menaces-contre-les-aeroports-saoudiens-au-lendemain-de-lattaque-meurtriere-a-ryad",
+    "source": "jdm",
+    "title": "Les Houthis renouvellent leurs menaces contre les aéroports saoudiens, au lendemain de l’attaque meurtrière à Riyad"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiqAFBVV95cUxPOE1zc3ozbG9aXzJEWGkya0F6OUh1WG1mVFZDT1prRWstR3NDMG5Zb3BvNHZEeWlhVXhVVEN3MWM2dmI1SlpwNU9vb1JnYVlJNEJBYmVTbjZ0NTB3enV0ZFl6SU5JWnVOdEpNWVJTQjRPeG9ZTElaTnB6dUNZOHo3cWZEWkd6TU1lb1EyaHNlTHRmMTR5TXBhaFNCTzdUSllmWVNMRHpGV2Y?oc=5",
+    "source": "lapresse",
+    "title": "Nouvelle frappe sur l’aéroport de Riyad"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/liveblog-jacob-fowler-starts-again-for-canadiens-vs-red-wings/",
+    "source": "gazette",
+    "title": "Liveblog replay: Fans chant “we want Larkin” as Canadiens beat Red Wings 1-0 in shootout"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/sports/2292170/kaiden-guhle-en-uniforme-contre-les-red-wings",
+    "source": "rc",
+    "title": "Kaiden Guhle en uniforme contre les Red Wings"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/canadiens-trade-jayden-struble-to-nashville-for-second-round-draft-pick/",
+    "source": "gazette",
+    "title": "Kaiden Guhle returns to Canadiens’ lineup after Jayden Struble traded to Nashville"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/politique/quebec/1015958/seront-allies-ennemis-chemin-pq-debut-session",
+    "source": "devoir",
+    "title": "Qui seront les alliés et les ennemis sur le chemin du PQ au début de la session?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10780893/a-quoi-ressemblera-relation-entre-carney-et-pspp",
+    "source": "rc",
+    "title": "À quoi ressemblera la relation entre Carney et PSPP?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/avec-cette-autre-bonne-performance-jacob-fowler-va-donner-des-maux-de-tete-a-la-direction-du-canadien",
+    "source": "jdm",
+    "title": "Avec cette autre bonne performance, Jacob Fowler va donner des maux de tête à la direction du Canadien"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2292239/canadien-montreal-en-rodage-red-wings-detroit-bolduc-fowler",
+    "source": "rc",
+    "title": "Le Canadien encore en rodage, mais récompensé"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/hidden-game-hockey/",
+    "source": "gazette",
+    "title": "Hidden Game: Third time’s the charm as Canadiens finally win one at the Bell Centre"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   },
+   "b": {
+    "url": "https://www.985fm.ca/nouvelles/807988/red-wings-0-canadiens-0-avant-match",
+    "source": "985",
+    "title": "Zachary Bolduc donne la victoire au CH en tirs de barrage"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/gouvernement-st-pierre-plamondon-voici-des-elus-pequistes-ministrables",
+    "source": "jdm",
+    "title": "Gouvernement St-Pierre Plamondon: Voici des élus péquistes ministrables"
+   },
+   "b": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMi6gFBVV95cUxNdjRqTmJKN2FXYTMwYW5NODRYYS1yY3ppRWJnOVF3QllJMEJadjR1ck5tM2pYZ08wLVNUWEJUdzRtbldMb194bWItZk12THV0X1NRYlVxc1RfOUxvWTBfWUNTXzNLYXVYUmhRV2RFNGZNMDJTTlA1MUJpcHQzeGU2SHdBMDRoZ3A1bE1rX2JraHVQYXhqOE9wMm02UzhtOGhXNXdGWDQ4LXlxdWJDUndTQU0yNlV2SnFHTm5vaWRpc1VtOXFuREpiWl9xYW10ZU1YaXYwRTlJaFNfaEdmN1czTm1UcUhoeWhHWXc?oc=5",
+    "source": "lapresse",
+    "title": "Marathon de Montréal | Les entraves à surveiller pour éviter les coureurs et les fermetures"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/montreal-marathon-2026-road-closures-9.7375346",
+    "source": "cbc",
+    "title": "Montreal marathon road closures to be aware of this weekend"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/08/caq-vers-un-chef-interimaire-des-le-17-octobre",
+    "source": "jdm",
+    "title": "CAQ: vers un chef intérimaire dès le 17 octobre?"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/mathieu-lacombe-culture-minister-expelled-from-caq-9.7375931",
+    "source": "cbc",
+    "title": "CAQ culture minister booted from party after attending PQ victory rally"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016084/bolduc-tranche-fusillade-canadien-bat-red-wings",
+    "source": "devoir",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1016030/canadien-echange-jayden-struble-predators",
+    "source": "devoir",
+    "title": "Le Canadien échange Jayden Struble aux Predators"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291874/canadien-predators-centre-bell-fowler-saros",
+    "source": "rc",
+    "title": "Le Canadien gaspille une avance de deux buts et s’incline devant les Predators"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/le-canadien-se-trompe-rarement-en-transigeant-avec-les-predators",
+    "source": "jdm",
+    "title": "Le Canadien se trompe rarement en transigeant avec les Predators"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291874/canadien-predators-centre-bell-fowler-saros",
+    "source": "rc",
+    "title": "Le Canadien gaspille une avance de deux buts et s’incline devant les Predators"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.lesoleil.com/actualites/politique/2026/10/10/pas-delu-du-gouvernement-a-quebec-et-si-le-probleme-etait-ailleurs-XQAMHWF2PRA2JJN5FIT3MQYZDY/",
+    "source": "soleil",
+    "title": "Pas d’élu du gouvernement à Québec? Et si le problème était ailleurs?"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/info/videos/1-10781797/gouvernement-st-pierre-plamondon-qui-seront-nouveaux-ministres-pequistes",
+    "source": "rc",
+    "title": "Gouvernement St-Pierre Plamondon : qui seront les nouveaux ministres péquistes?"
+   }
+  },
+  {
+   "label": "S",
+   "a": {
+    "url": "https://www.ledevoir.com/monde/asie/1016054/gouvernement-indien-empeche-revolte-contre-commission-electorale",
+    "source": "devoir",
+    "title": "Le gouvernement indien empêche la révolte contre la commission électorale"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/nouvelle/2292246/inde-remise-liberte-cafards-arrestation-manifestation",
+    "source": "rc",
+    "title": "L’Inde libère les chefs du mouvement des « cafards »"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.cbc.ca/news/canada/montreal/montreal-marathon-2026-road-closures-9.7375346",
+    "source": "cbc",
+    "title": "Montreal marathon road closures to be aware of this weekend"
+   },
+   "b": {
+    "url": "https://www.ledevoir.com/sports/1016105/malgre-report-octobre-marathon-montreal-ne-perd-rien-popularite",
+    "source": "devoir",
+    "title": "Malgré son report en octobre, le Marathon de Montréal ne perd rien de sa popularité"
+   }
+  },
+  {
+   "label": "N",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/09/16/course-automobile--a-16-ans-ce-pilote-quebecois--est-incroyable-et-rapide",
+    "source": "jdm",
+    "title": "Course automobile : À 16 ans, ce pilote Québécois « est incroyable et rapide »"
+   },
+   "b": {
+    "url": "https://news.google.com/rss/articles/CBMiXkFVX3lxTE5oV2t5d1dpOW5YbjZsNnNoUnBHZHI3Zk5QZmdIYlloeTdkYTRsekxfVDZkVmktZVc1alZjUFZpaVc1QWp5ZVc4c3JwNlVUM05GZ3UxVXBCdUptVG1veWc?oc=5",
+    "source": "lapresse",
+    "title": "Course automobile, Formule 1, Nascar"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMixgFBVV95cUxOcHhiTjNteVJfS0N1a2lOQkpyNFQzZnhBUGlGQm9tNWcwYTZkWEFwRWg0ajFmajIwZjFhbVltaEhTOFBJZ0hWdjFwUlhjQkV6OFlNZDdmdDhkbm9fT0ZCckJRRmdvOHAzNDN2OGZ6Y09xbmVWWXVPMG95YVQ5bUFKX19GRDFrRWNxQlB2c2ZDQ2NMeHBjRGhxbHU0V29wRjZ4VngtQnlLZy1Gb1VQM3RNRGRuSlhDNExQN2xvbG5hbnN1dEdOZ1E?oc=5",
+    "source": "lapresse",
+    "title": "Red Wings 0 – Canadien 1 (TB) | Zachary Bolduc joue les héros en tirs de barrage"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://news.google.com/rss/articles/CBMiygFBVV95cUxOMUF2QXRhNHVEYnZ0Z01CYWU4Qmxnd2NHb0RSZUpySmdNdE5CYnNwV05rM1l2a0oxdEdoZFEzeWNiZFRJZ2ZrN0VyQXRaak5ULU1vay1nVGY0QmVaTUl5TXJxcEdrdlp0T0otV0ZjZmNvd2pZa2hrZWxpV3g0VUxwYTF3VnNwOF93WkFXTlpqcFJKczY0M2c0Y1JXbGJwYWlMQXRCVDVNSnkwOTJ5YXloSFlHN29kc3lTQU9pLWhXRjdSOEFtenVaTFJB?oc=5",
+    "source": "lapresse",
+    "title": "Marathon Beneva de Montréal | La première journée du marathon sous un soleil d’automne"
+   },
+   "b": {
+    "url": "https://www.cbc.ca/news/canada/montreal/montreal-marathon-2026-road-closures-9.7375346",
+    "source": "cbc",
+    "title": "Montreal marathon road closures to be aware of this weekend"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.lesoleil.com/sports/2026/10/11/bolduc-tranche-en-fusillade-et-le-canadien-bat-les-red-wings-1-0-6NISA4YV6NCFLIK3BOORKFCZ5M/",
+    "source": "soleil",
+    "title": "Bolduc tranche en fusillade et le Canadien bat les Red Wings 1-0"
+   },
+   "b": {
+    "url": "https://www.ctvnews.ca/montreal/article/bolduc-scores-in-shootout-as-the-canadiens-outlast-the-red-wings-1-0/",
+    "source": "ctv",
+    "title": "Bolduc scores in shootout as the Canadiens outlast the Red Wings 1-0"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://ici.radio-canada.ca/sports/2292256/kenyan-geoffrey-birgen-marathon-montreal",
+    "source": "rc",
+    "title": "Le Kényan Geoffrey Birgen conserve son titre au Marathon de Montréal"
+   },
+   "b": {
+    "url": "https://www.journaldemontreal.com/2026/10/11/le-gagnant-du-marathon-de-montreal-2025-conserve-sa-couronne",
+    "source": "jdm",
+    "title": "Le gagnant du Marathon de Montréal 2025 conserve sa couronne"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.journaldemontreal.com/2026/10/10/a-tva-sports--une-chance-de-se-relever-pour-le-ch",
+    "source": "jdm",
+    "title": "Canadien: Une victoire signée Jacob Fowler"
+   },
+   "b": {
+    "url": "https://montrealgazette.com/sports/hockey/montreal-canadiens/liveblog-jacob-fowler-starts-again-for-canadiens-vs-red-wings/",
+    "source": "gazette",
+    "title": "Liveblog replay: Fans chant “we want Larkin” as Canadiens beat Red Wings 1-0 in shootout"
+   }
+  },
+  {
+   "label": "E",
+   "a": {
+    "url": "https://www.ledevoir.com/sports/1015715/canadien-gaspille-avance-deux-buts-perd-contre-predators",
+    "source": "devoir",
+    "title": "Le Canadien gaspille une avance de deux buts et perd contre les Predators"
+   },
+   "b": {
+    "url": "https://ici.radio-canada.ca/sports/2291884/debuts-tatons-moral-talons-canadien-montreal-predators-nashville",
+    "source": "rc",
+    "title": "Débuts à tâtons, moral dans les talons"
+   }
+  }
+ ]
+}

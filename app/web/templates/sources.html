@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% from "_macros.html" import dot, pill %}
+{% block title %}Sources · {{ APP_NAME }}{% endblock %}
+{% block content %}
+<div class="feed-head">
+  <div>
+    <h1>Sources</h1>
+    <p class="sub">{{ rows | length }} médias suivis. Collecte toutes les 15 min (30 min pour Google News), regroupement toutes les 5 min{% if last_process %}, dernier passage {{ last_process | ago }}{% endif %}.</p>
+  </div>
+  <form method="post" action="/actions/actualiser"><button class="btn" type="submit">Actualiser maintenant</button></form>
+</div>
+
+<section class="panel">
+  <div class="table-scroll">
+    <table class="data">
+      <thead>
+        <tr>
+          <th scope="col">Média</th><th scope="col">Groupe</th><th scope="col">Accès</th><th scope="col">Flux</th>
+          <th scope="col" class="num">24 h</th><th scope="col" class="num">Total</th><th scope="col">Pages</th><th scope="col">Dernière collecte</th><th scope="col">État</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for r in rows %}
+          <tr>
+            <td>{{ pill(r.source.name, r.slot) }} <span class="muted">{{ r.source.lang | upper }}</span></td>
+            <td>{{ dot(r.slot) }}{{ r.group }}</td>
+            <td>{% if r.source.fetch_pages %}{{ r.mode }}{% else %}<span class="tag tag-muted" title="Pages protégées (captcha / Access Denied) : titre et résumé du flux seulement">{{ r.mode }}</span>{% endif %}</td>
+            <td class="muted">{{ r.kinds | join(", ") | replace("gnews", "Google News") | replace("sitemap", "sitemap news") | replace("rss", "RSS") }} · {{ r.n_feeds }}</td>
+            <td class="num">{{ r.n_24h }}</td>
+            <td class="num muted">{{ r.n_total }}</td>
+            <td class="muted">
+              {% if r.source.fetch_pages %}
+                {{ r.enrich.get("ok", 0) }} lues{% if r.enrich.get("pending") %} · {{ r.enrich.pending }} en attente{% endif %}{% if r.enrich.get("blocked") %} · <span class="warn-text">{{ r.enrich.blocked }} bloquées</span>{% endif %}
+              {% else %}–{% endif %}
+            </td>
+            <td>{{ r.last_run | ago }}</td>
+            <td>
+              {% if not r.last_run %}<span class="badge badge-neutral">En attente</span>
+              {% elif r.failing %}<span class="badge badge-bad" title="{% for f in r.failing %}{{ f.status }} : {{ f.error }}&#10;{% endfor %}"><span class="badge-icon" aria-hidden="true">!</span>{{ r.failing | length }} flux en échec</span>
+              {% else %}<span class="badge badge-good"><span class="badge-icon" aria-hidden="true">✓</span>OK</span>{% endif %}
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</section>
+<p class="note">La Presse et L'actualité bloquent les robots (captcha AWS, Cloudflare) : leurs titres viennent des flux Google News. Québecor (Journal de Montréal, Journal de Québec, TVA) bloque les pages d'articles : titres et résumés de leurs propres flux. Aucune protection n'est contournée.</p>
+{% endblock %}

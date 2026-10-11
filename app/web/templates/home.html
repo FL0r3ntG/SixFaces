@@ -1,0 +1,180 @@
+{% extends "base.html" %}
+{% from "_macros.html" import coverage_bar, dot, photo, pill, status_mark %}
+{% block title %}{{ APP_NAME }} — Édition du {{ today | longdate | lower }}{% endblock %}
+{% block content %}
+
+<header class="mh">
+  <div class="mh-top">
+    <span>Édition du {{ today | longdate | lower }}</span>
+    <span>Mis à jour à {{ today | hm }} · heure du Québec</span>
+  </div>
+  <p class="mh-name"><svg class="mh-cube" viewBox="0 0 32 32" aria-hidden="true"><path d="M16 3 28 10 16 17 4 10z" class="cube-top"/><path d="M4 10 16 17v13L4 23z" class="cube-left"/><path d="M28 10 16 17v13l12-7z" class="cube-right"/></svg>{{ APP_NAME }}</p>
+  <p class="mh-tag">{{ APP_TAGLINE }}</p>
+  <nav class="mh-sections" aria-label="Rubriques">
+    <a href="/" aria-current="page">À la une</a>
+    {% for key in ["politique", "international", "justice", "economie", "societe", "sante", "environnement", "culture", "sports"] %}
+      <a href="/?cat={{ key }}">{{ key | category }}</a>
+    {% endfor %}
+    <a href="/couverture">Couverture</a>
+  </nav>
+</header>
+
+<section class="board" aria-label="La journée en chiffres">
+  <div class="board-cell"><span class="board-v">{{ day.articles }}</span><span class="board-l">articles depuis 24 h</span></div>
+  <div class="board-cell"><span class="board-v">{{ day.sources }}</span><span class="board-l">médias actifs</span></div>
+  <div class="board-cell"><span class="board-v">{{ day.sujets }}</span><span class="board-l">sujets suivis</span></div>
+  <div class="board-cell"><span class="board-v">{{ day.confirmed }}</span><span class="board-l">confirmés par 3 groupes et +</span></div>
+  <div class="board-cell board-share">
+    <span class="board-l">Part de la couverture par groupe, 24 h</span>
+    {{ coverage_bar(day.coverage) }}
+    <span class="board-legend">{% for s in day.coverage.segments %}<span>{{ dot(s.slot) }}{{ s.short }} {{ '%.0f' | format(s.pct) }} %</span>{% endfor %}</span>
+  </div>
+</section>
+
+{% if ticker %}
+<p class="latest"><span class="latest-k">Dernière heure</span>
+  {% for t in ticker[:3] %}
+    <span class="latest-item"><span class="latest-t">{{ t.a.published_at | hm }}</span>
+      <a href="{% if t.sujet_id %}/sujet/{{ t.sujet_id }}{% else %}{{ t.a.url }}{% endif %}">{{ t.a.title }}</a></span>
+  {% endfor %}
+</p>
+{% endif %}
+
+{% if not lead %}
+  <p class="empty">La collecte démarre. Les premiers sujets paraissent dans quelques minutes.</p>
+{% else %}
+
+<div class="front-grid">
+  {# ------------------------------------------------------------------ le fil #}
+  <aside class="col-fil" aria-labelledby="fil-h">
+    <h2 class="rubric" id="fil-h">Le fil</h2>
+    <ol class="fil">
+      {% for t in fil[:12] %}
+        <li>
+          <span class="fil-t">{{ t.a.published_at | hm }}</span>
+          <div>{{ pill(t.source, t.slot) }}
+            <a href="{% if t.sujet_id %}/sujet/{{ t.sujet_id }}{% else %}{{ t.a.url }}{% endif %}">{{ t.a.title }}</a></div>
+        </li>
+      {% endfor %}
+    </ol>
+    <a class="more" href="/?vue=liste">Tous les sujets du jour</a>
+  </aside>
+
+  {# ------------------------------------------------------------------ la une #}
+  <div class="col-une">
+    {% set c = lead %}
+    <article class="lead">
+      {% if c.image %}<a href="/sujet/{{ c.sujet.id }}" class="lead-ph">{{ photo(c, "wide") }}</a>{% endif %}
+      <p class="kicker">{{ c.sujet.category | category }}</p>
+      <h1 class="lead-h"><a href="/sujet/{{ c.sujet.id }}">{{ c.sujet.title }}</a></h1>
+      {% if c.lede %}<p class="lead-dek">{{ c.lede }}</p>{% endif %}
+      <p class="meta">
+        {{ status_mark(c.status) }}
+        <span>{{ c.sujet.n_articles }} articles · {{ c.sujet.n_sources }} médias · {{ c.sujet.n_groups }} groupes</span>
+        <span>{{ c.sujet.last_at | ago }}</span>
+        {% if c.figures_divergent %}<span class="mark mark-warn">Chiffres divergents</span>{% endif %}
+      </p>
+      {{ coverage_bar(c.coverage) }}
+      {% if c.headlines %}
+        <div class="howtitle">
+          <p class="howtitle-h">Comment ils titrent</p>
+          <ul>
+            {% for h in c.headlines %}
+              <li>{{ pill(h.source, h.slot) }}<a href="{{ h.url }}" target="_blank" rel="noopener noreferrer">{{ h.title }}</a></li>
+            {% endfor %}
+          </ul>
+        </div>
+      {% endif %}
+      <a class="more" href="/sujet/{{ c.sujet.id }}">Chronologie complète{% if c.sujet.n_events > 1 %} · {{ c.sujet.n_events }} développements{% endif %}</a>
+    </article>
+
+    <div class="une-pair">
+      {% for c in seconds[:2] %}
+        <article class="story">
+          {% if c.image %}<a href="/sujet/{{ c.sujet.id }}">{{ photo(c, "card") }}</a>{% endif %}
+          <p class="kicker">{{ c.sujet.category | category }}</p>
+          <h2 class="story-h"><a href="/sujet/{{ c.sujet.id }}">{{ c.sujet.title }}</a></h2>
+          {% if c.lede %}<p class="story-dek">{{ c.lede }}</p>{% endif %}
+          <p class="meta">{{ status_mark(c.status) }}<span>{{ c.sujet.n_sources }} médias · {{ c.sujet.n_groups }} groupes</span></p>
+        </article>
+      {% endfor %}
+    </div>
+  </div>
+
+  {# ------------------------------------------------------------------ right column #}
+  <div class="col-side">
+    {% for c in seconds[2:] %}
+      <article class="brief">
+        <div>
+          <p class="kicker">{{ c.sujet.category | category }}</p>
+          <h3 class="brief-h"><a href="/sujet/{{ c.sujet.id }}">{{ c.sujet.title }}</a></h3>
+          <p class="meta">{{ status_mark(c.status) }}<span>{{ c.sujet.n_groups }} groupes</span></p>
+        </div>
+        {% if c.image %}<a href="/sujet/{{ c.sujet.id }}" class="brief-ph" tabindex="-1" aria-hidden="true">{{ photo(c, "thumb") }}</a>{% endif %}
+      </article>
+    {% endfor %}
+
+    {% if rising %}
+      <section class="side-block">
+        <h2 class="rubric">En hausse</h2>
+        <ol class="ranked">
+          {% for c in rising %}
+            <li><a href="/sujet/{{ c.sujet.id }}">{{ c.sujet.title }}</a>
+              <span class="ranked-n">{{ c.n_recent }} articles en 3 h</span></li>
+          {% endfor %}
+        </ol>
+      </section>
+    {% endif %}
+  </div>
+</div>
+
+{# ------------------------------------------------------------------ analysis band #}
+<div class="analysis">
+  {% if divides %}
+    <section class="an-divides">
+      <h2 class="rubric">Le titre qui divise</h2>
+      <p class="an-intro">Même nouvelle, formulations les plus éloignées entre groupes de presse :
+        <a href="/sujet/{{ divides.event.sujet_id }}">{{ divides.event.title }}</a></p>
+      <div class="versus">
+        {% for r in divides.rows %}
+          <blockquote>
+            <a href="{{ r.url }}" target="_blank" rel="noopener noreferrer">{{ r.title }}</a>
+            <footer>{{ pill(r.source, r.slot) }}{% if r.opinion %} · opinion{% endif %}</footer>
+          </blockquote>
+        {% endfor %}
+      </div>
+    </section>
+  {% endif %}
+  {% if blind %}
+    <section class="an-blind">
+      <h2 class="rubric">Angle mort du jour</h2>
+      <h3 class="brief-h"><a href="/sujet/{{ blind.sujet.id }}">{{ blind.sujet.title }}</a></h3>
+      <p class="an-intro">Couvert par {{ blind.sujet.n_groups }} groupes de presse. Aucun article chez
+        <b>{{ blind.coverage.absent_major | join(", ") }}</b>.</p>
+      {{ coverage_bar(blind.coverage) }}
+      <a class="more" href="/couverture">Tous les angles morts</a>
+    </section>
+  {% endif %}
+</div>
+
+{# ------------------------------------------------------------------ sections #}
+{% for sec in sections %}
+  <section class="rub" aria-labelledby="rub-{{ sec.key }}">
+    <div class="rub-head">
+      <h2 id="rub-{{ sec.key }}">{{ sec.key | category }}</h2>
+      <a href="/?cat={{ sec.key }}">Toute la rubrique</a>
+    </div>
+    <div class="rub-grid">
+      {% for c in sec.cards %}
+        <article class="story{% if loop.first %} story-first{% endif %}">
+          {% if loop.first and c.image %}<a href="/sujet/{{ c.sujet.id }}">{{ photo(c, "card") }}</a>{% endif %}
+          <h3 class="story-h"><a href="/sujet/{{ c.sujet.id }}">{{ c.sujet.title }}</a></h3>
+          {% if loop.first and c.lede %}<p class="story-dek">{{ c.lede }}</p>{% endif %}
+          <p class="meta">{{ status_mark(c.status) }}<span>{{ c.sujet.n_groups }} groupe{{ 's' if c.sujet.n_groups > 1 }}</span><span>{{ c.sujet.last_at | ago }}</span></p>
+        </article>
+      {% endfor %}
+    </div>
+  </section>
+{% endfor %}
+{% endif %}
+{% endblock %}
