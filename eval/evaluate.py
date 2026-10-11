@@ -6,6 +6,8 @@ swallows unrelated developments shows up there, not in pair metrics).
 
     uv run python eval/evaluate.py            # current thresholds
     uv run python eval/evaluate.py P_SUJET=0.6 P_MERGE=0.8    # try other values of app.cluster constants
+    EVAL_DB=/path/snapshot.db uv run python eval/evaluate.py  # start from another database (e.g. one whose
+                                                              # embeddings are already computed: much faster)
 """
 
 import json
@@ -16,11 +18,12 @@ import sqlite3
 import sys
 import tempfile
 from collections import Counter
+from datetime import timedelta
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent.parent
 tmp = Path(tempfile.mkdtemp()) / "eval.db"
-src = sqlite3.connect(ROOT / "data" / "six_faces.db")
+src = sqlite3.connect(os.environ.get("EVAL_DB") or ROOT / "data" / "six_faces.db")
 dst = sqlite3.connect(tmp)
 src.backup(dst)
 src.close()
@@ -43,7 +46,7 @@ logging.getLogger().setLevel(logging.WARNING)
 
 for kv in sys.argv[1:]:
     k, v = kv.split("=")
-    setattr(C, k, float(v))
+    setattr(C, k, timedelta(hours=float(v)) if k.endswith(("WINDOW", "SPAN")) else float(v))
 
 with Session(engine) as s:
     s.exec(text("update article set event_id=null, processed=0, dup_of=null"))
@@ -68,17 +71,30 @@ pairs = [
     for p in json.loads((ROOT / "eval" / "pairs.json").read_text())["pairs"]
     if p["a"]["url"] in by_url and p["b"]["url"] in by_url
 ]
-for name, truth, same in (
-    ("même événement", "E", lambda p: ev(p["a"]["url"]) == ev(p["b"]["url"])),
-    ("même sujet", "ES", lambda p: sujet_of[ev(p["a"]["url"])] == sujet_of[ev(p["b"]["url"])]),
+
+
+def score(subset):
+    out = []
+    for truth, same in (
+        ("E", lambda p: ev(p["a"]["url"]) == ev(p["b"]["url"])),
+        ("ES", lambda p: sujet_of[ev(p["a"]["url"])] == sujet_of[ev(p["b"]["url"])]),
+    ):
+        tp = sum(1 for p in subset if p["label"] in truth and same(p))
+        fp = sum(1 for p in subset if p["label"] not in truth and same(p))
+        fn = sum(1 for p in subset if p["label"] in truth and not same(p))
+        prec, rec = tp / max(tp + fp, 1), tp / max(tp + fn, 1)
+        out.append(f"P {prec:.2f} R {rec:.2f} F1 {2 * prec * rec / max(prec + rec, 1e-9):.2f}")
+    return out
+
+
+print(f"{'':10s} {'même événement':24s} même sujet")
+for name, subset in (
+    ("tout", pairs),
+    ("spread", [p for p in pairs if p.get("set") == "spread"]),
+    ("recall", [p for p in pairs if p.get("set") == "recall"]),
 ):
-    tp = sum(1 for p in pairs if p["label"] in truth and same(p))
-    fp = sum(1 for p in pairs if p["label"] not in truth and same(p))
-    fn = sum(1 for p in pairs if p["label"] in truth and not same(p))
-    prec, rec = tp / max(tp + fp, 1), tp / max(tp + fn, 1)
-    print(
-        f"{name:15s} précision {prec:.2f}  rappel {rec:.2f}  F1 {2 * prec * rec / max(prec + rec, 1e-9):.2f}"
-    )
+    e, st = score(subset)
+    print(f"{name:10s} {e:24s} {st}   ({len(subset)} paires)")
 sizes = Counter(sujet_of.values()).most_common(5)
 print(
     f"{len(pairs)} paires · {len(sujet_of)} événements · plus gros sujets: {[n for _, n in sizes]} développements"

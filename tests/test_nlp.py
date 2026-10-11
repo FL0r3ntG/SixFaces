@@ -72,8 +72,11 @@ def test_lexical_overlap_favours_shared_rare_names():
 def test_pair_probabilities_use_time_for_events_not_stories():
     from app.nlp.similarity import p_event, p_story
 
-    # time apart lowers "same development" a lot; moderately similar pieces a day apart are a new development
-    assert p_event(0.75, 0.45, 2) - p_event(0.75, 0.45, 30) > 0.25
-    assert p_event(0.65, 0.30, 2) > 0.6 > p_event(0.65, 0.30, 30)
-    assert p_story(0.75, 0.45) > 0.7  # ...but still the same story
-    assert p_story(0.45, 0.0) < 0.2  # vaguely similar wording, no shared words: unrelated
+    # same wording, a few hours vs a day and a half apart: time lowers "same development" a lot
+    assert p_event(0.75, 0.45, 2) - p_event(0.75, 0.45, 36) > 0.2
+    assert p_event(0.75, 0.45, 2) > 0.6
+    # stories ignore time; strong matching-model similarity + shared words = same story
+    assert p_story(0.93, 0.45) > 0.8
+    assert p_story(0.80, 0.0) < 0.2
+    # shared figures and vocabulary in the bodies raise the story probability
+    assert p_story(0.88, 0.2, (0.6, 0.4)) > p_story(0.88, 0.2, (0.0, 0.0))

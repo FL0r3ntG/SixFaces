@@ -22,9 +22,11 @@ from sqlmodel import Session, col, select
 from app.db import engine
 from app.models import Article, Event, Sujet, utcnow
 from app.nlp.categories import CONF_SECTION
-from app.nlp.embed import embed, from_bytes, to_bytes
+from app.nlp.embed import embed, embed_match, from_bytes, to_bytes
 from app.nlp.similarity import (
     Idf,
+    body_overlap,
+    body_profile,
     centroid,
     doc_text,
     lexical,
@@ -81,6 +83,7 @@ def process() -> dict:
                 Article.published_at >= earliest - EVENT_WINDOW,
             )
         ).all()
+        _embed_missing(session, list(window))  # articles clustered before the matching model existed
         idf = Idf(
             doc_text(t, s)
             for t, s in session.exec(
@@ -165,6 +168,13 @@ def _embed_missing(session: Session, articles: list[Article]) -> None:
         vecs = embed([doc_text(a.title, a.summary) for a in chunk])
         for a, v in zip(chunk, vecs, strict=True):
             a.embedding = to_bytes(v)
+            session.add(a)
+    todo = [a for a in articles if a.embedding_e5 is None]
+    for i in range(0, len(todo), 64):
+        chunk = todo[i : i + 64]
+        vecs = embed_match([doc_text(a.title, a.summary) for a in chunk])
+        for a, v in zip(chunk, vecs, strict=True):
+            a.embedding_e5 = to_bytes(v)
             session.add(a)
 
 
@@ -487,16 +497,26 @@ class _StoryPool:
     def __init__(self, session: Session, event_ids: list[int], idf: Idf) -> None:
         rows = session.exec(
             select(
-                Article.event_id, Article.embedding, Article.title, Article.summary, Article.published_at
+                Article.event_id, Article.embedding, Article.title, Article.summary, Article.published_at,
+                Article.embedding_e5, Article.text,
             ).where(col(Article.event_id).in_(event_ids), Article.dup_of == None)
-        ).all()
+        ).all()  # fmt: skip
+        self.idf = idf
         self.events = [r[0] for r in rows]
         self.times = [r[4] for r in rows]
         self.vecs = [idf.vector(doc_text(r[2], r[3])) for r in rows]
+        self.texts = [r[6] for r in rows]
+        self._bodies: dict[int, object] = {}
         self.m = np.stack([from_bytes(r[1]) for r in rows]) if rows else np.zeros((0, 1))
+        self.m5 = np.stack([from_bytes(r[5]) for r in rows]) if rows else np.zeros((0, 1))
         self.members: dict[int, list[int]] = defaultdict(list)
         for i, ev in enumerate(self.events):
             self.members[ev].append(i)
+
+    def _body(self, i: int):
+        if i not in self._bodies:
+            self._bodies[i] = body_profile(self.texts[i], self.idf)
+        return self._bodies[i]
 
     def best_sujet(self, ev: Event, by_id: dict[int, Event]) -> tuple[int | None, int | None, float]:
         """(sujet, the development it follows, link probability). Compared with every article of every
@@ -507,6 +527,7 @@ class _StoryPool:
             return None, None, 0.0
         sports = ev.category == "sports"
         cos = self.m[idx] @ self.m.T
+        cos5 = self.m5[idx] @ self.m5.T
         cands: dict[int, list[float]] = defaultdict(list)
         for r, c in zip(*np.nonzero(cos > 0.45), strict=True):
             other = by_id.get(self.events[c])
@@ -519,7 +540,10 @@ class _StoryPool:
             if hours > SUJET_WINDOW.total_seconds() / 3600:
                 continue
             lex = lexical(self.vecs[i], self.vecs[j])
-            p = p_event(float(cos[r, c]), lex, hours) if sports else p_story(float(cos[r, c]), lex)
+            if sports:
+                p = p_event(float(cos[r, c]), lex, hours)
+            else:
+                p = p_story(float(cos5[r, c]), lex, body_overlap(self._body(i), self._body(j)))
             cands[other.id].append(p)
         best, best_p = None, P_SUJET
         for other_id, ps in cands.items():

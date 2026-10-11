@@ -23,7 +23,8 @@ def art(source, group, title, vec, hours_ago=1.0, event_id=1):
     i = next(_ids)
     return Article(
         id=i, source_key=source, group=group, url=f"https://x/{i}", title=title, title_norm=title.lower(),
-        published_at=NOW - timedelta(hours=hours_ago), embedding=to_bytes(v), event_id=event_id,
+        published_at=NOW - timedelta(hours=hours_ago), embedding=to_bytes(v), embedding_e5=to_bytes(v),
+        event_id=event_id,
     )  # fmt: skip
 
 

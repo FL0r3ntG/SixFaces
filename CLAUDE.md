@@ -9,7 +9,9 @@ and docs are in English.
 - Collection (21 outlets), enrichment, same-owner copy detection, grouping into events and chained sujets,
   verification, ranking and all pages work. The service collects continuously since 2026-10-11.
 - Grouping uses the fitted pair probabilities in `app/nlp/similarity.py` and the constants at the top of
-  `app/cluster.py`. After any change to them, run `uv run python eval/evaluate.py`, compare with the README
+  `app/cluster.py`: events use the fast embedding, stories use e5-large (`Article.embedding_e5`) plus body
+  numbers/vocabulary. `eval/pairs.json` has 510 labelled pairs (`set`: spread / recall); `EVAL_DB=` points
+  the evaluation at a snapshot whose embeddings are already computed. After any change to them, run `uv run python eval/evaluate.py`, compare with the README
   table, then `scripts/recluster.py` (service stopped). Never tune by eye on the live pages.
 
 ## Rules

@@ -13,7 +13,10 @@ class Settings(BaseSettings):
     app_tagline: str = "La presse québécoise, sous toutes ses faces"
     database_url: str = f"sqlite:///{ROOT / 'data' / 'six_faces.db'}"
     model_cache_dir: Path = ROOT / "data" / "models"
-    embedding_model: str = "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"
+    embedding_model: str = (
+        "sentence-transformers/paraphrase-multilingual-mpnet-base-v2"  # fast: filtering, copies
+    )
+    matching_model: str = "intfloat/multilingual-e5-large"  # stronger: same event / same story decisions
 
     scheduler_enabled: bool = True
     discover_interval_minutes: int = 15  # RSS + news sitemaps

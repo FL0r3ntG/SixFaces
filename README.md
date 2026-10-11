@@ -89,22 +89,32 @@ scheduler (APScheduler; catches up after the laptop sleeps)
 
 ### Same event? Same story?
 
-Each pair of articles gets three numbers:
-- `cos`, the cosine of their embeddings (headline + start of lede; multilingual, so French and English
-  coverage of the same news land close together);
+Two local multilingual embedding models read the headline and the start of the lede, so French and
+English coverage of the same news land close together:
+- a **fast** one (`paraphrase-multilingual-mpnet`), used to find candidates, detect copies and vote on
+  sections;
+- a **stronger** one (`multilingual-e5-large`, about 0.3 s per article on CPU), used to decide which
+  story a development belongs to.
+
+Each pair of articles then gets:
+- `cos` and `e5`, the cosine of their two embeddings;
 - `lex`, the IDF-weighted overlap of word stems, with names counting double;
-- `hours`, how far apart they were published.
+- `hours`, how far apart they were published;
+- when both articles have their text: the share of **numbers** they have in common and the overlap of
+  their **body** vocabulary.
 
 Two logistic models, fitted on hand-labelled pairs (see [Evaluation](#evaluation)), turn these into
 probabilities (`app/nlp/similarity.py`):
 
 ```
-p_event = σ(−2.74 + 4.63·cos + 8.05·lex − 1.10·ln(1 + hours))   same development
-p_story = σ(−5.53 + 7.25·cos + 9.33·lex)                        same story, any development
+p_event = σ(−2.74 + 4.63·cos + 8.05·lex − 1.10·ln(1 + hours))            same development
+p_story = σ(−60.42 + 69.86·e5 + 3.56·lex [− 2.38 + 3.07·numbers + 4.36·body])   same story
 ```
 
 Time matters for events: same-development pairs are a median 3.8 h apart, other developments of the
-same story 21 h. It doesn't matter for stories, which run for days.
+same story 21 h. It doesn't matter for stories, which run for days. The stronger model and the body
+signals help a lot for stories. For events they were tried and gave nothing at equal precision, so
+the event decision keeps the fast model.
 
 `app/cluster.py` uses them like this:
 - **Joining an event.** The best match in the event must reach 0.6 and the second best 0.3, so one
@@ -156,18 +166,28 @@ Pair metrics don't catch a sujet that swallows unrelated developments; size does
 |---|---|---|---|
 | First version (fixed thresholds on `cos + 0.6·lex`) | 0.74 / 0.53 / 0.62 | 0.95 / 0.76 / 0.84 | 12 (a post-election catch-all) |
 | Fitted probabilities + merge pass | 0.82 / 0.88 / 0.85 | 0.94 / 0.89 / 0.92 | 5 |
-| + time from the event start, 24 h span, chained stories (**current**) | **0.88 / 0.83 / 0.86** | **0.93 / 0.88 / 0.90** | 6 |
+| + time from the event start, 24 h span, chained stories | 0.88 / 0.83 / 0.86 | 0.93 / 0.88 / 0.90 | 6 |
 
-The pair models were 5-fold cross-validated. Headline-only similarity, named-entity overlap and
-language added about 0.01 F1 and were left out. Most remaining errors are judgment calls: a sprint vs
-the Grand Prix, a statement vs the reply to it. With a few weeks of data, label more pairs (especially
-long-running stories) and refit.
+A second labelling round added 197 pairs that this version kept **apart**: 28 were the same
+development and 61 the same story. The `set` field marks them `recall`; the first 313 are `spread`.
+On all 510 pairs, with the same data (1 836 articles):
+
+| All 510 pairs | Same event P / R / F1 | Same sujet P / R / F1 | Largest sujet |
+|---|---|---|---|
+| Previous version | 0.88 / 0.70 / 0.78 | 0.94 / 0.76 / 0.84 | 6 |
+| e5-large for events too (best setting at equal precision) | 0.89 / 0.66 / 0.76 | 0.96 / 0.82 / 0.88 | 6 |
+| **Current**: fast model for events; e5-large + body signals for stories | **0.88 / 0.70 / 0.78** | **0.95 / 0.83 / 0.89** | 6 |
+
+On the pairs the previous version kept apart, story recall rose from 0.49 to 0.65. The pair models
+were cross-validated (5 folds × 3). Headline-only similarity, named-entity overlap, language and body
+similarity added nothing once the rest was in. Most remaining errors are judgment calls: pre-game
+coverage vs the result, a sprint vs the Grand Prix, a statement vs the reply to it.
 
 ## Running it
 
 It runs like appart_finder: a Podman container managed by a systemd user service (a *quadlet*), on
-<http://127.0.0.1:8010>. It starts with the session and restarts if it crashes. The data (SQLite and the
-~1 GB embedding model, downloaded on first start) lives in `data/`, mounted at `/data`.
+<http://127.0.0.1:8010>. It starts with the session and restarts if it crashes. The data (SQLite and the two
+embedding models, about 3 GB, downloaded on first start) lives in `data/`, mounted at `/data`.
 
 ```bash
 # first install
@@ -201,7 +221,8 @@ systemctl --user stop six-faces && uv run python -m scripts.recluster && systemc
 ```
 
 Settings go in `.env` or the environment (`app/config.py`): `APP_NAME`, `APP_TAGLINE`, collection
-intervals, `HOST_DELAY_S`, `EMBEDDING_MODEL`, `DISPLAY_TZ` (default America/Toronto).
+intervals, `HOST_DELAY_S`, `EMBEDDING_MODEL` (fast model), `MATCHING_MODEL` (the model that decides
+same event / same story), `DISPLAY_TZ` (default America/Toronto).
 
 ## Development
 

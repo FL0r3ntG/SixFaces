@@ -35,7 +35,8 @@ class Article(SQLModel, table=True):
     enrich_status: str = Field(default="pending", index=True)
     wire: str | None = None  # "PC", "AFP", "Reuters", "AP" when the piece is agency copy
     opinion: bool = False
-    embedding: bytes | None = None
+    embedding: bytes | None = None  # fast model (filtering, copies, sections)
+    embedding_e5: bytes | None = None  # matching model (same event / same story)
     event_id: int | None = Field(default=None, index=True, foreign_key="event.id")
     # Same piece on another site of the same owner (JdM -> JdQ, TVA; Le Soleil -> 5 CN2i papers): points to the
     # first one. Copies stay in their event for the record but are left out of every count and list.
