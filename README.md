@@ -57,8 +57,16 @@ This measures corroboration, not truth.
   piece once, as "Québecor · 3 sites : …". On the first two days that was 408 of 670 Québecor articles
   and 368 of 515 CN2i articles. A copy has the same owner, appears within 48 h, and has the same
   headline or an embedding cosine ≥ 0.96.
-- **Agency copy** (La Presse Canadienne, AFP, AP, Reuters) is detected from bylines, datelines and
-  identical headlines across groups. It never counts as an independent confirmation.
+- **The same piece from another owner shows once too.** Agency copy (La Presse Canadienne, AFP, AP,
+  Reuters) is often run word for word by different owners: Noovo Info and L'actualité, CN2i and Le
+  Devoir. Such an article points to the first one (`Article.same_as`) when its headline is the same once
+  normalized: rubric prefix dropped ("Guerre en Ukraine | …"), one containing the other, or ≥ 90 %
+  similar. It also has to appear within 36 h and be close in meaning. It is forced into the same
+  development, listed once with "+ L'actualité", and counted once as an article. Each owner still gets
+  credit in the coverage bars, because it chose to run the story. Two outlets' *own* articles on the same
+  news are never merged this way.
+- **Agency copy** is detected from bylines, datelines and identical headlines across groups. It never
+  counts as an independent confirmation.
 - **Colours**: each group has one colour, used everywhere (charts, dots, outlet labels). Colours follow
   the outlets' branding: Radio-Canada, La Presse and CN2i in red; Québecor, Bell (Noovo) and the Gazette
   in blue; Le Devoir grey; Métro green. Groups sharing a colour family get distinct shades, and the

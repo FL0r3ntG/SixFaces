@@ -19,8 +19,10 @@ and docs are in English.
 - **Never bypass bot protection** (captcha, WAF, Cloudflare, Akamai). Blocked outlets stay headline-only
   (`fetch_pages=False`, Google News). Respect robots.txt and `HOST_DELAY_S`.
 - Corroboration counts **ownership groups**, never sites; agency copy is never an independent confirmation.
-- Same-owner copies (`Article.dup_of`) are excluded from every count and list: new queries on `Article` must
-  add `views.canonical()` (or `dup_of == None`) and name the outlet with `views.outlet()`.
+- **Never show a duplicate.** Same-owner copies (`dup_of`) are excluded from everything (`views.canonical()`).
+  The same piece run by another owner (`same_as`) is excluded from lists and article counts
+  (`views.listed()`) but keeps its owner's credit in coverage (`canonical()`). New queries that list
+  articles must use `listed()`; name outlets with `views.outlet()` (it adds "+ other outlet").
 - Stories are chains: a development links to the closest *earlier* development (`Event.follows_id`); one
   development spans at most `MAX_SPAN` (24 h).
 - **Look**: a newspaper front page. Newsreader for headlines, Inter for UI, hairline rules and columns,
