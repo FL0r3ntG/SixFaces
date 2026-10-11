@@ -11,6 +11,7 @@ Il compare ensuite **qui couvre quoi, comment et à quelle vitesse**. Il tourne 
 est en français, et il n'utilise **aucune IA générative** : le regroupement repose sur des modèles
 d'embeddings locaux, des règles et des pondérations ajustées sur des exemples étiquetés à la main.
 
+- [Aperçu](#aperçu)
 - [Ce qu'on y voit](#ce-quon-y-voit)
 - [Sources et groupes de presse](#sources-et-groupes-de-presse)
 - [Fonctionnement](#fonctionnement)
@@ -19,6 +20,32 @@ d'embeddings locaux, des règles et des pondérations ajustées sur des exemples
 - [Développement](#développement)
 - [Organisation du code](#organisation-du-code)
 - [Limites connues](#limites-connues)
+
+## Aperçu
+
+*Captures du 11 octobre 2026. Les photos des médias sont floutées : elles appartiennent à leurs auteurs.*
+
+**À la une** : la journée en chiffres, le fil, la nouvelle principale et la façon dont chaque groupe la titre.
+
+![À la une](docs/screenshots/une.jpg)
+
+**Un sujet** : chiffres clés, qui en parle, course à la nouvelle, volume de couverture…
+
+![Page d'un sujet](docs/screenshots/sujet.jpg)
+
+…puis la **chronologie** : chaque développement relié à celui dont il découle, jour par jour, avec les
+chiffres qui divergent d'un média à l'autre.
+
+![Chronologie d'un sujet](docs/screenshots/chronologie.jpg)
+
+**Couverture** : la part de chaque rubrique dans chaque groupe, les angles morts, qui publie en premier.
+
+![Couverture comparée](docs/screenshots/couverture.jpg)
+
+<p align="center">
+  <img src="docs/screenshots/une-sombre.jpg" alt="Thème sombre" width="68%">
+  <img src="docs/screenshots/mobile.jpg" alt="Sur téléphone" width="22%">
+</p>
 
 ## Ce qu'on y voit
 
