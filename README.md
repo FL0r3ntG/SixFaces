@@ -2,288 +2,307 @@
 
 *La presse québécoise, sous toutes ses faces.*
 
-Six-Faces is a personal, Quebec-only take on Ground News. Every 15 minutes it collects the articles of
-**21 Quebec outlets** (French and English) and groups them:
-- into **events**, one news development as covered by every outlet;
-- into **sujets**, a story followed over days as a chain of developments.
+Six-Faces est un Ground News personnel, entièrement consacré au Québec. Toutes les 15 minutes, il collecte
+les articles de **21 médias québécois** (francophones et anglophones) et les regroupe :
+- en **événements** : un même développement de l'actualité, tel que couvert par chaque média ;
+- en **sujets** : une histoire suivie sur plusieurs jours, comme une chaîne de développements.
 
-It then compares **who covers what, how, and how fast**. It runs on the laptop, the interface is in
-French, and it uses **no generative AI**: grouping relies on a small local embedding model plus rules and
-weights fitted on hand-labelled examples.
+Il compare ensuite **qui couvre quoi, comment et à quelle vitesse**. Il tourne sur le portable, l'interface
+est en français, et il n'utilise **aucune IA générative** : le regroupement repose sur des modèles
+d'embeddings locaux, des règles et des pondérations ajustées sur des exemples étiquetés à la main.
 
-- [What you see](#what-you-see)
-- [Sources and ownership groups](#sources-and-ownership-groups)
-- [How it works](#how-it-works)
-- [Evaluation](#evaluation)
-- [Running it](#running-it)
-- [Development](#development)
-- [Project layout](#project-layout)
-- [Known limits](#known-limits)
+- [Ce qu'on y voit](#ce-quon-y-voit)
+- [Sources et groupes de presse](#sources-et-groupes-de-presse)
+- [Fonctionnement](#fonctionnement)
+- [Évaluation](#évaluation)
+- [Lancer l'application](#lancer-lapplication)
+- [Développement](#développement)
+- [Organisation du code](#organisation-du-code)
+- [Limites connues](#limites-connues)
 
-## What you see
+## Ce qu'on y voit
 
-| Page | Contents |
+| Page | Contenu |
 |---|---|
-| **À la une** `/` | A newspaper-style front page. Masthead with the edition date; the day in figures (articles, active media, sujets, confirmed stories, share of coverage by group); *Dernière heure*; three columns: **Le fil** (every new article as it arrives), the **lead story** with "Comment ils titrent" (the same news headlined by other groups), and the next stories; **Le titre qui divise** (the event that groups word most differently); **Angle mort du jour** (a big story a major group did not cover); one block per section. |
-| **Tous les sujets** `/?vue=liste` | Every sujet ranked by importance, filterable by period (24 h → 30 days) and section, with coverage bar, other outlets' headlines, missing major groups and 48 h activity. |
-| **Sujet** `/sujet/{id}` | One story. Photo and lede, key figures, who covers it, *course à la nouvelle* (each group's first article and delay), volume chart, **évolution jour par jour**, then the **chronologie**. Each development shows its verification, which earlier development it follows from ("↳ Fait suite à …") and diverging figures. Its articles, grouped by owner, stay folded until you open one or click *Afficher tous les articles*. |
-| **Couverture** `/couverture` | Share of each section in each group's coverage (heatmap), blind spots per group, who publishes first. |
-| **Sources** `/sources` | Health of every outlet's feeds, articles per day, page fetching, and *Actualiser maintenant*. |
-| **Recherche** `/recherche?q=` | Search in headlines and summaries. |
+| **À la une** `/` | Une une de journal. En-tête avec la date de l'édition ; la journée en chiffres (articles, médias actifs, sujets, nouvelles confirmées, part de la couverture par groupe) ; *Dernière heure* ; trois colonnes : **Le fil** (chaque nouvel article dès son arrivée), la **nouvelle principale** avec « Comment ils titrent » (la même nouvelle titrée par les autres groupes) et les nouvelles suivantes ; **Le titre qui divise** (l'événement que les groupes formulent le plus différemment) ; **Angle mort du jour** (une grosse nouvelle qu'un grand groupe n'a pas couverte) ; un bloc par rubrique. |
+| **Tous les sujets** `/?vue=liste` | Tous les sujets classés par importance, filtrables par période (24 h → 30 jours) et par rubrique, avec la barre de couverture, les titres des autres médias, les grands groupes absents et l'activité sur 48 h. |
+| **Sujet** `/sujet/{id}` | Une histoire. Photo et chapeau, chiffres clés, qui en parle, *course à la nouvelle* (premier article de chaque groupe et délai), volume de couverture, **évolution jour par jour**, puis la **chronologie**. Chaque développement affiche sa vérification, le développement antérieur dont il découle (« ↳ Fait suite à … ») et les chiffres divergents. Ses articles, regroupés par propriétaire, restent repliés jusqu'à ce qu'on en ouvre un ou qu'on clique sur *Afficher tous les articles*. |
+| **Couverture** `/couverture` | Part de chaque rubrique dans la couverture de chaque groupe (carte de chaleur), angles morts par groupe, qui publie en premier. |
+| **Sources** `/sources` | État des flux de chaque média, articles par jour, lecture des pages, et *Actualiser maintenant*. |
+| **Recherche** `/recherche?q=` | Recherche dans les titres et les résumés. |
 
-Status marks: **✓ Confirmé** means at least 3 independent ownership groups have their own article.
-**≈ Corroboré** means 2. **! Source unique** means 1. **↻ Dépêche seulement** means agency copy only.
-This measures corroboration, not truth.
+Mentions de vérification : **✓ Confirmé** = au moins 3 groupes de presse indépendants ont leur propre
+article. **≈ Corroboré** = 2. **! Source unique** = 1. **↻ Dépêche seulement** = uniquement de la copie
+d'agence. Cela mesure la corroboration, pas la vérité.
 
-## Sources and ownership groups
+## Sources et groupes de presse
 
-| Access | Outlets |
+| Accès | Médias |
 |---|---|
-| Full text (feed or news sitemap + article page) | Le Devoir, Radio-Canada, CBC Montreal, the six CN2i papers (Le Soleil, Le Droit, La Tribune, Le Nouvelliste, Le Quotidien, La Voix de l'Est), Montreal Gazette, CTV Montréal, Noovo Info, 98.5 Montréal, Métro, Pivot |
-| Headline + feed summary (article pages answer "Access Denied") | Le Journal de Montréal, Le Journal de Québec, TVA Nouvelles |
-| Headline via Google News (whole site behind a captcha) | La Presse (one query per section), L'actualité |
+| Texte complet (flux ou sitemap news + page de l'article) | Le Devoir, Radio-Canada, CBC Montreal, les six journaux de CN2i (Le Soleil, Le Droit, La Tribune, Le Nouvelliste, Le Quotidien, La Voix de l'Est), Montreal Gazette, CTV Montréal, Noovo Info, 98.5 Montréal, Métro, Pivot |
+| Titre + résumé du flux (les pages répondent « Access Denied ») | Le Journal de Montréal, Le Journal de Québec, TVA Nouvelles |
+| Titre via Google News (tout le site derrière un captcha) | La Presse (une requête par rubrique), L'actualité |
 
-- **No protection is bypassed.** Blocked outlets stay headline-only. robots.txt is respected for article
-  pages: the Gazette forbids its RSS feed but allows its news sitemap, so the sitemap is used. There is
-  a 2 s gap between two requests to the same host, and the user agent identifies the app.
-- Full article text is stored locally for analysis only. The UI shows headlines, short ledes and links
-  to the originals. Photos are the outlets' own lead images, hotlinked (`no-referrer`), never downloaded.
-- **Corroboration counts ownership groups, not sites.** The groups are Québecor (JdM, JdQ, TVA), CN2i
-  (6 papers), CBC/Radio-Canada, Bell Média (CTV, Noovo), Postmedia (Gazette), La Presse, Le Devoir,
-  Cogeco (98.5), Métro Média, Pivot and Mishmash (L'actualité).
-- **Same-owner copies count once.** When a group republishes one piece on several of its sites (JdM →
-  JdQ, TVA; Le Soleil → the other CN2i papers), the first one is kept. The others point to it
-  (`Article.dup_of`) and are left out of every count, ranking, vote, chart and list. The UI shows the
-  piece once, as "Québecor · 3 sites : …". On the first two days that was 408 of 670 Québecor articles
-  and 368 of 515 CN2i articles. A copy has the same owner, appears within 48 h, and has the same
-  headline or an embedding cosine ≥ 0.96.
-- **The same piece from another owner shows once too.** Agency copy (La Presse Canadienne, AFP, AP,
-  Reuters) is often run word for word by different owners: Noovo Info and L'actualité, CN2i and Le
-  Devoir. Such an article points to the first one (`Article.same_as`) when its headline is the same once
-  normalized: rubric prefix dropped ("Guerre en Ukraine | …"), one containing the other, or ≥ 90 %
-  similar. It also has to appear within 36 h and be close in meaning. It is forced into the same
-  development, listed once with "+ L'actualité", and counted once as an article. Each owner still gets
-  credit in the coverage bars, because it chose to run the story. Two outlets' *own* articles on the same
-  news are never merged this way.
-- **Agency copy** is detected from bylines, datelines and identical headlines across groups. It never
-  counts as an independent confirmation.
-- **Colours**: each group has one colour, used everywhere (charts, dots, outlet labels). Colours follow
-  the outlets' branding: Radio-Canada, La Presse and CN2i in red; Québecor, Bell (Noovo) and the Gazette
-  in blue; Le Devoir grey; Métro green. Groups sharing a colour family get distinct shades, and the
-  stacked bars alternate reds and blues. The palette was checked for normal and colour-blind vision in
-  both themes (`app/web/static/app.css`, `--s1…--s8`).
+- **Aucune protection n'est contournée.** Les médias bloqués restent en « titre seul ». Le robots.txt est
+  respecté pour les pages d'articles : la Gazette interdit son flux RSS mais autorise son sitemap news,
+  c'est donc le sitemap qui est utilisé. Deux requêtes vers un même site sont espacées d'au moins 2 s,
+  et le user agent identifie l'application.
+- Le texte des articles est conservé localement, uniquement pour l'analyse. L'interface montre les
+  titres, de courts chapeaux et des liens vers les originaux. Les photos sont celles des médias,
+  affichées depuis leurs serveurs (`no-referrer`), jamais téléchargées.
+- **La corroboration compte des groupes de presse, pas des sites.** Les groupes : Québecor (JdM, JdQ,
+  TVA), CN2i (6 journaux), CBC/Radio-Canada, Bell Média (CTV, Noovo), Postmedia (Gazette), La Presse,
+  Le Devoir, Cogeco (98.5), Métro Média, Pivot et Mishmash (L'actualité).
+- **Les reprises d'un même propriétaire comptent une seule fois.** Quand un groupe republie un article
+  sur plusieurs de ses sites (JdM → JdQ, TVA ; Le Soleil → les autres journaux de CN2i), seul le premier
+  est gardé. Les autres pointent vers lui (`Article.dup_of`) et sont exclus de tous les comptes,
+  classements, votes, graphiques et listes. L'interface affiche l'article une fois, sous la forme
+  « Québecor · 3 sites : … ». Les deux premiers jours, cela représentait 408 des 670 articles de Québecor
+  et 368 des 515 de CN2i. Une reprise a le même propriétaire, paraît dans les 48 h, et a le même titre
+  ou une similarité d'embedding ≥ 0,96.
+- **Le même article chez un autre propriétaire n'apparaît aussi qu'une fois.** La copie d'agence (La
+  Presse Canadienne, AFP, AP, Reuters) est souvent reprise mot pour mot par des propriétaires différents :
+  Noovo Info et L'actualité, CN2i et Le Devoir. Un tel article pointe vers le premier (`Article.same_as`)
+  quand son titre est identique une fois normalisé : préfixe de rubrique retiré (« Guerre en Ukraine | … »),
+  l'un contenant l'autre, ou similaire à ≥ 90 %. Il doit aussi paraître dans les 36 h et être proche par
+  le sens. Il est placé dans le même développement, affiché une fois avec « + L'actualité » et compté
+  comme un seul article. Chaque propriétaire reste crédité dans les barres de couverture, puisqu'il a
+  choisi de publier la nouvelle. Les articles *propres* de deux médias sur la même nouvelle ne sont
+  jamais fusionnés de cette façon.
+- **La copie d'agence** est repérée par la signature, la mention de lieu et les titres identiques entre
+  groupes. Elle ne compte jamais comme une confirmation indépendante.
+- **Couleurs** : chaque groupe a une couleur, la même partout (graphiques, pastilles, noms de médias),
+  qui suit l'identité visuelle des médias : Radio-Canada, La Presse et CN2i en rouge ; Québecor, Bell
+  (Noovo) et la Gazette en bleu ; Le Devoir en gris ; Métro en vert. Les groupes d'une même famille de
+  couleur ont des teintes distinctes, et les barres empilées alternent rouges et bleus. La palette a été
+  vérifiée pour la vision normale et le daltonisme, dans les deux thèmes (`app/web/static/app.css`,
+  `--s1…--s8`).
 
-## How it works
-
-```
-scheduler (APScheduler; catches up after the laptop sleeps)
- ├─ discover:<source>  every 15 min (Google News 30 min)  RSS / news sitemaps / Google News → Article
- ├─ enrich             every 3 min   article page → text, byline, section, photo (trafilatura)
- ├─ images             every 4 min   og:image for articles whose feed has no photo
- └─ process            every 5 min
-      ├─ cluster   embed headline + lede → same-owner copies → join an event or start one
-      │            → merge split events → link each development to the story it continues
-      ├─ verify    independent groups, agency copy, diverging figures
-      └─ rank      importance of events and sujets
-```
-
-### Same event? Same story?
-
-Two local multilingual embedding models read the headline and the start of the lede, so French and
-English coverage of the same news land close together:
-- a **fast** one (`paraphrase-multilingual-mpnet`), used to find candidates, detect copies and vote on
-  sections;
-- a **stronger** one (`multilingual-e5-large`, about 0.3 s per article on CPU), used to decide which
-  story a development belongs to.
-
-Each pair of articles then gets:
-- `cos` and `e5`, the cosine of their two embeddings;
-- `lex`, the IDF-weighted overlap of word stems, with names counting double;
-- `hours`, how far apart they were published;
-- when both articles have their text: the share of **numbers** they have in common and the overlap of
-  their **body** vocabulary.
-
-Two logistic models, fitted on hand-labelled pairs (see [Evaluation](#evaluation)), turn these into
-probabilities (`app/nlp/similarity.py`):
+## Fonctionnement
 
 ```
-p_event = σ(−2.74 + 4.63·cos + 8.05·lex − 1.10·ln(1 + hours))            same development
-p_story = σ(−60.42 + 69.86·e5 + 3.56·lex [− 2.38 + 3.07·numbers + 4.36·body])   same story
+planificateur (APScheduler ; rattrape les tâches après la mise en veille du portable)
+ ├─ discover:<source>  toutes les 15 min (Google News 30 min)  RSS / sitemaps news / Google News → Article
+ ├─ enrich             toutes les 3 min   page de l'article → texte, signature, rubrique, photo (trafilatura)
+ ├─ images             toutes les 4 min   og:image pour les articles dont le flux n'a pas de photo
+ └─ process            toutes les 5 min
+      ├─ cluster   embeddings titre + chapeau → reprises → rattacher à un événement ou en créer un
+      │            → fusionner les événements scindés → relier chaque développement à l'histoire qu'il prolonge
+      ├─ verify    groupes indépendants, copie d'agence, chiffres divergents
+      └─ rank      importance des événements et des sujets
 ```
 
-Time matters for events: same-development pairs are a median 3.8 h apart, other developments of the
-same story 21 h. It doesn't matter for stories, which run for days. The stronger model and the body
-signals help a lot for stories. For events they were tried and gave nothing at equal precision, so
-the event decision keeps the fast model.
+### Même événement ? Même histoire ?
 
-`app/cluster.py` uses them like this:
-- **Joining an event.** The best match in the event must reach 0.6 and the second best 0.3, so one
-  stray link is not enough. Time is counted from the event's *start*, and a development spans at most
-  24 h. Inside one development, coverage cannot drift article by article.
-- **Merge pass.** Two events started less than 24 h apart whose three best cross pairs average ≥ 0.7 are
-  fused. This repairs events split by the order articles arrived in.
-- **Stories are chains.** A new development joins the sujet of the *earlier* development it is closest
-  to (mean of its two best pairs, `p_story` ≥ 0.7). It is compared with every development of the last 7
-  days, not with where the story began, and the link is stored (`Event.follows_id`, `follows_p`). The
-  first and last developments can have little in common as long as each step is close: *Trump négocie du
-  diesel russe* → *Poutine reçoit les propositions* → *un nouveau président pour l'Ukraine* →
-  *cessez-le-feu énergétique*.
-- **Sports.** Sujets only chain coverage of the same game, otherwise every Canadiens game would join
-  one endless story.
-- The **headline of an event** is its most consensual one, the closest to all the others. Opinion
-  pieces, very short headlines and live-blog lines are avoided ("Première période | …").
+Deux modèles d'embeddings multilingues locaux lisent le titre et le début du chapeau, de sorte que les
+couvertures française et anglaise d'une même nouvelle se retrouvent proches :
+- un modèle **rapide** (`paraphrase-multilingual-mpnet`), pour trouver les candidats, repérer les
+  reprises et voter sur les rubriques ;
+- un modèle **plus puissant** (`multilingual-e5-large`, environ 0,3 s par article sur le processeur),
+  pour décider à quelle histoire appartient un développement.
 
-### Importance, sections, figures
+Chaque paire d'articles reçoit alors :
+- `cos` et `e5`, la similarité de leurs deux embeddings ;
+- `lex`, le recouvrement des racines de mots pondéré par l'IDF, les noms propres comptant double ;
+- `heures`, l'écart entre leurs publications ;
+- quand les deux articles ont leur texte : la part de **chiffres** en commun et le recouvrement du
+  **vocabulaire du corps** de l'article.
 
-- **Importance:** the sum over ownership groups of freshness × weight × (1 + 0.15 · ln(articles)).
-  Freshness has an 18 h half-life. Opinion-only coverage counts ×0.5, agency-only ×0.6, and a
-  front-page feed (*à la une*, *manchettes*) adds 0.5. A sujet scores its best development plus
-  0.3 × the others. Sports and culture are damped on the front page.
-- **Sections:** the outlet's own section is trusted when it exists (URL, the feed it came from,
-  Radio-Canada's "Zone X" bylines). Otherwise headline keywords give a weak guess, which the 7 nearest
-  well-labelled articles can overrule. An event's section is one vote per ownership group, so six CN2i
-  papers filing the same wire under *affaires* count once.
-- **Figures:** death tolls, injuries, evacuations and arrests are extracted with patterns and compared
-  across outlets with their times. A toll that rises over the day is usually an update, not a
-  contradiction, and the page says so.
+Deux modèles logistiques, ajustés sur des paires étiquetées à la main (voir [Évaluation](#évaluation)),
+en font des probabilités (`app/nlp/similarity.py`) :
 
-## Evaluation
+```
+p_event = σ(−2,74 + 4,63·cos + 8,05·lex − 1,10·ln(1 + heures))               même développement
+p_story = σ(−60,42 + 69,86·e5 + 3,56·lex [− 2,38 + 3,07·chiffres + 4,36·corps])   même histoire
+```
 
-`eval/pairs.json` holds 313 cross-outlet article pairs, labelled by hand blind to the algorithm's output:
-**E** for same event, **S** for same story but another development, **N** for unrelated. They were
-sampled across the whole similarity range, plus pairs the algorithm put together and close pairs it kept
-apart.
+Le temps compte pour les événements : les paires d'un même développement sont publiées à 3,8 h d'écart
+en médiane, les autres développements d'une même histoire à 21 h. Il ne compte pas pour les histoires,
+qui durent des jours. Le modèle plus puissant et les signaux du corps de l'article aident beaucoup pour
+les histoires. Pour les événements, ils ont été essayés et n'apportaient rien à précision égale :
+la décision d'événement garde donc le modèle rapide.
+
+`app/cluster.py` les utilise ainsi :
+- **Rattacher un article à un événement.** La meilleure correspondance dans l'événement doit atteindre
+  0,6 et la deuxième 0,3 : un seul lien isolé ne suffit pas. Le temps est compté depuis le *début* de
+  l'événement, et un développement dure au plus 24 h. À l'intérieur d'un développement, la couverture ne
+  peut pas dériver d'article en article.
+- **Passe de fusion.** Deux événements commencés à moins de 24 h d'intervalle, dont les trois meilleures
+  paires croisées atteignent en moyenne 0,7, sont fusionnés. Cela répare les événements scindés à cause
+  de l'ordre d'arrivée des articles.
+- **Les histoires sont des chaînes.** Un nouveau développement rejoint le sujet du développement
+  *antérieur* dont il est le plus proche (moyenne de ses deux meilleures paires, `p_story` ≥ 0,7). Il est
+  comparé à tous les développements des 7 derniers jours, pas au point de départ de l'histoire, et le lien
+  est conservé (`Event.follows_id`, `follows_p`). Le premier et le dernier développement peuvent avoir
+  peu en commun, tant que chaque étape est proche : *Trump négocie du diesel russe* → *Poutine reçoit les
+  propositions* → *un nouveau président pour l'Ukraine* → *cessez-le-feu énergétique*.
+- **Sports.** Un sujet n'enchaîne que la couverture d'un même match ; sinon, tous les matchs du Canadien
+  formeraient une seule histoire sans fin.
+- Le **titre d'un événement** est le plus consensuel, le plus proche de tous les autres. Les opinions, les
+  titres très courts et les lignes de direct (« Première période | … ») sont évités.
+
+### Importance, rubriques, chiffres
+
+- **Importance** : somme, sur les groupes de presse, de fraîcheur × poids × (1 + 0,15 · ln(articles)).
+  La fraîcheur a une demi-vie de 18 h. Une couverture faite seulement d'opinions compte ×0,5, seulement
+  de copie d'agence ×0,6, et la présence dans un fil « à la une » ou « manchettes » ajoute 0,5. Un sujet
+  vaut son meilleur développement plus 0,3 × les autres. Les sports et la culture sont atténués à la une.
+- **Rubriques** : la rubrique du média fait foi quand elle existe (URL, flux d'origine, signatures « Zone X »
+  de Radio-Canada). Sinon, des mots-clés du titre donnent une estimation faible, que peuvent corriger les
+  7 articles bien étiquetés les plus proches. La rubrique d'un événement se décide à une voix par groupe de
+  presse : six journaux de CN2i qui classent la même dépêche en *affaires* ne comptent qu'une fois.
+- **Chiffres** : les bilans (morts, blessés, évacués, arrestations) sont extraits par motifs et comparés
+  d'un média à l'autre, avec l'heure. Un bilan qui monte au fil de la journée est le plus souvent une mise
+  à jour, pas une contradiction, et la page le dit.
+
+## Évaluation
+
+`eval/pairs.json` contient 510 paires d'articles de médias différents, étiquetées à la main sans voir le
+résultat de l'algorithme : **E** pour même événement, **S** pour même histoire mais autre développement,
+**N** pour sans rapport. Le champ `set` distingue deux échantillons :
+- `spread` (313 paires) : tirées sur toute l'échelle de similarité, plus des paires que l'algorithme
+  regroupait et des paires proches qu'il séparait ;
+- `recall` (197 paires) : des paires que la version précédente gardait **séparées**. 28 étaient le même
+  développement et 61 la même histoire.
 
 ```bash
-uv run python eval/evaluate.py                 # re-clusters a COPY of the database and scores it
-uv run python eval/evaluate.py P_SUJET=0.6     # try another value of any app.cluster constant
+uv run python eval/evaluate.py                 # regroupe une COPIE de la base et la note
+uv run python eval/evaluate.py P_SUJET=0.6     # essayer une autre valeur d'une constante de app.cluster
+EVAL_DB=/chemin/copie.db uv run python eval/evaluate.py   # partir d'une copie dont les embeddings
+                                                          # sont déjà calculés (bien plus rapide)
 ```
 
-It reports pairwise precision, recall and F1 for "same event" and "same sujet", and the largest sujets.
-Pair metrics don't catch a sujet that swallows unrelated developments; size does.
+Le script donne la précision, le rappel et le F1 par paire pour « même événement » et « même sujet »,
+pour l'ensemble et pour chaque échantillon, ainsi que la taille des plus gros sujets. Les mesures par
+paire ne repèrent pas un sujet qui avale des développements sans rapport ; sa taille, si.
 
-| 1 776 articles, 2026-10-11 | Same event P / R / F1 | Same sujet P / R / F1 | Largest sujet |
+| 1 776 articles, 11 octobre 2026, 313 paires | Même événement P / R / F1 | Même sujet P / R / F1 | Plus gros sujet |
 |---|---|---|---|
-| First version (fixed thresholds on `cos + 0.6·lex`) | 0.74 / 0.53 / 0.62 | 0.95 / 0.76 / 0.84 | 12 (a post-election catch-all) |
-| Fitted probabilities + merge pass | 0.82 / 0.88 / 0.85 | 0.94 / 0.89 / 0.92 | 5 |
-| + time from the event start, 24 h span, chained stories | 0.88 / 0.83 / 0.86 | 0.93 / 0.88 / 0.90 | 6 |
+| Première version (seuils fixes sur `cos + 0,6·lex`) | 0,74 / 0,53 / 0,62 | 0,95 / 0,76 / 0,84 | 12 (un fourre-tout post-électoral) |
+| Probabilités ajustées + passe de fusion | 0,82 / 0,88 / 0,85 | 0,94 / 0,89 / 0,92 | 5 |
+| + temps compté depuis le début, 24 h max, histoires en chaîne | 0,88 / 0,83 / 0,86 | 0,93 / 0,88 / 0,90 | 6 |
 
-A second labelling round added 197 pairs that this version kept **apart**: 28 were the same
-development and 61 the same story. The `set` field marks them `recall`; the first 313 are `spread`.
-On all 510 pairs, with the same data (1 836 articles):
+Sur les 510 paires et les mêmes données (1 836 articles) :
 
-| All 510 pairs | Same event P / R / F1 | Same sujet P / R / F1 | Largest sujet |
+| 510 paires | Même événement P / R / F1 | Même sujet P / R / F1 | Plus gros sujet |
 |---|---|---|---|
-| Previous version | 0.88 / 0.70 / 0.78 | 0.94 / 0.76 / 0.84 | 6 |
-| e5-large for events too (best setting at equal precision) | 0.89 / 0.66 / 0.76 | 0.96 / 0.82 / 0.88 | 6 |
-| **Current**: fast model for events; e5-large + body signals for stories | **0.88 / 0.70 / 0.78** | **0.95 / 0.83 / 0.89** | 6 |
+| Version précédente | 0,88 / 0,70 / 0,78 | 0,94 / 0,76 / 0,84 | 6 |
+| e5-large aussi pour les événements (meilleur réglage à précision égale) | 0,89 / 0,66 / 0,76 | 0,96 / 0,82 / 0,88 | 6 |
+| **Actuelle** : modèle rapide pour les événements ; e5-large + corps de l'article pour les histoires | **0,88 / 0,70 / 0,78** | **0,95 / 0,83 / 0,89** | 6 |
 
-On the pairs the previous version kept apart, story recall rose from 0.49 to 0.65. The pair models
-were cross-validated (5 folds × 3). Headline-only similarity, named-entity overlap, language and body
-similarity added nothing once the rest was in. Most remaining errors are judgment calls: pre-game
-coverage vs the result, a sprint vs the Grand Prix, a statement vs the reply to it.
+Sur les paires que la version précédente gardait séparées, le rappel des histoires est passé de 0,49 à
+0,65. Les modèles de paires ont été validés par validation croisée (5 plis × 3). La similarité des seuls
+titres, le recouvrement des entités nommées, la langue et la similarité du corps n'apportaient plus rien
+une fois le reste en place. La plupart des erreurs restantes sont des cas limites : l'avant-match et le
+résultat, le sprint et le Grand Prix, une déclaration et la réponse à cette déclaration.
 
-## Running it
+## Lancer l'application
 
-It runs like appart_finder: a Podman container managed by a systemd user service (a *quadlet*), on
-<http://127.0.0.1:8010>. It starts with the session and restarts if it crashes. The data (SQLite and the two
-embedding models, about 3 GB, downloaded on first start) lives in `data/`, mounted at `/data`.
+Elle tourne comme appart_finder : un conteneur Podman géré par un service systemd utilisateur (un
+*quadlet*), sur <http://127.0.0.1:8010>. Elle démarre avec la session et redémarre en cas de plantage. Les
+données (SQLite et les deux modèles d'embeddings, environ 3 Go, téléchargés au premier démarrage) sont dans
+`data/`, monté sur `/data`.
 
 ```bash
-# first install
+# première installation
 podman build -t localhost/six-faces:latest .
 cp deploy/six-faces.container ~/.config/containers/systemd/
 systemctl --user daemon-reload
 systemctl --user start six-faces
 
-# day to day
+# au quotidien
 systemctl --user {status,restart,stop} six-faces
 journalctl --user -u six-faces -f
 
-# after a code change
+# après une modification du code
 podman build -t localhost/six-faces:latest . && systemctl --user restart six-faces
 ```
 
-Database migrations run at startup. **Only one process may run the scheduler on `data/six_faces.db`**,
-so stop the service before running the app another way:
+Les migrations de la base s'exécutent au démarrage. **Un seul processus peut faire tourner le
+planificateur sur `data/six_faces.db`** : arrêter le service avant de lancer l'application autrement.
 
 ```bash
 uv sync
-uv run uvicorn app.main:app --port 8010                                    # full app, scheduler on
-SCHEDULER_ENABLED=false uv run uvicorn app.main:app --port 8011 --reload   # UI only (service may stay up)
+uv run uvicorn app.main:app --port 8010                                    # application complète
+SCHEDULER_ENABLED=false uv run uvicorn app.main:app --port 8011 --reload   # interface seule (le service peut rester actif)
 ```
 
-After changing similarity, clustering, copy detection or section rules, rebuild the grouping. Articles
-and embeddings are kept:
+Après une modification de la similarité, du regroupement, de la détection des reprises ou des règles de
+rubriques, reconstruire le regroupement. Les articles et les embeddings sont conservés :
 
 ```bash
 systemctl --user stop six-faces && uv run python -m scripts.recluster && systemctl --user start six-faces
 ```
 
-Settings go in `.env` or the environment (`app/config.py`): `APP_NAME`, `APP_TAGLINE`, collection
-intervals, `HOST_DELAY_S`, `EMBEDDING_MODEL` (fast model), `MATCHING_MODEL` (the model that decides
-same event / same story), `DISPLAY_TZ` (default America/Toronto).
+Les réglages se mettent dans `.env` ou dans l'environnement (`app/config.py`) : `APP_NAME`, `APP_TAGLINE`,
+intervalles de collecte, `HOST_DELAY_S`, `EMBEDDING_MODEL` (modèle rapide), `MATCHING_MODEL` (le modèle qui
+décide même événement / même histoire), `DISPLAY_TZ` (par défaut America/Toronto).
 
-## Development
+## Développement
 
 ```bash
-uv run pytest                                     # offline: parsers, NLP rules, verification, ranking, pages
+uv run pytest                                     # hors ligne : parseurs, règles NLP, vérification, classement, pages
 uv run ruff check . && uv run ruff format .
-uv run alembic revision --autogenerate -m "..."   # after changing app/models.py
-uv run python eval/evaluate.py                    # after touching grouping
+uv run alembic revision --autogenerate -m "..."   # après une modification de app/models.py
+uv run python eval/evaluate.py                    # après toute modification du regroupement
 ```
 
-**Adding an outlet** takes one entry in `app/sources.py`: its feeds (`rss`, `sitemap` or `gnews`), owner
-group, language, and `fetch_pages=False` if article pages are blocked. Read its robots.txt first. A new
-owner group needs a label in `GROUPS`; it shows as "Autres" unless it gets a colour slot (`CHART_GROUPS`
-in `app/web/views.py` and `--sN` in `app.css`).
+**Ajouter un média** demande une entrée dans `app/sources.py` : ses flux (`rss`, `sitemap` ou `gnews`), son
+groupe propriétaire, sa langue, et `fetch_pages=False` si ses pages d'articles sont bloquées. Lire d'abord
+son robots.txt. Un nouveau groupe a besoin d'un libellé dans `GROUPS` ; il apparaît dans « Autres » tant
+qu'il n'a pas de couleur (`CHART_GROUPS` dans `app/web/views.py` et `--sN` dans `app.css`).
 
-## Project layout
+Le code, les commentaires et les noms restent en anglais ; l'interface et la documentation sont en
+français.
+
+## Organisation du code
 
 ```
 app/
-  sources.py        the 21 outlets: feeds, owner group, access mode, URL filters
-  fetch/            http.py (polite client, robots.txt) · discover.py (RSS / sitemaps / Google News) ·
-                    enrich.py (article page → text, byline, photo)
-  ingest.py         store new articles, merge duplicates across feeds, enrich pages, backfill photos
-  nlp/              text.py (cleaning, names, wire & opinion detection) · categories.py (sections) ·
-                    embed.py (local ONNX model) · similarity.py (lexical overlap, p_event, p_story)
-  cluster.py        copies → events → merge pass → story chains; event headline and section
-  verify.py         independent groups, agency copy, diverging figures
-  rank.py           importance of events and sujets
-  scheduler.py      background jobs, catch-up after sleep
+  sources.py        les 21 médias : flux, groupe propriétaire, mode d'accès, filtres d'URL
+  fetch/            http.py (client poli, robots.txt) · discover.py (RSS / sitemaps / Google News) ·
+                    enrich.py (page d'article → texte, signature, photo)
+  ingest.py         enregistre les nouveaux articles, fusionne les doublons entre flux, lit les pages, complète les photos
+  nlp/              text.py (nettoyage, noms, détection de dépêches et d'opinions) · categories.py (rubriques) ·
+                    embed.py (modèles ONNX locaux) · similarity.py (recouvrement lexical, p_event, p_story)
+  cluster.py        reprises → événements → passe de fusion → chaînes d'histoires ; titre et rubrique d'un événement
+  verify.py         groupes indépendants, copie d'agence, chiffres divergents
+  rank.py           importance des événements et des sujets
+  scheduler.py      tâches de fond, rattrapage après la veille
   models.py         Article → Event → Sujet, FetchRun
-  web/              routes.py · views.py (queries for each page) · fmt.py (French dates) · templates/ · static/
-eval/               pairs.json (labelled pairs) · evaluate.py
+  web/              routes.py · views.py (requêtes de chaque page) · fmt.py (dates en français) · templates/ · static/
+eval/               pairs.json (paires étiquetées) · evaluate.py
 scripts/            recluster.py
 migrations/         Alembic
-deploy/             six-faces.container (Podman quadlet)
-tests/              offline test suite
+deploy/             six-faces.container (quadlet Podman)
+tests/              tests hors ligne
 ```
 
-**Data model.** An `Article` belongs to one `Event` (one development) and may be a same-owner copy of
-another article (`dup_of`). An `Event` belongs to one `Sujet` (a story) and records the earlier event it
-follows from (`follows_id`, `follows_p`). `FetchRun` logs every feed fetch for the Sources page. All
-times are stored in UTC and shown in Quebec time.
+**Modèle de données.** Un `Article` appartient à un `Event` (un développement). Il peut être une reprise
+d'un autre article du même propriétaire (`dup_of`) ou le même article publié par un autre propriétaire
+(`same_as`). Un `Event` appartient à un `Sujet` (une histoire) et garde le développement antérieur dont il
+découle (`follows_id`, `follows_p`). `FetchRun` trace chaque lecture de flux pour la page Sources. Toutes
+les heures sont stockées en UTC et affichées à l'heure du Québec.
 
-## Known limits
+## Limites connues
 
-- La Presse and L'actualité are headline-only, through Google News, which caps each feed at 100 items
-  (hence one query per La Presse section). Their times can lag a little.
-- Québecor gives a headline and a short summary only, so its text never feeds figure checks or wire
-  detection.
-- "Premier à publier" relies on each outlet's published time, which some outlets update when they edit.
-- Grouping was tuned on the first days of collection. Re-check it with `eval/evaluate.py` as data
-  accumulates.
-- If the laptop is off for more than about a day, Google News items from the gap are lost (the queries
-  look back one day). RSS feeds and sitemaps cover about two days.
+- La Presse et L'actualité sont en « titre seul », via Google News, qui limite chaque flux à 100 éléments
+  (d'où une requête par rubrique de La Presse). Leurs heures peuvent avoir un léger retard.
+- Québecor ne fournit qu'un titre et un court résumé : son texte n'alimente jamais la vérification des
+  chiffres ni la détection des dépêches.
+- « Premier à publier » repose sur l'heure de publication de chaque média, que certains modifient quand
+  ils mettent un article à jour.
+- Le regroupement a été réglé sur les premiers jours de collecte. Le revérifier avec `eval/evaluate.py` à
+  mesure que les données s'accumulent.
+- Si le portable reste éteint plus d'environ une journée, les articles Google News de cette période sont
+  perdus (les requêtes remontent une journée). Les flux RSS et les sitemaps couvrent environ deux jours.
 
-## The name
+## Le nom
 
-**Six-Faces** sounds like a Quebec place name (Trois-Rivières, Deux-Montagnes, Sept-Îles), but it is the
-six faces of a cube: each face one outlet's angle on the same story. The reference stays implicit, so
-there is no logo, just the name.
+**Six-Faces** sonne comme un nom de lieu québécois (Trois-Rivières, Deux-Montagnes, Sept-Îles), mais ce
+sont les six faces d'un cube : chaque face, l'angle d'un média sur la même nouvelle. La référence reste
+implicite, il n'y a donc pas de logo, seulement le nom.
 
-## License
+## Licence
 
-GPL-3.0-only, like appart_finder.
+GPL-3.0-only, comme appart_finder.

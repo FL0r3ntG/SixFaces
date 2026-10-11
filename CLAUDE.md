@@ -1,43 +1,51 @@
 # Six-Faces (`six_faces`)
 
-Ground News for Quebec, personal project. Runs on the laptop as the Podman quadlet `six-faces` on port 8010.
-README.md documents the design, the evaluation and how to run it. The **UI is in French**; code, comments
-and docs are in English.
+Ground News pour le Québec, projet personnel. Tourne sur le portable avec le quadlet Podman `six-faces`, port 8010.
+README.md décrit la conception, l'évaluation et le lancement. **L'interface et la documentation (README,
+CLAUDE.md, messages de commit au besoin) sont en français** ; le code, les commentaires et les noms restent en
+anglais.
 
-## Status (2026-10-11)
+## État (11 octobre 2026)
 
-- Collection (21 outlets), enrichment, same-owner copy detection, grouping into events and chained sujets,
-  verification, ranking and all pages work. The service collects continuously since 2026-10-11.
-- Grouping uses the fitted pair probabilities in `app/nlp/similarity.py` and the constants at the top of
-  `app/cluster.py`: events use the fast embedding, stories use e5-large (`Article.embedding_e5`) plus body
-  numbers/vocabulary. `eval/pairs.json` has 510 labelled pairs (`set`: spread / recall); `EVAL_DB=` points
-  the evaluation at a snapshot whose embeddings are already computed. After any change to them, run `uv run python eval/evaluate.py`, compare with the README
-  table, then `scripts/recluster.py` (service stopped). Never tune by eye on the live pages.
+- Collecte (21 médias), lecture des pages, détection des reprises, regroupement en événements et en sujets
+  chaînés, vérification, classement et toutes les pages fonctionnent. Le service collecte en continu depuis le
+  11 octobre 2026.
+- Le regroupement utilise les probabilités de paires de `app/nlp/similarity.py` et les constantes en tête de
+  `app/cluster.py` : les événements utilisent l'embedding rapide, les histoires e5-large (`Article.embedding_e5`)
+  plus les chiffres et le vocabulaire du corps. `eval/pairs.json` contient 510 paires étiquetées (`set` :
+  spread / recall) ; `EVAL_DB=` fait tourner l'évaluation sur une copie dont les embeddings sont déjà
+  calculés. Après toute modification de ces éléments : `uv run python eval/evaluate.py`, comparer au tableau
+  du README, puis `scripts/recluster.py` (service arrêté). Ne jamais régler « à l'œil » sur les pages en ligne.
 
-## Rules
+## Règles
 
-- **No LLM** for grouping or categorizing (the user's choice). The local embedding model + rules + fitted
-  weights is the approach.
-- **Never bypass bot protection** (captcha, WAF, Cloudflare, Akamai). Blocked outlets stay headline-only
-  (`fetch_pages=False`, Google News). Respect robots.txt and `HOST_DELAY_S`.
-- Corroboration counts **ownership groups**, never sites; agency copy is never an independent confirmation.
-- **Never show a duplicate.** Same-owner copies (`dup_of`) are excluded from everything (`views.canonical()`).
-  The same piece run by another owner (`same_as`) is excluded from lists and article counts
-  (`views.listed()`) but keeps its owner's credit in coverage (`canonical()`). New queries that list
-  articles must use `listed()`; name outlets with `views.outlet()` (it adds "+ other outlet").
-- Stories are chains: a development links to the closest *earlier* development (`Event.follows_id`); one
-  development spans at most `MAX_SPAN` (24 h).
-- **Look**: a newspaper front page. Newsreader for headlines, Inter for UI, hairline rules and columns,
-  editorial red `--brand` used sparingly. No emojis, no rounded cards, no gradients, no badge boxes
-  (status is a text mark, outlets are small caps with a colour square).
-- **Colours**: one colour per ownership group, everywhere, following the outlets' branding (slots `--s1…--s8`,
-  order in `views.CHART_GROUPS`, alternating reds and blues for stacking). Groups without a brand colour
-  fold into "Autres". Re-check separation (normal + colour-blind, both themes) before changing a colour.
-- Never put scraped text (titles, summaries) inside `data-tip` attributes: app.js renders them as HTML.
-- No logo: the cube reference stays implicit in the name. The app name and tagline live in `app/config.py` (`app_name`, `app_tagline`); templates use `APP_NAME`.
-- Only one process may run the scheduler on `data/six_faces.db`.
+- **Pas de LLM** pour regrouper ou classer (choix de l'utilisateur). L'approche : embeddings locaux + règles
+  + pondérations ajustées.
+- **Ne jamais contourner une protection anti-robots** (captcha, WAF, Cloudflare, Akamai). Les médias bloqués
+  restent en titre seul (`fetch_pages=False`, Google News). Respecter robots.txt et `HOST_DELAY_S`.
+- La corroboration compte des **groupes de presse**, jamais des sites ; la copie d'agence n'est jamais une
+  confirmation indépendante.
+- **Ne jamais afficher de doublon.** Les reprises d'un même propriétaire (`dup_of`) sont exclues de tout
+  (`views.canonical()`). Le même article publié par un autre propriétaire (`same_as`) est exclu des listes et
+  des comptes d'articles (`views.listed()`), mais reste crédité à son propriétaire dans la couverture
+  (`canonical()`). Toute nouvelle requête qui liste des articles doit utiliser `listed()` ; nommer les médias
+  avec `views.outlet()` (qui ajoute « + autre média »).
+- Les histoires sont des chaînes : un développement se rattache au développement *antérieur* le plus proche
+  (`Event.follows_id`) ; un développement dure au plus `MAX_SPAN` (24 h).
+- **Allure** : une une de journal. Newsreader pour les titres, Inter pour l'interface, filets fins et
+  colonnes, rouge éditorial `--brand` utilisé avec parcimonie. Pas d'emojis, pas de cartes arrondies, pas de
+  dégradés, pas de badges encadrés (le statut est une mention texte, les médias sont en petites capitales
+  avec un carré de couleur).
+- **Couleurs** : une couleur par groupe de presse, partout, selon l'identité des médias (emplacements
+  `--s1…--s8`, ordre dans `views.CHART_GROUPS`, rouges et bleus alternés pour l'empilement). Les groupes sans
+  couleur propre vont dans « Autres ». Revérifier la distinction (vision normale + daltonisme, deux thèmes)
+  avant de changer une couleur.
+- Ne jamais mettre de texte collecté (titres, résumés) dans un attribut `data-tip` : app.js l'affiche en HTML.
+- Pas de logo : la référence au cube reste implicite dans le nom. Le nom et le slogan sont dans
+  `app/config.py` (`app_name`, `app_tagline`) ; les gabarits utilisent `APP_NAME`.
+- Un seul processus peut faire tourner le planificateur sur `data/six_faces.db`.
 
-## Commands
+## Commandes
 
 ```bash
 uv run pytest && uv run ruff check . && uv run ruff format .
