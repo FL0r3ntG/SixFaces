@@ -44,6 +44,9 @@ anglais.
 - Pas de logo : la référence au cube reste implicite dans le nom. Le nom et le slogan sont dans
   `app/config.py` (`app_name`, `app_tagline`) ; les gabarits utilisent `APP_NAME`.
 - Un seul processus peut faire tourner le planificateur sur `data/six_faces.db`.
+- Mise en ligne : `deploy/server/` (Compose + Caddy, `PUBLIC_MODE` forcé) et le guide `docs/DEPLOIEMENT.md`,
+  écrit pour quelqu'un qui ne connaît pas le projet. Le tenir à jour à chaque changement de réglage ou de
+  déploiement.
 
 ## Commandes
 

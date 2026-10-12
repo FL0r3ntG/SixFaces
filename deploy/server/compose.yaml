@@ -6,9 +6,9 @@ services:
     build: ../..
     image: six-faces:latest
     restart: unless-stopped
+    env_file: .env          # optional settings (see .env.example)
     environment:
-      PUBLIC_MODE: "true"
-      ALLOW_INDEXING: "false"
+      PUBLIC_MODE: "true"   # a public site is always read-only
     volumes:
       - ../../data:/data   # SQLite database + embedding models (~3 GB, downloaded on first start)
     expose:

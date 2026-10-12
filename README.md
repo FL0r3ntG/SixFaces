@@ -268,42 +268,18 @@ décide même événement / même histoire), `DISPLAY_TZ` (par défaut America/T
 
 ## Mise en ligne
 
-Le site peut être public : en mode public (`PUBLIC_MODE=true`), il est **en lecture seule** (pas de bouton
-*Actualiser*, pas de détails d'erreurs internes, pas d'explorateur d'API) et **non indexé** par les moteurs de
-recherche (`robots.txt` + en-tête `X-Robots-Tag: noindex`, sauf `ALLOW_INDEXING=true`). La collecte continue
-selon son horaire. Caddy, devant l'application, obtient le certificat HTTPS tout seul et ajoute les en-têtes
-de sécurité.
+Pour mettre le site en ligne sur un serveur (public, en lecture seule, non indexé, HTTPS automatique), suivre
+le guide pas à pas : **[docs/DEPLOIEMENT.md](docs/DEPLOIEMENT.md)**. Il couvre le serveur à choisir, le DNS,
+l'installation de Docker, le démarrage, les vérifications, les mises à jour, les sauvegardes, la reprise de
+données existantes, le dépannage et tous les réglages.
 
-**Serveur** : allumé 24 h/24, au moins 4 Go de mémoire (8 Go confortables), ~5 Go de disque, Docker avec
-Compose (ou Podman Compose), ports 80 et 443 ouverts.
+En bref, sur un serveur avec Docker et un domaine qui pointe vers lui :
 
 ```bash
-# 1. DNS : un enregistrement A (et AAAA si IPv6) du domaine vers l'adresse IP du serveur
-
-# 2. Sur le serveur
 git clone https://github.com/FL0r3ntG/SixFaces.git six-faces && cd six-faces
 cp deploy/server/.env.example deploy/server/.env      # puis y mettre DOMAIN=ton.domaine
 docker compose -f deploy/server/compose.yaml up -d --build
-
-# 3. (facultatif) reprendre l'historique déjà collecté, depuis le portable, service arrêté :
-#    rsync -a --info=progress2 data/ serveur:six-faces/data/
 ```
-
-Au premier démarrage, les deux modèles (~3 Go) se téléchargent dans `data/models`. Une fois le serveur en
-place, arrêter la collecte sur le portable (`systemctl --user disable --now six-faces`) : un seul
-collecteur suffit.
-
-```bash
-# mise à jour
-git pull && docker compose -f deploy/server/compose.yaml up -d --build
-# journaux
-docker compose -f deploy/server/compose.yaml logs -f app
-# sauvegarde cohérente de la base (même en marche)
-sqlite3 data/six_faces.db ".backup sauvegarde-$(date +%F).db"
-```
-
-Les photos affichées sont celles des médias, chargées depuis leurs serveurs et créditées, avec un lien
-vers l'article, comme le font les agrégateurs ; un média peut en demander le retrait.
 
 ## Développement
 
