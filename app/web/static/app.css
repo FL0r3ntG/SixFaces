@@ -511,3 +511,66 @@ table.data, table.heat { width: 100%; border-collapse: collapse; font-size: 13px
 .also { font-size: 10.5px; font-weight: 600; color: var(--muted); margin-right: 6px; white-space: nowrap; letter-spacing: 0.02em; }
 .grp-shared .grp-name { color: var(--ink-2); }
 .grp-shared .dot { margin-right: 3px; }
+
+/* ===================================================================================================== */
+/* Phones                                                                                                 */
+/* ===================================================================================================== */
+.search-toggle { display: none; }
+.table-scroll { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+@media (max-width: 760px) {
+  /* compact header: name + search + theme on one line, tabs below; not sticky, the news gets the screen */
+  .topbar { position: static; padding-top: env(safe-area-inset-top); }
+  .topbar-inner { display: grid; grid-template-columns: 1fr auto auto; grid-template-areas: "brand search theme" "nav nav nav" "form form form";
+                  gap: 6px 8px; height: auto; padding: 8px 16px 6px; }
+  .brand { grid-area: brand; font-size: 20px; }
+  .search-toggle { display: grid; grid-area: search; }
+  #theme-toggle { grid-area: theme; }
+  .nav { grid-area: nav; overflow-x: auto; flex-wrap: nowrap; max-width: none; scrollbar-width: none; margin: 0 -16px; padding: 0 12px;
+         -webkit-mask-image: linear-gradient(90deg, transparent, #000 12px, #000 calc(100% - 24px), transparent); }
+  .nav::-webkit-scrollbar { display: none; }
+  .nav a { white-space: nowrap; padding: 8px 10px; font-size: 14.5px; }
+  .search { grid-area: form; display: none; max-width: none; margin: 4px 0 2px; }
+  .search-open .search { display: block; }
+  .search input { height: 40px; font-size: 16px; }   /* 16px: iOS does not zoom into the field */
+  .icon-btn { width: 40px; height: 40px; }           /* comfortable tap targets */
+  .page, .page-home { padding: 16px max(16px, env(safe-area-inset-left)) 32px max(16px, env(safe-area-inset-right)); }
+  .footer { padding-bottom: max(16px, env(safe-area-inset-bottom)); }
+
+  /* front page: one column, lead story, then the other stories, then le fil */
+  .front-grid { display: flex; flex-direction: column; }
+  .col-une { order: 1; } .col-side { order: 2; } .col-fil { order: 3; }
+  .col-fil { grid-row: auto; margin-top: 22px; padding-top: 16px !important; border-top: 1px solid var(--ink); }
+  .mh-name { font-size: 40px; margin-top: 12px; }
+  .mh-top { font-size: 11.5px; }
+  .mh-sections { margin: 0 -16px; padding: 9px 16px; gap: 2px 18px; scrollbar-width: none;
+                 -webkit-mask-image: linear-gradient(90deg, #000 calc(100% - 24px), transparent); }
+  .mh-sections::-webkit-scrollbar { display: none; }
+  .board { grid-template-columns: 1fr 1fr; }
+  .board-cell { padding: 10px 0; }
+  .board-cell:nth-child(even):not(.board-share) { padding-left: 14px; border-left: 1px solid var(--grid); }
+  .board-share { grid-column: 1 / -1; }
+  .latest { flex-direction: column; gap: 6px; }
+  .lead-h { font-size: 30px; }
+  .lead-dek { font-size: 17px; }
+  .brief-h { font-size: 17px; }
+  .fil li { font-size: 14px; }
+
+  /* sujet page */
+  .race li { grid-template-columns: minmax(0, 1fr) auto; }
+  .race-bar { display: none; }
+  .race-name { min-width: 0; overflow: hidden; text-overflow: ellipsis; }
+  .race-t { white-space: nowrap; font-size: 12.5px; }
+  .evo-days { grid-auto-flow: row; grid-template-columns: repeat(auto-fill, minmax(96px, 1fr)); overflow: visible; }
+  .tl-day-sep { margin-left: 0; }
+  .tl-body { padding: 12px; }
+  .tl-title { font-size: 18px; }
+  .tl-articles summary { gap: 6px; }
+  .by-group { grid-template-columns: 1fr; }
+  .panel { padding: 14px; }
+  .sujet-hero .ph { max-height: 240px; }
+
+  /* list, sources, search */
+  .feed-head { align-items: flex-start; }
+  .seg { max-width: 100%; overflow-x: auto; scrollbar-width: none; }
+  .res-src, .res-when { min-width: 0; }
+}

@@ -59,6 +59,7 @@
   <section class="panel">
     <h2>Premier à publier</h2>
     <p class="note">Sur {{ n_events_big }} événements couverts par au moins 3 groupes : combien de fois chaque groupe a publié en premier.</p>
+    <div class="table-scroll">
     <table class="data">
       <thead><tr><th scope="col">Groupe</th><th scope="col" class="num">En premier</th><th scope="col" class="num">Présent</th><th scope="col" class="num">Taux</th></tr></thead>
       <tbody>
@@ -68,6 +69,7 @@
         {% endfor %}
       </tbody>
     </table>
+    </div>
     <p class="note">Les heures viennent des flux des médias ; les titres via Google News (La Presse, L'actualité) peuvent arriver avec un léger retard.</p>
   </section>
 </div>

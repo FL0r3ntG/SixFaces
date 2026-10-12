@@ -52,3 +52,15 @@ def test_sujet_page_with_timeline():
         assert "Chiffres différents" in r.text  # 3 vs 4 dead
         assert "Séisme au Panama" in client.get("/").text
         assert "Séisme" in client.get("/recherche?q=Séisme").text
+
+
+def test_installable_on_phones():
+    with TestClient(app) as client:
+        m = client.get("/manifest.webmanifest")
+        assert m.status_code == 200 and m.headers["content-type"].startswith("application/manifest+json")
+        data = m.json()
+        assert data["display"] == "standalone" and data["start_url"] == "/"
+        for icon in data["icons"]:
+            assert client.get(icon["src"]).status_code == 200
+        page = client.get("/").text
+        assert 'rel="manifest"' in page and "apple-touch-icon" in page and "viewport-fit=cover" in page

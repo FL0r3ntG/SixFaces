@@ -41,6 +41,14 @@
     try { localStorage.setItem("theme", root.dataset.theme); } catch (e) {}
   });
 
+  // phones: the search field opens from a button in the header
+  const searchBtn = document.getElementById("search-toggle");
+  searchBtn?.addEventListener("click", () => {
+    const open = document.body.classList.toggle("search-open");
+    searchBtn.setAttribute("aria-expanded", String(open));
+    if (open) document.querySelector("#search-form input")?.focus();
+  });
+
   // sujet page: one button opens / closes every development's list of articles
   const toggle = document.getElementById("toggle-articles");
   toggle?.addEventListener("click", () => {

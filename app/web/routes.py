@@ -3,11 +3,12 @@ from pathlib import Path
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Request
-from fastapi.responses import RedirectResponse
+from fastapi.responses import JSONResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from sqlmodel import Session
 
 from app import scheduler
+from app.config import get_settings
 from app.db import engine
 from app.models import utcnow
 from app.nlp.categories import CATEGORIES
@@ -90,6 +91,40 @@ def recherche(request: Request, session: DB, q: str = ""):
     q = q.strip()
     results = views.search(session, q) if len(q) >= 2 else []
     return page(request, "recherche.html", session, q=q, results=results)
+
+
+@router.get("/manifest.webmanifest")
+def manifest():
+    """Lets phones install the app on the home screen, opening full screen like a native app."""
+    s = get_settings()
+    return JSONResponse(
+        {
+            "name": s.app_name,
+            "short_name": s.app_name,
+            "description": s.app_tagline,
+            "lang": "fr-CA",
+            "start_url": "/",
+            "scope": "/",
+            "display": "standalone",
+            "background_color": "#faf8f3",
+            "theme_color": "#faf8f3",
+            "icons": [
+                {"src": "/static/icons/icon-192.png", "sizes": "192x192", "type": "image/png"},
+                {"src": "/static/icons/icon-512.png", "sizes": "512x512", "type": "image/png"},
+                {
+                    "src": "/static/icons/icon-maskable-512.png",
+                    "sizes": "512x512",
+                    "type": "image/png",
+                    "purpose": "maskable",
+                },
+            ],
+            "shortcuts": [
+                {"name": "Tous les sujets", "url": "/?vue=liste"},
+                {"name": "Couverture", "url": "/couverture"},
+            ],
+        },
+        media_type="application/manifest+json",
+    )
 
 
 @router.post("/actions/actualiser")
