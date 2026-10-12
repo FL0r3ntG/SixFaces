@@ -19,6 +19,10 @@ class Settings(BaseSettings):
     matching_model: str = "intfloat/multilingual-e5-large"  # stronger: same event / same story decisions
 
     scheduler_enabled: bool = True
+    # Public site: read-only (no "Actualiser" action, no internal error details) and not indexed by search
+    # engines. Collection keeps running on its own schedule.
+    public_mode: bool = False
+    allow_indexing: bool = False
     discover_interval_minutes: int = 15  # RSS + news sitemaps
     gnews_interval_minutes: int = 30  # Google News feeds (headline-only sources)
     process_interval_minutes: int = 5  # embed + cluster + rank

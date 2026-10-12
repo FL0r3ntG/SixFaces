@@ -64,3 +64,22 @@ def test_installable_on_phones():
             assert client.get(icon["src"]).status_code == 200
         page = client.get("/").text
         assert 'rel="manifest"' in page and "apple-touch-icon" in page and "viewport-fit=cover" in page
+
+
+def test_not_indexed_by_default():
+    with TestClient(app) as client:
+        r = client.get("/")
+        assert r.headers["x-robots-tag"] == "noindex, nofollow"
+        assert "Disallow: /" in client.get("/robots.txt").text
+        assert client.get("/docs").status_code == 404  # no API explorer on a public site
+
+
+def test_public_mode_is_read_only(monkeypatch):
+    from app.config import get_settings
+    from app.web import routes
+
+    monkeypatch.setattr(get_settings(), "public_mode", True)
+    monkeypatch.setitem(routes.templates.env.globals, "PUBLIC", True)
+    with TestClient(app) as client:
+        assert client.post("/actions/actualiser", follow_redirects=False).status_code == 404
+        assert "Actualiser maintenant" not in client.get("/sources").text

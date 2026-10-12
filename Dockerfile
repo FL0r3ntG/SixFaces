@@ -15,4 +15,4 @@ ENV PATH="/app/.venv/bin:$PATH"
 ENV DATABASE_URL=sqlite:////data/six_faces.db MODEL_CACHE_DIR=/data/models
 EXPOSE 8000
 # migrations run at startup (app.main.lifespan)
-CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000"]
+CMD ["uvicorn", "app.main:app", "--host", "0.0.0.0", "--port", "8000", "--proxy-headers", "--forwarded-allow-ips", "*"]

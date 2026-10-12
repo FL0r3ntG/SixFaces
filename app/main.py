@@ -32,6 +32,18 @@ async def lifespan(_app: FastAPI):
     scheduler.shutdown()
 
 
-app = FastAPI(title=get_settings().app_name, lifespan=lifespan)
+app = FastAPI(
+    title=get_settings().app_name, lifespan=lifespan, docs_url=None, redoc_url=None, openapi_url=None
+)
+
+
+@app.middleware("http")
+async def headers(request, call_next):
+    response = await call_next(request)
+    if not get_settings().allow_indexing:
+        response.headers["X-Robots-Tag"] = "noindex, nofollow"
+    return response
+
+
 app.mount("/static", StaticFiles(directory=Path(__file__).parent / "web" / "static"), name="static")
 app.include_router(router)

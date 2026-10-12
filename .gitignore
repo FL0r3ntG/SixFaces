@@ -12,3 +12,4 @@ data/
 .env
 __pycache__/
 *.pyc
+deploy/server/.env

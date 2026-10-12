@@ -3,7 +3,7 @@ from pathlib import Path
 from typing import Annotated
 
 from fastapi import APIRouter, Depends, HTTPException, Request
-from fastapi.responses import JSONResponse, RedirectResponse
+from fastapi.responses import JSONResponse, PlainTextResponse, RedirectResponse
 from fastapi.templating import Jinja2Templates
 from sqlmodel import Session
 
@@ -17,6 +17,7 @@ from app.web import fmt, views
 
 templates = Jinja2Templates(directory=Path(__file__).parent / "templates")
 fmt.register(templates.env)
+templates.env.globals.update(PUBLIC=get_settings().public_mode, ALLOW_INDEXING=get_settings().allow_indexing)
 templates.env.globals.update(legend=views.legend, source_name=lambda key: BY_KEY[key].name)
 
 router = APIRouter()
@@ -127,9 +128,19 @@ def manifest():
     )
 
 
+@router.get("/robots.txt", response_class=PlainTextResponse)
+def robots():
+    if get_settings().allow_indexing:
+        return "User-agent: *\nAllow: /\n"
+    return "User-agent: *\nDisallow: /\n"
+
+
 @router.post("/actions/actualiser")
 def actualiser():
-    """'Actualiser' button: collect every source now, then cluster."""
+    """'Actualiser' button: collect every source now, then cluster. Disabled on the public site, where any
+    visitor could otherwise make the server re-scrape every outlet in a loop."""
+    if get_settings().public_mode:
+        raise HTTPException(404)
     if scheduler.scheduler.running:
         scheduler.run_all_soon("bouton Actualiser")
     else:

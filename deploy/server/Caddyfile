@@ -1,0 +1,18 @@
+# HTTPS certificate is obtained automatically for {$DOMAIN} (DNS must point to this server).
+{$DOMAIN} {
+	encode zstd gzip
+
+	header {
+		Strict-Transport-Security "max-age=31536000"
+		X-Content-Type-Options "nosniff"
+		X-Frame-Options "DENY"
+		Referrer-Policy "strict-origin-when-cross-origin"
+		Permissions-Policy "camera=(), microphone=(), geolocation=()"
+		-Server
+	}
+
+	@static path /static/*
+	header @static Cache-Control "public, max-age=604800"
+
+	reverse_proxy app:8000
+}

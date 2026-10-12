@@ -7,7 +7,7 @@
     <h1>Sources</h1>
     <p class="sub">{{ rows | length }} médias suivis. Collecte toutes les 15 min (30 min pour Google News), regroupement toutes les 5 min{% if last_process %}, dernier passage {{ last_process | ago }}{% endif %}.</p>
   </div>
-  <form method="post" action="/actions/actualiser"><button class="btn" type="submit">Actualiser maintenant</button></form>
+  {% if not PUBLIC %}<form method="post" action="/actions/actualiser"><button class="btn" type="submit">Actualiser maintenant</button></form>{% endif %}
 </div>
 
 <section class="panel">
@@ -36,7 +36,7 @@
             <td>{{ r.last_run | ago }}</td>
             <td>
               {% if not r.last_run %}<span class="badge badge-neutral">En attente</span>
-              {% elif r.failing %}<span class="badge badge-bad" title="{% for f in r.failing %}{{ f.status }} : {{ f.error }}&#10;{% endfor %}"><span class="badge-icon" aria-hidden="true">!</span>{{ r.failing | length }} flux en échec</span>
+              {% elif r.failing %}<span class="badge badge-bad" {% if not PUBLIC %}title="{% for f in r.failing %}{{ f.status }} : {{ f.error }}&#10;{% endfor %}"{% endif %}><span class="badge-icon" aria-hidden="true">!</span>{{ r.failing | length }} flux en échec</span>
               {% else %}<span class="badge badge-good"><span class="badge-icon" aria-hidden="true">✓</span>OK</span>{% endif %}
             </td>
           </tr>

@@ -1,0 +1,36 @@
+# Six-Faces on a server: the app (public, read-only) behind Caddy (HTTPS + security headers).
+#   cp deploy/server/.env.example deploy/server/.env   # then set DOMAIN
+#   docker compose -f deploy/server/compose.yaml up -d --build
+services:
+  app:
+    build: ../..
+    image: six-faces:latest
+    restart: unless-stopped
+    environment:
+      PUBLIC_MODE: "true"
+      ALLOW_INDEXING: "false"
+    volumes:
+      - ../../data:/data   # SQLite database + embedding models (~3 GB, downloaded on first start)
+    expose:
+      - "8000"
+    # the two embedding models need ~3-4 GB of memory while embedding
+    mem_limit: 6g
+
+  caddy:
+    image: caddy:2
+    restart: unless-stopped
+    depends_on:
+      - app
+    ports:
+      - "80:80"
+      - "443:443"
+      - "443:443/udp"
+    env_file: .env
+    volumes:
+      - ./Caddyfile:/etc/caddy/Caddyfile:ro
+      - caddy-data:/data
+      - caddy-config:/config
+
+volumes:
+  caddy-data:
+  caddy-config:
